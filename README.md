@@ -14,7 +14,7 @@ Each game logo havs 2 versions by default, one with a tinted overlay designed to
 
 For some games, aditional icons are available based on the game's promotional material.
 
-##Developers
+## Developers
 The [refs.json](refs.json) file contains a list of all StadiaIcons referenced by game uid (the ones used in Stadia game URLs). Image paths can be constructed using the information contained in the `datasets` coupled with individual `uids`.
 
 Each image uri can be constructed as follows: `datasets.X.uri` + `uids.Y.Z` + (optional)`other.altSuffix` + `datasets.X.extension` where `X` is the type of icon, `Y` is the game uid and `Z` is the icon variant id (`0` by default).
