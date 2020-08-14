@@ -1,0 +1,57 @@
+{
+	"datasets":{
+		"icons":{
+			"uri":"https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Icons/",
+			"extension":".ico"
+		},
+		"images":{
+			"uri":"https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/",
+			"extension":".png"
+		}
+	},
+	"other":{
+		"altSuffix":"_alt"
+	},
+	"uids":{
+		"8b7e7f7036e5483eaa8745d46248536crcp1":{
+			"0":"Assassin's Creed – Odyssey",
+			"1":"Assassin's Creed – Odyssey-2"
+		},
+		"a38d988fb142400c947bf0a7b37fd404rcp1":{
+			"0":"Attack on Titan 2 – Final Battle"
+		},
+		"be080ad40b434ca289166031d3e88623rcp1":{
+			"0":"Borderlands 3"
+		},
+		"05f66a46027747a08b930ea70374ac7frcp1":{
+			"0":"Crayta"
+		},
+		"f39390395ed5444d8e9b23460c8f9152rcp1":{
+			"0":"Darksiders – Genesis"
+		},
+		"20e792017ab34ad89b70dc17a5c72d68rcp1":{
+			"0":"Destiny 2"
+		},
+		"5a0e892c933c4f56b4d87976cb655ecfrcp1":{
+			"0":"Doom 64"
+		},
+		"632522c846a041ce801e47b96ba2e265rcp1":{
+			"0":"Doom Eternal"
+		},
+		"d599576cddfc400f804b889460e84cb3rcp1":{
+			"0":"Ember"
+		},
+		"a447622dbe084c3e9ace4f913a939afarcp1":{
+			"0":"Final Fantasy XV"
+		},
+		"73182869b2a644bdbef46984b96e1721rcp1":{
+			"0":"Get Packed"
+		},
+		"18a3cc2bb111419c8ac873086d04dfaarcp1":{
+			"0":"Gylt"
+		},
+		"c727a9083ce649e5b1cc6999c4fa2e5frcp1":{
+			"0":"Jotun"
+		}
+	}
+}
