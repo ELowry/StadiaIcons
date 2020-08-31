@@ -8,6 +8,10 @@
 			"uri":"https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/",
 			"extension":".png"
 		}
+		"webp":{
+			"uri":"https://raw.githubusercontent.com/ELowry/StadiaIcons/master/WebP/",
+			"extension":".webp"
+		}
 	},
 	"other":{
 		"altSuffix":"_alt"
@@ -52,6 +56,39 @@
 		},
 		"c727a9083ce649e5b1cc6999c4fa2e5frcp1":{
 			"0":"Jotun"
+		},
+		"4b7f307c37364d659118bf7d435733c7rcp1":{
+			"0":"Just Dance 2020"
+		},
+		"6b43cecd79734ba28cef5894985c65f1rcp1":{
+			"0":"Just Shapes & Beats"
+		},
+		"da94f3aa88b24eb6ae6fdff798f73355rcp1":{
+			"0":"Kine"
+		},
+		"f5f9708a422a44cc876c240cfa07221drcp1":{
+			"0":"Kona"
+		},
+		"6d0d865669774338b3ce888a84da6cdercp1":{
+			"0":"Lara Croft and the Temple of Osiris"
+		},
+		"3aed855f10b34f618e5f6c6f5467bcf9rcp1":{
+			"0":"Little Nightmares"
+		},
+		"d334bea27ee64ef5a3a9bb14b1d6a88ercp1":{
+			"0":"Lost Words – Beyond the Page"
+		},
+		"9b3ea6519cac48d68ca821f07b1a6a3drcp1":{
+			"0":"Metro 2033 Redux"
+		},
+		"879d82512f5441829250ead1aa678a70rcp1":{
+			"0":"Metro Exodus"
+		},
+		"b65c1c4dcdf24446bcecda190c6a2fe7rcp1":{
+			"0":"Metro Last Light"
+		},
+		"ef14fb2f692c4b42b4b092d3e7864cd8rcp1":{
+			"0":"Monster Boy and the Cursed Kingdom"
 		}
 	}
 }
