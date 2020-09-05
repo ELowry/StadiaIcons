@@ -7,7 +7,7 @@ Icon Designs for Stadia Games.
 StadiaIcons a set of game icons designed with Google Stadia in mind ([stadia.com](https://stadia.com)). The objective is to have one logo for each game in the Google Stadia Library, following a simple design principle inspired by the Stadia logo and colors.
 
 ## How can I use it?
-This project is free to use as you see fit. Simply download or reference the icons you wish to use in [PNG image format](/Images) or as [Windows Icons](/Icons), and have fun!
+This project is free to use as you see fit. Simply download or reference the icons you wish to use in [PNG image format](/Images), as [Windows Icons](/Icons), or as [WebP Images](/WebP) and have fun!
 
 ### Developers
 The [refs.json](refs.json) file contains a list of all StadiaIcons referenced by game uid (the ones used in Stadia game URLs). Image paths can be constructed using the information contained in the `datasets` coupled with individual `uids`.
