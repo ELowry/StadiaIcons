@@ -81,8 +81,14 @@
 		"73182869b2a644bdbef46984b96e1721rcp1":{
 			"0":"Get Packed"
 		},
+		"11c9ece5b3a045908d77cf2b66adb010rcp1":{
+			"0":"Ghost Recon – Breakpoint"
+		},
 		"ca805d3d37404654a91d2ea62fad7bd4rcp1":{
 			"0":"GRID"
+		},
+		"16330bd770134d85b5bef3cc6b1407ffrcp1":{
+			"0":"Gunsport"
 		},
 		"18a3cc2bb111419c8ac873086d04dfaarcp1":{
 			"0":"Gylt"
@@ -94,6 +100,9 @@
 			"0":"Hitman",
 			"1":"Hitman 2",
 			"2":"Hitman 3"
+		},
+		"161f276db10947a199cd0260ed4dc248rcp1":{
+			"0":"Immortals Fenyx Rising"
 		},
 		"c727a9083ce649e5b1cc6999c4fa2e5frcp1":{
 			"0":"Jotun"
@@ -200,6 +209,9 @@
 		"921e9afe46aa478fb4aa929a7b1a6bd5rcp1":{
 			"0":"Spitlings"
 		},
+		"15a067411b8d4429b0954434d8f05d48rcp1":{
+			"0":"Stacks On Stacks – On Stacks"
+		},
 		"c4898519ff254b969ede8bafdff927e8rcp1":{
 			"0":"SteamWorld Dig"
 		},
@@ -212,8 +224,17 @@
 		"b845605f8eb447008f3f0d2295265ffdrcp1":{
 			"0":"SteamWorld Quest – Hand of Gilgamech"
 		},
+		"8e77c7a4368944589b4c9d8179d2eb4crcp1":{
+			"0":"Strange Brigade"
+		},
 		"f7afcff709e74227a5648aacadf03815rcp1":{
 			"0":"Superhot"
+		},
+		"cc97434908874852a6705d255a605dc8rcp1":{
+			"0":"The Crew 2"
+		},
+		"d43cd46c81734ca48e1a615310d0237crcp1":{
+			"0":"The Division 2"
 		},
 		"b17f16d4a4f94c0a85e07f54dbdedbb6rcp1":{
 			"0":"The Elder Scrolls – Online",
@@ -231,6 +252,9 @@
 		"42503ac2cfcf40018c15c86b86a5508drcp1":{
 			"0":"Tomb Raider"
 		},
+		"a031419410cc48469ff8954ea0732640rcp1":{
+			"0":"Trials Rising"
+		},
 		"3e7b24085e704c10ab03f93a19947c14rcp1":{
 			"0":"Wave Break"
 		},
@@ -239,6 +263,12 @@
 		},
 		"657210fe20ad402b85bda8f816b80d98rcp1":{
 			"0":"Windbound"
+		},
+		"4884bd9bd7864cf28deef05ef4b69e70rcp1":{
+			"0":"Wolfenstein – Youngblood"
+		},
+		"cba537cccfe3470b8784f88660ea5f09rcp1":{
+			"0":"Zombie Army 4"
 		}
 	}
 }
