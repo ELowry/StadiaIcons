@@ -29,6 +29,9 @@
 		"altSuffix":"_alt"
 	},
 	"uids":{
+		"defaultIcon":{
+			"0":"Stadia"
+		},
 		"8b7e7f7036e5483eaa8745d46248536crcp1":{
 			"0":"Assassin's Creed – Odyssey",
 			"1":"Assassin's Creed – Odyssey-2"
