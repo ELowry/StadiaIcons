@@ -7,14 +7,32 @@ Icon Designs for Stadia Games.
 StadiaIcons a set of game icons designed with Google Stadia in mind ([stadia.com](https://stadia.com)). The objective is to have one logo for each game in the Google Stadia Library, following a simple design principle inspired by the Stadia logo and colors.
 
 ## How can I use it?
-This project is free to use as you see fit. Simply download or reference the icons you wish to use in [PNG image format](/Images), as [Windows Icons](/Icons), or as [WebP Images](/WebP) and have fun!
+StadiaIcons can be used in one of 2 ways:
+1. You can simply download or use a link to the icons you wish to use in [PNG image format](/Images), as [Windows Icons](/Icons), or as [WebP Images](/WebP); you are free to use them as you see fit!
+2. You can use [StadiaIcons Shortcuts](https://stadiaicons.000webhostapp.com/games.php) (currently in BETA), which lets you install shortcuts to individual Stadia games directly to your Desktop/Start Menu with the corresponding StadiaIcons icon automatically assigned. [Click here](/Shortcuts) to learn more.
 
 ### Developers
+#### StadiaIcons
 The [refs.json](refs.json) file contains a list of all StadiaIcons referenced by game uid (the ones used in Stadia game URLs). Image paths can be constructed using the information contained in the `datasets` coupled with individual `uids`.
 
 Each image uri can be constructed as follows: `datasets.X.uri` + `uids.Y.Z` + (optional)`other.altSuffix` + `datasets.X.extension` where `X` is the type of icon, `Y` is the game uid and `Z` is the icon variant id (`0` by default).
 
-## Contents
-Each game logo havs 2 versions by default, one with a tinted overlay designed to make the logos fit with the Stadia color scheme (this is the default design), and one with only the game's default image colors (this design is marked with `_alt` at the end of the filename).
+#### StadiaIcons Shortcuts
+If you wish to make use of the [StadiaIcons Shortcuts](https://stadiaicons.000webhostapp.com/games.php) system, you will find the relevant information and code in the [/Shortcuts](/Shortcuts) folder.
 
-For some games, aditional icons are available based on the game's promotional material.
+## Contents
+Each game logo comes in 2 styles with 2 color variants each.
+
+The default icons are designed to be displayed in larger sizes (>128px)? They take the shape of the full Stadia Logo.
+
+![Destiny 2 Default Large Icon](/Images/192/Destiny%202.png) ![Destiny 2 Default Large Icon](/Images/192/Destiny%202_alt.png)
+
+The smaller variants are designed to be easily identifiable when displayed at smaller sizes, such as Windows Start Menu icons.
+
+![Destiny 2 Default Large Icon](/Images/128/Destiny%202.png) ![Destiny 2 Default Large Icon](/Images/128/Destiny%202_alt.png)
+
+The images with a tinted overlay are the default; they are designed to make the logos fit with the Stadia color scheme.
+
+The versions with only the game's default image colors follow the same naming scheme with an added `_alt` at the end of the filename.
+
+***Note:** For some games, additional icons are available based on the game's promotional material.*
