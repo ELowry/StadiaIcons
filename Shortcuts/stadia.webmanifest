@@ -1,0 +1,70 @@
+<?php
+	header('Content-Type: manifest/json');
+
+	include 'get.php';
+	
+?>{
+	"name": "<?php echo $fullName ?>",
+	"short_name": "<?php echo $shortName ?>",
+	"lang": "en-US",
+	"start_url": "<?php
+		echo '/' . $uid . '/?fullName=' . $fullName . '&shortName=' . $shortName . '&uid=' . $uid;
+		if ($variant != 0)
+		{
+			echo '&variant=' . $variant;
+		}
+		if ($alt != '')
+		{
+			echo '&alt=' . $alt;
+		}
+	?>",
+	"scope": "/<?php echo $uid ?>/",
+	"display": "fullscreen",
+	"theme_color": "#202124",
+	"icons": [
+		{
+			"src": "<?php echo $data->datasets->{'images-128'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-128'}->extension; ?>",
+			"type": "image/png",
+			"sizes": "128x128",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "<?php echo $data->datasets->{'images-192'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-192'}->extension; ?>",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "any"
+		},
+		{
+			"src": "<?php echo $data->datasets->{'images-512'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-512'}->extension; ?>",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "any"
+		},
+		{
+			"src": "<?php echo $data->datasets->images->uri . $data->uids->$uid->$variant . $alt . $data->datasets->images->extension; ?>",
+			"type": "image/png",
+			"sizes": "1024x1024",
+			"purpose": "any"
+		},
+		{
+			"src": "<?php echo $data->datasets->webp->uri . $data->uids->$uid->$variant . $alt . $data->datasets->webp->extension; ?>",
+			"type": "image/webp",
+			"sizes": "1024x1024",
+			"purpose": "any"
+		},
+		{
+			"src": "<?php echo $data->datasets->icons->uri . $data->uids->$uid->$variant . $alt . $data->datasets->icons->extension; ?>",
+			"type": "image/x-icon",
+			"sizes": "256x256 128x128 64x64 48x48 32x32 16x16"
+		}
+	],
+	"background_color": "#202124",
+	"related_applications": [
+		{
+			"platform": "play",
+			"id": "com.google.stadia.android",
+			"url": "https://play.google.com/store/apps/details?id=com.google.stadia.android"
+		}
+	],
+	"prefer_related_applications": false
+}
