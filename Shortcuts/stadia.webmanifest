@@ -19,7 +19,7 @@
 		}
 	?>",
 	"scope": "/<?php echo $uid ?>/",
-	"display": "fullscreen",
+	"display": "standalone",
 	"theme_color": "#202124",
 	"icons": [
 		{

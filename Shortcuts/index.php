@@ -1,4 +1,6 @@
 <?php
+	$checkSubdir = true;
+
 	include 'get.php';
 	
 	if ($fullName != null && $shortName != null && $uid != null && $data!= null && property_exists($data->uids, $uid))
@@ -53,6 +55,13 @@
 			<section id="Loading" class="show">
 				<div class="loader"><div></div><div></div><div></div><div></div></div>
 			</section>
+			<section id="Installed">
+				<div>
+					<h1>Installation Successful</h1>
+					<p>You should now be able to open <?php echo $fullName ?> directly from your Desktop or Start Menu.</p>
+					<p style="padding-top: 2vw;"><button class="LaunchGame"><span>Launch <?php echo $fullName ?> Now</span></button></a></p>
+				</div>
+			</section>
 			<section id="InstallPrompt">
 				<div>
 					<h1><span class="gradient">StadiaIcons</span> Shortcuts</h1>
@@ -91,13 +100,6 @@
 					<p>* StadiaIcon shortcuts use Progressive Web Apps, and in order to open your game without the address bar at the top, the app instead opens the game in a regular browser tab using a popup and immediately closes in the background.</p>
 				</div>
 			</section>
-			<section id="Installed">
-				<div>
-					<h1>Installation Successful</h1>
-					<p>You should now be able to open <?php echo $fullName ?> directly from your Desktop or Start Menu.</p>
-					<p style="padding-top: 2vw;"><button class="LaunchGame"><span>Launch <?php echo $fullName ?> Now</span></button></a></p>
-				</div>
-			</section>
 			<section id="Uninstall">
 				<div>
 					<h1><span class="gradient">StadiaIcons</span> Shortcut Stopped</h1>
@@ -121,9 +123,7 @@
 					<span class="close">×</span>
 			</aside>
 		</main>
-		<footer>
-			Copyright © 2020 Eric Lowry. All Rights Reserved.
-		</footer>
+		<?php include 'footer.php'; ?>
 	</body>
 </html>
 <?php
@@ -161,9 +161,7 @@
 				</div>
 			</section>
 		</main>
-		<footer>
-			Copyright © 2020 Eric Lowry. All Rights Reserved.
-		</footer>
+		<?php include 'footer.php'; ?>
 	</body>
 </html>
 		<?php

@@ -1,4 +1,4 @@
-var inPWA = (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches),
+var inPWA = (window.matchMedia('(display-mode: standalone)').matches || window.matchMedia('(display-mode: fullscreen)').matches || window.navigator.standalone === true),
 	isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor); 
 
 
@@ -48,9 +48,11 @@ window.addEventListener('load', function ()
 	else
 	{
 		var incompatibleDelay = setTimeout( function()
-		{
-			ShowIncompatible();
-		}, 1200);
+			{
+				ShowIncompatible();
+			}, 1200),
+			hasInstalled = false;
+		
 		let deferredPrompt;
 
 		window.addEventListener('beforeinstallprompt', (e) => {
@@ -79,18 +81,30 @@ window.addEventListener('load', function ()
 			deferredPrompt.userChoice.then((choiceResult) => {
 				if (choiceResult.outcome === 'accepted')
 				{
-					ShowInstalled();
+					if (!hasInstalled) 
+					{
+						hasInstalled = true;
+						ShowInstalled();
+					}
 				}
 				else
 				{
-					ShowInstallPrompt();
+					if (!hasInstalled) 
+					{
+						hasInstalled = false;
+						ShowInstallPrompt();
+					}
 				}
 			});
 		});
 		
 		window.addEventListener('appinstalled', (e) => {
-			// Log install to analytics
-			ShowInstalled();
+			// Has installed
+			if (!hasInstalled) 
+			{
+				hasInstalled = true;
+				ShowInstalled();
+			}
 		});
 	}
 	
@@ -215,6 +229,7 @@ function ShowIncompatible()
 }
 function ShowInstalled()
 {
+	document.getElementById('InstallPrompt').style.display = 'none';
 	document.getElementById('Installed').style.display = 'flex';
 	document.getElementById('Alert').style.display = 'flex';
 	document.getElementById('Loading').className = '';

@@ -1,4 +1,6 @@
 <?php
+	$ignoreGET = true;
+
 	include 'get.php';
 ?>
 <!DOCTYPE HTML>
@@ -13,7 +15,7 @@
 				echo '<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="' . $data->datasets->icons->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->icons->extension . '">' . "\n\t\t";
 				echo '<link rel="icon" type="image/png" sizes="128x128" href="' . $data->datasets->{'images-128'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-128'}->extension . '">' . "\n\t\t";
 				echo '<link rel="icon" type="image/png" sizes="192x192" href="' . $data->datasets->{'images-192'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-192'}->extension . '">' . "\n\t\t";
-				echo '<link rel="icon" type="image/png" sizes="512x512" href="' . $data->datasets->{'images-512'}->uri . $data->uids->defaultIcon->{'0'} . $alt . $data->datasets->{'images-512'}->extension . '">' . "\n\t\t";
+				echo '<link rel="icon" type="image/png" sizes="512x512" href="' . $data->datasets->{'images-512'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-512'}->extension . '">' . "\n\t\t";
 				echo '<link rel="icon" type="image/png" sizes="1024x1024" href="' . $data->datasets->images->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->images->extension . '">' . "\n\t\t";
 				echo '<link rel="icon" type="image/webp" sizes="1024x1024" href="' . $data->datasets->webp->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->webp->extension . '">' . "\n\t\t";
 				echo '<link rel="apple-touch-icon" href="' . $data->datasets->{'images-192'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-192'}->extension . '">' . "\n";
@@ -39,6 +41,8 @@
 				height: auto;
 			}
 			#grid > a > figure {
+				width: 128px;
+				height: 128px;
 				background-size: contain !important;
 			}
 			#grid > a > figure > img {
@@ -59,15 +63,39 @@
 		<script>
 			window.addEventListener('load', function ()
 			{
+				var hasResolved = false;
+				
+				setTimeout(function() {
+					if (!hasResolved)
+					{
+					document.getElementById('Alert').style.display = 'flex';
+					document.getElementById('Games').style.display = 'flex';
+					document.getElementById('Loading').className = '';
+					}
+				}, 12000);
+				
 				document.getElementById('CloseAlert').addEventListener('click', (e) => {
 					document.getElementById('Alert').style.display = 'none';
+				});
+				
+				Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => {
+					img.addEventListener('load', resolve);
+					img.addEventListener('error', resolve);
+				}))).then(() => {
+					hasResolved = true;
+					document.getElementById('Alert').style.display = 'flex';
+					document.getElementById('Games').style.display = 'flex';
+					document.getElementById('Loading').className = '';
 				});
 			});
 		</script>
 	</head>
 	<body>
 		<main>
-			<section style="display: flex;">
+			<section id="Loading" class="show">
+				<div class="loader"><div></div><div></div><div></div><div></div></div>
+			</section>
+			<section id="Games" style="display: none;">
 				<div style="max-width: 1600px; padding: 3vw;">
 					<div style="margin: auto; max-width: 1024px; padding: 3vw;">
 						<h1><span class="gradient">StadiaIcons</span> Shortcuts</h1>
@@ -108,14 +136,12 @@
 					?>
 				</div>
 			</section>
-			<aside id="Alert" style="display: flex;">
+			<aside id="Alert" style="z-index: 10;">
 					<h2>IMPORTANT</h2>
 					<p>This project is a work in progress. It is likely that installed <strong>StadiaIcons</strong> shortcuts will be disabled some time in the future.</p>
 					<span id="CloseAlert" class="close">×</span>
 			</aside>
 		</main>
-		<footer>
-			Copyright © 2020 Eric Lowry. All Rights Reserved.
-		</footer>
+		<?php include 'footer.php'; ?>
 	</body>
 </html>
