@@ -1,7 +1,19 @@
+DirectoryIndex games.php
+
+
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteRule ^[A-z0-9]+/(.*) /index.php [NC,L,QSA]
+RewriteRule ^[A-z0-9]{32}rcp1/(.*) /index.php [NC,L,QSA]
 
-AddType application/x-httpd-php  .webmanifest .htm
+
+AddType application/x-httpd-php .webmanifest .xml .json
+
+
+ErrorDocument 400 /inc/error.php?code=400
+ErrorDocument 401 /inc/error.php?code=401
+ErrorDocument 403 /inc/error.php?code=403
+ErrorDocument 404 /inc/error.php?code=404
+
+Options All -Indexes

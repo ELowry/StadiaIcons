@@ -1,17 +1,17 @@
 <?php
 	$checkSubdir = true;
 
-	include 'get.php';
+	include './inc/get.php';
 	
-	if ($fullName != null && $shortName != null && $uid != null && $data!= null && property_exists($data->uids, $uid))
+	if( $info->isValid )
 	{
 		
 		$urlParams = '?fullName=' . $fullName . '&shortName=' . $shortName . '&uid=' . $uid;
-		if ($variant != 0)
+		if( $variant != 0 )
 		{
 			$urlParams .= '&variant=' . $variant;
 		}
-		if ($alt != '')
+		if( $alt != '' )
 		{
 			$urlParams .= '&alt=' . $alt;
 		}
@@ -19,9 +19,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>StadiaIcons – <?php echo $fullName ?></title>
+		<title>StadiaIcons – <?php echo $fullName ?> – Shortcut</title>
+		<meta name="description" content="This page will allow you to install <?php echo $fullName ?> as a Progressive Web App with its corresponding StadiaIcon.">
+		<meta name="keywords" content="Stadia, Icons, Design, Gaming, Game, Shortcut, <?php echo $shortName ?>">
+		<meta name="author" content="Eric Lowry">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<link rel="manifest" href="/stadia.webmanifest<?php echo $urlParams ?>">
-		<meta name="Description" content="This page will allow you to install <?php echo $fullName ?> as a Progressive Web App with its corresponding StadiaIcon.">
+		
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="application-name" content="<?php echo $fullName ?>">
@@ -29,19 +34,39 @@
 		<meta name="theme-color" content="#202124">
 		<meta name="msapplication-navbutton-color" content="#202124">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="msapplication-starturl" content="<?php echo $myURL ?>/<?php echo $uid . '/' . $urlParams ?>">
+		<meta name="msapplication-starturl" content="<?php echo $info->shortcutUrl ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="theme-color" content="#202124">
 
 		<?php
-			echo '<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="' . $data->datasets->icons->uri . $data->uids->$uid->$variant . $alt . $data->datasets->icons->extension . '">' . "\n\t\t";
-			echo '<link rel="icon" type="image/png" sizes="128x128" href="' . $data->datasets->{'images-128'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-128'}->extension . '">' . "\n\t\t";
-			echo '<link rel="icon" type="image/png" sizes="192x192" href="' . $data->datasets->{'images-192'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-192'}->extension . '">' . "\n\t\t";
-			echo '<link rel="icon" type="image/png" sizes="512x512" href="' . $data->datasets->{'images-512'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-512'}->extension . '">' . "\n\t\t";
-			echo '<link rel="icon" type="image/png" sizes="1024x1024" href="' . $data->datasets->images->uri . $data->uids->$uid->$variant . $alt . $data->datasets->images->extension . '">' . "\n\t\t";
-			echo '<link rel="icon" type="image/webp" sizes="1024x1024" href="' . $data->datasets->webp->uri . $data->uids->$uid->$variant . $alt . $data->datasets->webp->extension . '">' . "\n\t\t";
-			echo '<link rel="apple-touch-icon" href="' . $data->datasets->{'images-192'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-192'}->extension . '">' . "\n";
+			echo '<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="' . $info->images->icon . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="128x128" href="' . $info->images->image128 . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="192x192" href="' . $info->images->image192 . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="512x512" href="' . $info->images->image512 . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="1024x1024" href="' . $info->images->image . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/webp" sizes="1024x1024" href="' . $info->images->webp . '">' . "\n\t\t";
+			echo '<link rel="apple-touch-icon" href="' . $info->images->image192 . '">' . "\n";
 		?>
+		
+		<meta property="og:title" content="<?php echo $shortName ?> shortcut">
+		<meta property="og:site_name" content="StadiaIcons Shortcuts">
+		<meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+		<meta property="og:description" content="This page will allow you to install <?php echo $fullName ?> as a Progressive Web App with its corresponding StadiaIcon.">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
+		<?php
+			echo '<meta property="og:image" content="' . $info->images->image . '">' . "\n\t\t";
+			echo '<meta property="og:image" content="' . $info->images->webp . '">' . "\n\t\t";
+			echo '<meta property="og:image" content="' . $info->images->image512 . '">' . "\n\t\t";
+			echo '<meta property="og:image" content="' . $info->images->image192 . '">' . "\n\t\t";
+			echo '<meta property="og:image" content="' . $info->images->image128 . '">' . "\n";
+		?>
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@EricLowry14">
+		<meta name="twitter:description" content="This page will allow you to install <?php echo $fullName ?> as a Progressive Web App with its corresponding StadiaIcon.">
+		<meta name="twitter:title" content="StadiaIcons – <?php echo $fullName ?> – Shortcut">
+		<meta name="twitter:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
 		
 		<link rel="stylesheet" href="/style.css">
 		
@@ -68,13 +93,13 @@
 					<h2><?php echo $fullName ?></h2>
 					<a id="InstallButton" href="https://stadia.google.com/player/<?php echo $uid ?>">
 						<img  srcset="<?php
-							echo preg_replace('/\s+/', "%20", $data->datasets->webp->uri . $data->uids->$uid->$variant . $alt . $data->datasets->webp->extension ) . ' 1024w, '
-								. preg_replace('/\s+/', "%20", $data->datasets->images->uri . $data->uids->$uid->$variant . $alt . $data->datasets->images->extension ) . ' 1024w, '
-								. preg_replace('/\s+/', "%20", $data->datasets->{'images-512'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-512'}->extension ) . ' 512w, '
-								. preg_replace('/\s+/', "%20", $data->datasets->{'images-192'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-192'}->extension ) . ' 192w, '
-								. preg_replace('/\s+/', "%20", $data->datasets->{'images-128'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-128'}->extension ) . ' 182w';
+							echo preg_replace('/\s+/', "%20", $info->images->webp ) . ' 1024w, '
+								. preg_replace('/\s+/', "%20", $info->images->image ) . ' 1024w, '
+								. preg_replace('/\s+/', "%20", $info->images->image512 ) . ' 512w, '
+								. preg_replace('/\s+/', "%20", $info->images->image192 ) . ' 192w, '
+								. preg_replace('/\s+/', "%20", $info->images->image128 ) . ' 182w';
 							?>" src="<?php
-							echo $data->datasets->{'images-192'}->uri . $data->uids->$uid->$variant . $alt . $data->datasets->{'images-192'}->extension;
+							echo $info->images->image192;
 							?>" alt="<?php
 							echo $fullName . ' Game Icon';
 						?>" style="width: 30vw;" />
@@ -123,7 +148,7 @@
 					<span class="close">×</span>
 			</aside>
 		</main>
-		<?php include 'footer.php'; ?>
+		<?php include './inc/footer.php'; ?>
 	</body>
 </html>
 <?php
@@ -134,20 +159,20 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title><span class="gradient">StadiaIcons</span> – Error</title>
-		<meta name="Description" content="There was an error processing your StadiaIcon request.">
+		<title>StadiaIcons – Error</title>
+		<meta name="description" content="There was an error processing your StadiaIcon request.">
+		<meta name="keywords" content="Stadia, Icons, Design, Gaming, Game, Shortcut, <?php echo $shortName ?>">
+		<meta name="author" content="Eric Lowry">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<?php
-			if ($data != null)
-			{
-				echo '<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="' . $data->datasets->icons->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->icons->extension . '">' . "\n\t\t";
-				echo '<link rel="icon" type="image/png" sizes="128x128" href="' . $data->datasets->{'images-128'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-128'}->extension . '">' . "\n\t\t";
-				echo '<link rel="icon" type="image/png" sizes="192x192" href="' . $data->datasets->{'images-192'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-192'}->extension . '">' . "\n\t\t";
-				echo '<link rel="icon" type="image/png" sizes="512x512" href="' . $data->datasets->{'images-512'}->uri . $data->uids->defaultIcon->{'0'} . $alt . $data->datasets->{'images-512'}->extension . '">' . "\n\t\t";
-				echo '<link rel="icon" type="image/png" sizes="1024x1024" href="' . $data->datasets->images->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->images->extension . '">' . "\n\t\t";
-				echo '<link rel="icon" type="image/webp" sizes="1024x1024" href="' . $data->datasets->webp->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->webp->extension . '">' . "\n\t\t";
-				echo '<link rel="apple-touch-icon" href="' . $data->datasets->{'images-192'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-192'}->extension . '">' . "\n";
-			}
+			echo '<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="' . $info->images->icon . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="128x128" href="' . $info->images->image128 . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="192x192" href="' . $info->images->image192 . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="512x512" href="' . $info->images->image512 . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/png" sizes="1024x1024" href="' . $info->images->image . '">' . "\n\t\t";
+			echo '<link rel="icon" type="image/webp" sizes="1024x1024" href="' . $info->images->webp . '">' . "\n\t\t";
+			echo '<link rel="apple-touch-icon" href="' . $info->images->image192 . '">' . "\n";
 		?>
 		
 		<link rel="stylesheet" href="/style.css">
@@ -161,7 +186,7 @@
 				</div>
 			</section>
 		</main>
-		<?php include 'footer.php'; ?>
+		<?php include './inc/footer.php'; ?>
 	</body>
 </html>
 		<?php

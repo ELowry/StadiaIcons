@@ -1,7 +1,14 @@
 <?php
-	header('Content-Type: manifest/json');
-
-	include 'get.php';
+	include './inc/get.php';
+	
+	if( $fullName != null && $shortName != null && $uid != null && $data!= null )
+	{
+		header('Content-Type: manifest/json');
+	
+		if( !property_exists( $data->uids, $uid ) )
+		{
+			$uid = 'defaultIcon';
+		}
 	
 ?>{
 	"name": "<?php echo $fullName ?>",
@@ -9,11 +16,11 @@
 	"lang": "en-US",
 	"start_url": "<?php
 		echo '/' . $uid . '/?fullName=' . $fullName . '&shortName=' . $shortName . '&uid=' . $uid;
-		if ($variant != 0)
+		if( $variant != 0 )
 		{
 			echo '&variant=' . $variant;
 		}
-		if ($alt != '')
+		if( $alt != '' )
 		{
 			echo '&alt=' . $alt;
 		}
@@ -68,3 +75,13 @@
 	],
 	"prefer_related_applications": false
 }
+<?php
+	}
+	else
+	{
+		header('HTTP/1.1 404 Not Found');
+		$_GET['code'] = '404';
+		include( './inc/error.php' );
+		exit;
+	}
+?>

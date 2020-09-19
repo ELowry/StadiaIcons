@@ -47,7 +47,7 @@ window.addEventListener('load', function ()
 	}
 	else
 	{
-		var incompatibleDelay = setTimeout( function()
+		var incompatibleDelay = window.setTimeout(function()
 			{
 				ShowIncompatible();
 			}, 1200),
@@ -135,7 +135,7 @@ function launchPup()
 {
 	var gameWindow = window.open('https://stadia.google.com/player/' + uid, '_blank');
 	
-	setTimeout( function()
+	window.setTimeout( function()
 	{
 		var hasRunCheck = false;
 		try
@@ -182,7 +182,7 @@ function launchPup()
 // POPUP TEST
 function TestPopup()
 {
-	var popupTest = setTimeout(function()
+	var popupTest = window.setTimeout(function()
 	{
 		console.warn("Popup Test Failed");
 		document.getElementById('PopupPrompt').style.display = 'flex';

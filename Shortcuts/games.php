@@ -1,16 +1,19 @@
 <?php
 	$ignoreGET = true;
 
-	include 'get.php';
+	include './inc/get.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>StadiaIcons – BETA</title>
-		<meta name="Description" content="There was an error processing your StadiaIcon request.">
+		<title>StadiaIcons – Shortcuts BETA – Stadia Games List</title>
+		<meta name="description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
+		<meta name="keywords" content="Stadia, Icons, Design, Gaming, Shortcuts">
+		<meta name="author" content="Eric Lowry">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<?php
-			if ($data != null)
+			if( $data != null )
 			{
 				echo '<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="' . $data->datasets->icons->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->icons->extension . '">' . "\n\t\t";
 				echo '<link rel="icon" type="image/png" sizes="128x128" href="' . $data->datasets->{'images-128'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-128'}->extension . '">' . "\n\t\t";
@@ -21,6 +24,29 @@
 				echo '<link rel="apple-touch-icon" href="' . $data->datasets->{'images-192'}->uri . $data->uids->defaultIcon->{'0'} . $data->datasets->{'images-192'}->extension . '">' . "\n";
 			}
 		?>
+		
+		<meta property="og:title" content="Games List">
+		<meta property="og:site_name" content="StadiaIcons Shortcuts">
+		<meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+		<meta property="og:description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
+		<?php
+			if( $data != null )
+			{
+				echo '<meta property="og:image" content="' . $data->datasets->images->uri . $data->datasets->images->extension . '">' . "\n\t\t";
+				echo '<meta property="og:image" content="' . $data->datasets->webp->uri . $data->datasets->webp->extension . '">' . "\n\t\t";
+				echo '<meta property="og:image" content="' . $data->datasets->{'images-512'}->uri . $data->datasets->{'images-512'}->extension . '">' . "\n\t\t";
+				echo '<meta property="og:image" content="' . $data->datasets->{'images-192'}->uri . $data->datasets->{'images-192'}->extension . '">' . "\n\t\t";
+				echo '<meta property="og:image" content="' . $data->datasets->{'images-128'}->uri . $data->datasets->{'images-128'}->extension . '">' . "\n";
+			}
+		?>
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@EricLowry14">
+		<meta name="twitter:description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
+		<meta name="twitter:title" content="StadiaIcons Shortcuts – Stadia Games List">
+		<meta name="twitter:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
 		
 		<link rel="stylesheet" href="/style.css">
 		<style>
@@ -42,18 +68,16 @@
 			}
 			#grid > a > figure {
 				width: 128px;
-				height: 128px;
 				background-size: contain !important;
 			}
 			#grid > a > figure > img {
+				width: 128px;
+				height: 128px;
 				transition: opacity 0.28s, filter 0.28s;
 			}
 			#grid > a:hover > figure > img {
 				opacity: 0;
 				filter: alpha(opacity=0);
-			}
-			figcaption {
-				max-width: 128px;
 			}
 			a:not(:hover) figcaption {
 				color: #fff;
@@ -106,22 +130,22 @@
 						<p><strong>Begin by picking one of these Stadia titles you own or have claimed and follow the instructions to install a <span class="gradient">StadiaIcons</span> Shortcut to your Desktop or Start Menu.</strong></p>
 					</div>
 					<?php
-						if ($data != null)
+						if( $data != null )
 						{
 					?>
 					<div id="grid">
 						<?php
-							foreach ( $data->uids as $currid => $imgs )
+							foreach( $data->uids as $currid => $imgs )
 							{
-								if ($currid != 'defaultIcon') {
+								if( $currid != 'defaultIcon' ) {
 									$name = $imgs->{'0'};
 									$sname = str_replace( ' – ', ': ', $name );
 									$imgname = str_replace ( array ( "'", '"', ' ' ), array ( '%27', '%22', '%20' ),  $data->uids->{$currid}->{'0'});
 									echo '<a href="/' . $currid . '/?fullName=' . $name . '&shortName=' . $sname . '&uid=' . $currid . '" target="_blank">' . "\n\t\t\t\t\t"
 										.	'<figure style="background: url(\'' . $data->datasets->{'images-192'}->uri . $imgname . $data->other->altSuffix . $data->datasets->{'images-192'}->extension . '\') no-repeat scroll;">' . "\n\t\t\t\t\t"
-										.		'<img src="' . $data->datasets->{'images-192'}->uri . $imgname . $data->datasets->{'images-192'}->extension . '" alt="[Image]"/>' . "\n\t\t\t\t"
+										.		'<img src="' . $data->datasets->{'images-192'}->uri . $imgname . $data->datasets->{'images-192'}->extension . '" alt="[' . $name . ' icon]" tytle="' . $sname . '"/>' . "\n\t\t\t\t\t"
+										.		'<figcaption>' . $sname . '</figcaption>' . "\n\t\t\t\t"
 										.	'</figure>' . "\n\t\t\t\t"
-										.	'<figcaption>' . $sname . '</figcaption>' . "\n\t\t\t\t"
 										.'</a>' . "\n\t\t\t\t";
 								}
 							}
@@ -142,6 +166,6 @@
 					<span id="CloseAlert" class="close">×</span>
 			</aside>
 		</main>
-		<?php include 'footer.php'; ?>
+		<?php include './inc/footer.php'; ?>
 	</body>
 </html>

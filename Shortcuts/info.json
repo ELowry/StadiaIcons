@@ -1,0 +1,15 @@
+<?php
+	header('Content-Type: application/json');
+
+	include './inc/get.php';
+	
+	$info->data = new stdClass();
+	
+	$info->data->fullName = $fullName;
+	$info->data->shortName = $shortName;
+	$info->data->gameUid = $uid;
+	$info->data->variantNumber = $variant;
+	$info->data->altSuffix = $alt;
+	
+	echo json_encode( $info );
+?>
