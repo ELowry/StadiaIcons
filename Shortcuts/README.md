@@ -2,7 +2,7 @@
 ## What is it?
 StadiaIcons Shortcuts is a system that leverages the power of Progressive Web Apps and some popup trickery to allow you to easily add individual Stadia game shortcuts to your computer in just a few clicks. And the best part is that each icon will automatically use StadiaIcons images!
 
-As part of the Beta, you can access StadiaIcons Shortcuts through [temporary standalone page](https://stadiaicons.000webhostapp.com/games.php) that will allow you to access each game's installation page directly. The end-goal is to eventually build this directly into Stadia using systems similar to [Stadia+](https://chrome.google.com/webstore/detail/stadia%20-extension/bbhmnnecicphphjamhdefpagipoegijd) or [Stadia Enhanced](https://chrome.google.com/webstore/detail/stadia-enhanced/ldeakaihfnkjmelifgmbmjlphdfncbfg).
+As part of the Beta, you can access StadiaIcons Shortcuts through [temporary standalone page](https://stadiaicons.000webhostapp.com/) that will allow you to access each game's installation page directly. The end-goal is to eventually build this directly into Stadia using systems similar to [Stadia+](https://chrome.google.com/webstore/detail/stadia%20-extension/bbhmnnecicphphjamhdefpagipoegijd) or [Stadia Enhanced](https://chrome.google.com/webstore/detail/stadia-enhanced/ldeakaihfnkjmelifgmbmjlphdfncbfg).
 
 ### BETA WARNING
 This system is in **BETA**, and as such it is almost certainly *temporary*. It will eventually move it to a more stable platform or simply be integrated into existing extensions/userscripts by other developers.
@@ -61,7 +61,7 @@ In order to create an individual PWA for each game, a bit of redirection tricker
 * All subfolders redirect straight to the root's [index.php](index.php) file, effectively making them all run the same code. This way, we can use each game's `uid` as a virtual subfolder in order to ensure each PWA can be installed separately.
 * The `.webmanifest` extension is set to run PHP code, which allows us to build the PWA's parameters dynamically 
 
-### [get.php](get.php)
+### [inc/get.php](inc/get.php)
 This file's sole purpose is to parse the url parameters (as described above) and fetch the StadiaIcons [refs.json](/refs.json) reference sheet (stored as the `$data` variable).
 
 ***Note:** This document contains a direct reference to the website's full URL, you will need to modify this manually.*
