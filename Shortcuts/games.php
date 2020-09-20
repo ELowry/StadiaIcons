@@ -1,16 +1,36 @@
 <?php
+
+	/* LICENSED UNDER AGPL 3.0
+	This file is part of StadiaIcons.
+
+	StadiaIcons is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	StadiaIcons is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with StadiaIcons.  If not, see <https://www.gnu.org/licenses/>.
+	*/
+	
 	$ignoreGET = true;
 
-	include './inc/get.php';
+	include $_SERVER['DOCUMENT_ROOT'] . '/inc/get.php';
+	
+	include $_SERVER['DOCUMENT_ROOT'] . '/inc/lang.php';
 ?>
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="<?php echo $langPrefix ?>">
 	<head>
-		<title>StadiaIcons – Shortcuts BETA – Stadia Games List</title>
-		<meta name="description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
-		<meta name="keywords" content="Stadia, Icons, Design, Gaming, Shortcuts">
+		<title>StadiaIcons – Shortcuts BETA – <?php _e( 'games->meta->Stadia Games List' ) ?></title>
+		<meta name="description" content="<?php _e( 'games->meta->Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!' ) ?>">
+		<meta name="keywords" content="<?php _e( 'meta->Stadia, Icons, Design, Gaming, Game, Shortcut' ) ?>">
 		<meta name="author" content="Eric Lowry">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		
 		<?php
 			if( $data != null )
@@ -25,10 +45,10 @@
 			}
 		?>
 		
-		<meta property="og:title" content="Games List">
+		<meta property="og:title" content="<?php _e( 'games->meta->Stadia Games List' ) ?>">
 		<meta property="og:site_name" content="StadiaIcons Shortcuts">
 		<meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
-		<meta property="og:description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
+		<meta property="og:description" content="<?php _e( 'games->meta->Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!' ) ?>">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
 		<?php
@@ -44,8 +64,8 @@
 		
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@EricLowry14">
-		<meta name="twitter:description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
-		<meta name="twitter:title" content="StadiaIcons Shortcuts – Stadia Games List">
+		<meta name="twitter:description" content="<?php _e( 'games->meta->Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!' ) ?>">
+		<meta name="twitter:title" content="StadiaIcons Shortcuts – <?php _e( 'games->meta->Stadia Games List' ) ?>">
 		<meta name="twitter:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
 		
 		<link rel="stylesheet" href="/style.css">
@@ -123,11 +143,11 @@
 				<div style="max-width: 1600px; padding: 3vw;">
 					<div style="margin: auto; max-width: 1024px; padding: 3vw;">
 						<h1><span class="gradient">StadiaIcons</span> Shortcuts</h1>
-						<h2>BETA TEST</h2>
-						<p>Welcome to the <span class="gradient">StadiaIcons</span> Shortcuts beta test!</p>
-						<p><strong>This project is a work in progress</strong>, and <em>I am mainly looking for feedback.</em></p>
-						<p>Though each individual installation page is unlikely to change much in terms of how they function, this list will most likely be entirely redesigned and/or integrated directly within the Stadia using some form of extension/userscript.</p>
-						<p><strong>Begin by picking one of these Stadia titles you own or have claimed and follow the instructions to install a <span class="gradient">StadiaIcons</span> Shortcut to your Desktop or Start Menu.</strong></p>
+						<h2><?php _e( 'games->content->BETA TEST' ) ?></h2>
+						<p><?php _e( 'games->content->Welcome to the %s Shortcuts beta test!', '<span class="gradient">StadiaIcons</span>' ) ?></p>
+						<p><?php _e( 'games->content-><strong>This project is a work in progress</strong>, and <em>I am mainly looking for feedback.</em>' ) ?></p>
+						<p><?php _e( 'games->content->Though each individual installation page is unlikely to change much in terms of how they function, this list will most likely be entirely redesigned and/or integrated directly within the Stadia using some form of extension/userscript.' ) ?></p>
+						<p><strong><?php _e( 'games->content->Begin by picking one of these Stadia titles you own or have claimed and follow the instructions to install a %s Shortcut to your Desktop or Start Menu.', '<span class="gradient">StadiaIcons</span>' ) ?></strong></p>
 					</div>
 					<?php
 						if( $data != null )
@@ -143,7 +163,7 @@
 									$imgname = str_replace ( array ( "'", '"', ' ' ), array ( '%27', '%22', '%20' ),  $data->uids->{$currid}->{'0'});
 									echo '<a href="/' . $currid . '/?fullName=' . $name . '&shortName=' . $sname . '&uid=' . $currid . '" target="_blank">' . "\n\t\t\t\t\t"
 										.	'<figure style="background: url(\'' . $data->datasets->{'images-192'}->uri . $imgname . $data->other->altSuffix . $data->datasets->{'images-192'}->extension . '\') no-repeat scroll;">' . "\n\t\t\t\t\t"
-										.		'<img src="' . $data->datasets->{'images-192'}->uri . $imgname . $data->datasets->{'images-192'}->extension . '" alt="[' . $name . ' icon]" tytle="' . $sname . '"/>' . "\n\t\t\t\t\t"
+										.		'<img src="' . $data->datasets->{'images-192'}->uri . $imgname . $data->datasets->{'images-192'}->extension . '" alt="[' . __( 'games->content->%s icon', $name ) . ']" tytle="' . $sname . '"/>' . "\n\t\t\t\t\t"
 										.		'<figcaption>' . $sname . '</figcaption>' . "\n\t\t\t\t"
 										.	'</figure>' . "\n\t\t\t\t"
 										.'</a>' . "\n\t\t\t\t";
@@ -155,17 +175,17 @@
 						}
 						else
 						{
-							echo '<h2>ERROR: Could not retrieve images.</h2>';
+							echo '<h2>' . __( 'games->content->ERROR: Could not retrieve images.' ) . '</h2>';
 						}
 					?>
 				</div>
 			</section>
 			<aside id="Alert" style="z-index: 10;">
-					<h2>IMPORTANT</h2>
-					<p>This project is a work in progress. It is likely that installed <strong>StadiaIcons</strong> shortcuts will be disabled some time in the future.</p>
+					<h2><?php _e( 'generic->IMPORTANT' ) ?></h2>
+					<p><?php _e( 'games->content->This project is a work in progress. It is likely that installed %s shortcuts will be disabled some time in the future.', '<strong>StadiaIcons</strong>' ) ?></p>
 					<span id="CloseAlert" class="close">×</span>
 			</aside>
 		</main>
-		<?php include './inc/footer.php'; ?>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php'; ?>
 	</body>
 </html>
