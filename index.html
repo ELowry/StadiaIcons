@@ -36,7 +36,7 @@
 		
 		<meta property="og:title" content="Stadia Games List">
 		<meta property="og:site_name" content="StadiaIcons Shortcuts">
-		<meta property="og:url" content="https://stadiaicons.000webhostapp.com/">
+		<meta property="og:url" content="https://elowry.github.io/StadiaIcons/">
 		<meta property="og:description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
@@ -49,7 +49,7 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@EricLowry14">
 		<meta name="twitter:description" content="Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!">
-		<meta name="twitter:title" content="StadiaIcons Shortcuts – Stadia Games List">
+		<meta name="twitter:title" content="StadiaIcons Shortcuts">
 		<meta name="twitter:image" content="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Header.png">
 		
 		<link rel="stylesheet" href="pages/style.css">
@@ -57,7 +57,38 @@
 		
 		<script src="pages/scripts.js"></script>
 		<script>
-			var langDir = 'Shortcuts/firebase/public/lang/';
+			var metaLang = {
+				description: {
+					tag: 'meta',
+					attr: 'name',
+					attrVal: 'description',
+					targetAttr: 'content',
+					path: 'home.metaDescription'
+				},
+				ogDescription: {
+					tag: 'meta',
+					attr: 'property',
+					attrVal: 'og:description',
+					targetAttr: 'content',
+					path: 'home.metaDescription'
+				},
+				twitterDescription: {
+					tag: 'meta',
+					attr: 'property',
+					attrVal: 'twitter:description',
+					targetAttr: 'content',
+					path: 'home.metaDescription'
+				},
+				keywords: {
+					tag: 'meta',
+					attr: 'name',
+					attrVal: 'keywords',
+					targetAttr: 'content',
+					path: 'meta.keywords',
+					props: ['']
+				}
+			},
+				langDir = 'Shortcuts/firebase/public/lang/';
 		</script>
 		<script src="Shortcuts/firebase/public/scripts/lang.js"></script>
 	</head>
@@ -68,15 +99,15 @@
 			</section>
 			<section id="Info">
 				<div>
-					<h1>Welcome to <span class="gradient">StadiaIcons</span> Shortcuts!</h1>
-					<h2>What is it?</h2>
-					<p><span class="gradient">StadiaIcons</span> a set of game icons designed with <a href="https://stadia.google.com" title="Go to stadia.google.com">Google Stadia</a> in mind. Each icon follows a simple design principle inspired by the Stadia logo and colors.</p>
-					<p>As for <span class="gradient">StadiaIcons</span> <strong>Shortcuts</strong>, it allows you to easily add individual Stadia game shortcuts with their corresponding <span class="gradient">StadiaIcon</span> to your devices in just a few clicks.</p>
-					<h2>How does it work?</h2>
-					<p>It's really quite simple: select a Stadia game you want to install from the list below and we'll guide you through the process.</p>
+					<h1 class="lang" data-lang="home.title">Welcome to &#8203;<span class="gradient">StadiaIcons</span> Shortcuts&#8203;!</h1>
+					<h2 class="lang" data-lang="home.whatTitle">What is it?</h2>
+					<p class="lang" data-lang="home.iconsDescription">&#8203;<span class="gradient">StadiaIcons</span>&#8203; is a set of game icons designed with &#8203;<a href="https://stadia.google.com" title="Go to stadia.google.com">Google Stadia</a>&#8203; in mind. Each icon follows a simple design principle inspired by the Stadia logo and colors.</p>
+					<p class="lang" data-lang="home.shortcutsDescription">As for &#8203;<span class="gradient">StadiaIcons</span> <strong>Shortcuts</strong>&#8203;, it allows you to easily add individual Stadia game shortcuts with their corresponding &#8203;<span class="gradient">StadiaIcon</span>&#8203; to your devices in just a few clicks.</p>
+					<h2 class="lang" data-lang="home.howTitle">How does it work?</h2>
+					<p class="lang" data-lang="home.howInfo">It's really quite simple: select a Stadia game you want to install from the list below and we'll guide you through the process.</p>
 					<p style="margin-top: 2em;">
-						<a id="Button" href="#Games">
-							<button><span style="font-size: 1.4em !important;">Show Me!</span></button>
+						<a href="#Games" class="scroll">
+							<button><span style="font-size: 1.4em !important;" class="lang" data-lang="home.button">Show Me!</span></button>
 						</a>
 					</p>
 				</div>

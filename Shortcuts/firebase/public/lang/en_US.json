@@ -52,6 +52,17 @@
 			"info": "To uninstall this shortcut, please press the {0} key as the shortcut launches."
 		}
 	},
+	"home":
+	{
+		"metaDescription": "Install shortcuts for Stadia games to your desktop with corresponding StadiaIcons!",
+		"title": "Welcome to {0}!",
+		"whatTitle": "What is it?",
+		"iconsDescription": "{0} is a set of game icons designed with {1} in mind. Each icon follows a simple design principle inspired by the Stadia logo and colors.",
+		"shortcutsDescription": "As for {0}, it allows you to easily add individual Stadia game shortcuts with their corresponding {1} to your devices in just a few clicks.",
+		"howTitle": "How does it work?",
+		"howInfo": "It's really quite simple: select a Stadia game you want to install from the list below and we'll guide you through the process.",
+		"button": "Show Me!"
+	},
 	"error":
 	{
 		"head":

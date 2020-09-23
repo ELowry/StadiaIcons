@@ -18,14 +18,6 @@
 window.addEventListener('load', function ()
 {
 	
-	// Smooth Scrolling
-	
-	document.getElementById('Button').addEventListener('click', function (e)
-	{
-		e.preventDefault();
-		scrollTo(document.documentElement, document.getElementById('Games').offsetTop, 400);
-	});
-	
 	// Get the refs.json structure
 	
 	fetch ('refs.json').then (
@@ -92,14 +84,30 @@ function StartLoading()
 }
 
 
-function scrollTo(element, to, duration) {
-	if (duration <= 0) return;
-	var difference = to - element.scrollTop;
-	var perTick = difference / duration * 10;
+(function() {
+	scrollTo();
+})();
 
-	setTimeout(function() {
-		element.scrollTop = element.scrollTop + perTick;
-		if (element.scrollTop === to) return;
-		scrollTo(element, to, duration - 10);
-	}, 10);
+function scrollTo() {
+	const links = document.querySelectorAll('.scroll');
+	links.forEach(each => (each.onclick = scrollAnchors));
+}
+
+function scrollAnchors(e, respond = null) {
+	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+	e.preventDefault();
+	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+	const targetAnchor = document.querySelector(targetID);
+	if (!targetAnchor) return;
+	const originalTop = distanceToTop(targetAnchor);
+	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+	const checkIfDone = setInterval(function() {
+		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+		if (distanceToTop(targetAnchor) === 0 || atBottom) {
+			targetAnchor.tabIndex = '-1';
+			targetAnchor.focus();
+			window.history.pushState('', '', targetID);
+			clearInterval(checkIfDone);
+		}
+	}, 100);
 }
