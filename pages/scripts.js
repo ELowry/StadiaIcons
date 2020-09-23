@@ -18,6 +18,9 @@
 window.addEventListener('load', function ()
 {
 	
+	// Start Smooth Scrolling
+	scrollTo();
+	
 	// Get the refs.json structure
 	
 	fetch ('refs.json').then (
@@ -83,10 +86,7 @@ function StartLoading()
 	});
 }
 
-
-(function() {
-	scrollTo();
-})();
+// Smooth Scrolling
 
 function scrollTo() {
 	const links = document.querySelectorAll('.scroll');
