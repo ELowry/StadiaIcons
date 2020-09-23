@@ -1,0 +1,90 @@
+{
+	"generic":
+	{
+		"error": "Erreur",
+		"important": "IMPORTANT"
+	},
+	"meta":
+	{
+		"title": "StadiaIcons – {0} – Rarcourci",
+		"simpleTitle": "{0} raccourci",
+		"description": "Cette page vous permettra d'installer {0} sous forme de <em>Progressive Web App</a> avec une icône StadiaIcon.",
+		"keywords": "Stadia, Icône, Design, Jeu, Jeu Vidéo, Rarcourci{0}"
+	},
+	"main":
+	{
+		"installed":
+		{
+			"title": "Installation réussie",
+			"info": "Vous devriez maintenant pouvoir ouvrir {0} directement depuis votre bureau ou depuis le menu Démarrer.",
+			"button": "Démarrez {0} maintenant"
+		},
+		"installPrompt":
+		{
+			"prompt": "Créez un raccourci sur votre appareil."
+		},
+		"popupPrompt":
+		{
+			"title": "Première installation",
+			"inset1": "C'est la première fois que vous installez un raccourci StadiaIcons.",
+			"inset2": "Afin de créer des raccourcis, vous devez autoriser ce site Web à afficher des <em>popups</em>*.",
+			"inset3": "Si votre navigateur le permet, vous devriez voir un message demandant cette autorisation. Il se trouve généralement à droite de la barre d'adresse.",
+			"request": "Si vous ne voyez pas ce message ou si vous venez d'octroyer l'autorisation au site, veuillez simplement appuyer sur ce bouton&nbsp;:",
+			"button": "Vérifier l'accès aux <em>popups</em>",
+			"footnote": "* Les raccourcis StadiaIcon Shortcuts fonction grâce aux <em>Progressive Web Apps</em>&nbsp;; ainsi, afin de lancer vos jeux en plein-écran, l'application doit donc ouvrir le jeu dans une fenâtre classique de navigateur à l'aide d'une en l'ouvrant dans une <em>popup</em> et referme alors immédiatement la page d'origine en arrière-plan."
+		},
+		"uninstall":
+		{
+			"stopped": "a été interrompu",
+			"info": "Vous avez appuyé sur la touche {0} pendant le lancement de l'application.",
+			"uninstall": "Vous essayez peut-être de désinstaller ce raccourci&nbsp;? Dans ce cas, vous devriez trouver un bouton <em>désinstaller</em> dans le menu de réglages de cette page, lequel se situe généralement en haut à droite de la fenâtre.",
+			"restart": "Au cas contraire, vous pouvez simplement appuyer sur ce bouton pour démarrer votre jeu&nbsp;:",
+			"button": "Jouer à {0}"
+		},
+		"unavailable":
+		{
+			"status": "Soit le raccourci est peut-être déjà installé OU votre navigateur n'est peut-être pas pris en charge",
+			"info": "Si vous avez déjà installé le raccourci {1} de {0}, vous n'avez plus besoin d'utiliser ce lien&nbsp;; utilisez simplement le raccourci en question pour jouer à votre jeu&nbsp;!",
+			"browsers": "Au cas contraire, nous vous recommandons vivement d'utiliser {0}Télécharger Chrome{1} ou {2}Télécharger Edge{3}."
+		},
+		"alert":
+		{
+			"info": "Pour désinstaller ce raccourci, appuyez sur la touche {0} pendant le lancement du raccourci."
+		}
+	},
+	"error":
+	{
+		"head":
+		{
+			"title": "StadiaIcons – Erreur {0}",
+			"simpleTitle": "StadiaIcons – Erreur",
+			"description": "Une erreur s'est produite lors du chargement de cette page&nbsp;: Erreur {0}, {1}"
+		},
+		"description": "Une erreur s'est produite lors du traitement de votre demande {0}.",
+		"instructions": "Veuillez fermer cette page et réessayer. Si le problème persiste, veuillez me contacter sur Reddit {0} ou sur {1}.",
+		"title": "Erreur {0}:",
+		"codes":
+		{
+			"400": "Mauvaise requête",
+			"401": "Vous n'êtes aps autorisés à visiter cette page",
+			"403": "Accès interdit",
+			"404": "Page non trouvée"
+		},
+		"cta": "{0}Cliquez ici{1} pour retourner à la page d'accueil"
+	},
+	"popupTest":
+	{
+		"head":
+		{
+			"title": "Test de popup",
+			"description": "Cette page est utilisée pour tester l'autorisation à afficher des <em>popups</em>."
+		},
+		"warning": "Cette fenêtre devrait bientpot se refermer toute seule.",
+		"request": "Veuillez ne pas la refermer vous-même."
+	},
+	"footer":
+	{
+		"copyright": "Copyright © {0} Eric Lowry. Sous license {1}.",
+		"links": "Suivez {0}StadiaIcons sur GitHub{1}"
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"hosting": {
+		"public": "public",
+		"ignore": [
+			"firebase.json",
+			"**/.*",
+			"**/node_modules/**"
+		],
+		"redirects": [
+			{
+				"source": "/",
+				"destination": "https://github.com/ELowry/StadiaIcons/",
+				"type": 301
+			}
+		],
+		"rewrites": [
+			{
+				"source": "/info/*",
+				"function": "verify"
+			},
+			{
+				"source": "/*rcp1/stadia.webmanifest",
+				"function": "webmanifest"
+			},
+			{
+				"source": "/*rcp1/sw.js",
+				"destination": "/scripts/sw.js"
+			},
+			{
+				"source": "/*rcp1/shortcuts.js",
+				"destination": "/scripts/shortcuts.js"
+			},
+			{
+				"source": "/*rcp1/",
+				"function": "shortcut"
+			}
+		]
+	}
+}

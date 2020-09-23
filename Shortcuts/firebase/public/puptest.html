@@ -1,0 +1,75 @@
+<!--
+
+	/* LICENSED UNDER AGPL 3.0
+	This file is part of StadiaIcons.
+
+	StadiaIcons is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	StadiaIcons is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with StadiaIcons.  If not, see <https://www.gnu.org/licenses/>.
+	*/
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title class="lang" data-lang="popupTest.head.title">StadiaIcons – Popup Test</title>
+		<meta name="description" content="This page is used to test for popup authorization.">
+		<meta name="author" content="Eric Lowry">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		
+		<script>
+			window.addEventListener('load', function () {
+				if (this.opener !== null)
+				{
+					this.opener.postMessage({'loaded': true}, "*");
+					this.close();
+				}
+				else
+				{
+					window.setTimeout(function ()
+					{
+						this.location.replace("/");
+					}, 2000);
+				}
+			});
+			var metaLang = {
+				description: {
+					tag: 'meta',
+					attr: 'name',
+					attrVal: 'description',
+					targetAttr: 'content',
+					path: 'popupTest.head.description'
+				}
+			};
+		</script>
+		<script src="/scripts/lang.js"></script>
+		
+		<link rel="stylesheet" href="/style.css">
+	</head>
+	<body class="translatable">
+		<script>0</script>
+		<main>
+			<section id="Loading">
+				<div class="loader"><div></div><div></div><div></div><div></div></div>
+			</section>
+			<section class="forced">
+				<div>
+						<h1 class="lang" data-lang="popupTest.warning">This window should close shortly.</h1>
+						<p class="lang" data-lang="popupTest.request">Please do not close it yourself.</p>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
+			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203;</p>
+		</footer>
+	</body>
+</html>
