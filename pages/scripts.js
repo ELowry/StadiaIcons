@@ -29,7 +29,22 @@ window.addEventListener('load', function ()
 			
 			for(u in json.uids)
 			{
-				console.log(json.uids[u]);
+				
+				if( u !== 'defaultIcon' ) {
+					
+					var name = json.uids[u][0],
+						sName = name.replace(' – ', ': '),
+						imgName = name.replace("'", '%27').replace('"', '%22').replace(' ', '%20').replace('&', '%26').replace('?', '%3F')),
+						item = `
+						<a href="https://stadiaicons.web.app/` + u + `/?fullName=` + name + `&shortName=` + sName + `" target="_blank">' . "\n\t\t\t\t\t"
+							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192' ).extension + `') no-repeat scroll;">
+								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + name + ` icon]" title="` + sName + `"/>
+								<figcaption>` + name + `</figcaption>
+							</figure>
+						</a>`;
+					grid.indertAdjascentHTML('beforeend', item);
+				}
+				
 			}
 			
 			setTimeout(function()
