@@ -53,7 +53,11 @@ window.addEventListener( 'load', function ()
 	
 	// FIND EXISTING & POSSIBLES
 	
-	fetch ('../lang/langs.json').then (
+	if(!langFile)
+	{
+		langFile = '../lang/langs.json';
+	}
+	fetch (langFile).then (
 		response => response.json()
 	).then (
 		(json) => {

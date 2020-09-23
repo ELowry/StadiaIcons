@@ -106,8 +106,8 @@ module.exports = function(info, errors)
 					props: [', ` + info.fullName + `']
 				}
 			},
-			
-				uid = '` + info.uid + `';
+				uid = '` + info.uid + `',
+				langFile = '../lang/langs.json';
 		</script>
 		<script src="/scripts/lang.js"></script>
 		<script src="/` + info.uid + `/shortcuts.js"></script>
