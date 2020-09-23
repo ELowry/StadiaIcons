@@ -20,12 +20,10 @@ window.addEventListener('load', function ()
 	
 	// Smooth Scrolling
 	
-	$(document).on('click', 'a[href^="#"]', function (event) {
-		event.preventDefault();
-
-		$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top
-		}, 400);
+	document.getElementById('Button').addEventListener('click', function (e)
+	{
+		e.preventDefault();
+		scrollTo(document.documentElement, document.getElementById('Games').offsetTop, 400);
 	});
 	
 	// Get the refs.json structure
@@ -91,4 +89,17 @@ function StartLoading()
 		document.getElementById('Games').style.display = 'flex';
 		document.body.classList.add('loaded');
 	});
+}
+
+
+function scrollTo(element, to, duration) {
+	if (duration <= 0) return;
+	var difference = to - element.scrollTop;
+	var perTick = difference / duration * 10;
+
+	setTimeout(function() {
+		element.scrollTop = element.scrollTop + perTick;
+		if (element.scrollTop === to) return;
+		scrollTo(element, to, duration - 10);
+	}, 10);
 }
