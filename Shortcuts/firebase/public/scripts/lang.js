@@ -53,7 +53,7 @@ window.addEventListener( 'load', function ()
 	
 	// FIND EXISTING & POSSIBLES
 	
-	if(!langDir)
+	if(typeof langDir === undefined)
 	{
 		langDir = '../lang/';
 	}
