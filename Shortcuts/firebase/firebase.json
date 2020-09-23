@@ -9,7 +9,7 @@
 		"redirects": [
 			{
 				"source": "/",
-				"destination": "https://github.com/ELowry/StadiaIcons/",
+				"destination": "https://elowry.github.io/StadiaIcons/",
 				"type": 301
 			}
 		],
