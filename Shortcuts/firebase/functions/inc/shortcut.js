@@ -107,7 +107,7 @@ module.exports = function(info, errors)
 				}
 			},
 				uid = '` + info.uid + `',
-				langFile = '../lang/langs.json';
+				langDir = '../lang/';
 		</script>
 		<script src="/scripts/lang.js"></script>
 		<script src="/` + info.uid + `/shortcuts.js"></script>

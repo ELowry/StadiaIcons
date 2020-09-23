@@ -53,11 +53,11 @@ window.addEventListener( 'load', function ()
 	
 	// FIND EXISTING & POSSIBLES
 	
-	if(!langFile)
+	if(!langDir)
 	{
-		langFile = '../lang/langs.json';
+		langDir = '../lang/';
 	}
-	fetch (langFile).then (
+	fetch (langDir + 'langs.json').then (
 		response => response.json()
 	).then (
 		(json) => {
@@ -115,7 +115,7 @@ window.addEventListener( 'load', function ()
 
 function GrabLanguage(lang, prefix)
 {
-	fetch ('../lang/' + lang + '.json').then (
+	fetch (langDir + lang + '.json').then (
 		response => response.json()
 	).then (
 		(json) => {

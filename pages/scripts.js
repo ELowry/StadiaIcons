@@ -66,6 +66,7 @@ function StartLoading()
 	{
 		if (!hasResolved)
 		{
+			document.getElementById('Info').style.display = 'flex';
 			document.getElementById('Games').style.display = 'flex';
 			document.body.classList.add('loaded');
 		}
@@ -76,6 +77,7 @@ function StartLoading()
 		img.addEventListener('error', resolve);
 	}))).then(() => {
 		hasResolved = true;
+			document.getElementById('Info').style.display = 'flex';
 		document.getElementById('Games').style.display = 'flex';
 		document.body.classList.add('loaded');
 	});
