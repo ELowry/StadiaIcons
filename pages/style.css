@@ -1,3 +1,23 @@
+#Info {
+	box-shadow: 0 0.125em 0.75em rgba(0,0,0,0.6), 0 0.0625em 0.375em rgba(0,0,0,0.34);
+}
+	#Info > div {
+		max-width: 1280px !important;
+	}
+@media (min-width: 1024px)
+{
+	#Info > div {
+		font-size: 1.24em;
+	}
+	#Info h1 {
+		font-size: 2.4em;
+	}
+}
+
+#Games {
+	background-color: #1a1b1e;
+}
+
 #grid {
 	display: flex;
 	flex-wrap: wrap;

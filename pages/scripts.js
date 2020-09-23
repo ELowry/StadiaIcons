@@ -18,7 +18,17 @@
 window.addEventListener('load', function ()
 {
 	
-	// Get 
+	// Smooth Scrolling
+	
+	$(document).on('click', 'a[href^="#"]', function (event) {
+		event.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 400);
+	});
+	
+	// Get the refs.json structure
 	
 	fetch ('refs.json').then (
 		response => response.json()
