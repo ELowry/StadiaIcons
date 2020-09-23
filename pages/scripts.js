@@ -42,7 +42,7 @@ window.addEventListener('load', function ()
 						<a href="https://stadiaicons.web.app/` + u + `/?fullName=` + name + `&shortName=` + sName + `" target="_blank">
 							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192'].extension + `') no-repeat scroll;">
 								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + name + ` icon]" title="` + sName + `"/>
-								<figcaption>` + name + `</figcaption>
+								<figcaption>` + sName + `</figcaption>
 							</figure>
 						</a>`;
 					grid.insertAdjacentHTML('beforeend', item);
