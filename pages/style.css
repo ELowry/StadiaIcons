@@ -1,0 +1,33 @@
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+	#grid > a {
+		padding: 0 2vw;
+	}
+		#grid > a > figure,
+		#grid > a > figure > img {
+			margin: 0;
+			padding: 0;
+			max-width: 128px;
+			height: auto;
+		}
+		#grid > a > figure {
+			width: 128px;
+			background-size: contain !important;
+		}
+			#grid > a > figure > img {
+				width: 128px;
+				height: 128px;
+				transition: opacity 0.28s, filter 0.28s;
+			}
+			#grid > a:hover > figure > img {
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			
+a:not(:hover) figcaption {
+	color: #fff;
+}
