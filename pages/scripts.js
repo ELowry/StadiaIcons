@@ -36,13 +36,14 @@ window.addEventListener('load', function ()
 				if( u !== 'defaultIcon' ) {
 					
 					var name = json.uids[u][0],
-						sName = name.replace(' – ', ': '),
+						fName = name.replace(' – ', ': '),
+						sName = name.split(' – ')[0],
 						imgName = name.replace("'", '%27').replace('"', '%22').replace(' ', '%20').replace('&', '%26').replace('?', '%3F'),
 						item = `
 						<a href="https://stadiaicons.web.app/` + u + `/?fullName=` + imgName + `&shortName=` + sName.replace("'", '%27').replace('"', '%22').replace(' ', '%20').replace('&', '%26').replace('?', '%3F') + `" target="_blank">
 							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192'].extension + `') no-repeat scroll;">
-								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + name + ` icon]" title="` + sName + `"/>
-								<figcaption>` + sName + `</figcaption>
+								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + sName + ` icon]" title="` + fName + `"/>
+								<figcaption>` + fName + `</figcaption>
 							</figure>
 						</a>`;
 					grid.insertAdjacentHTML('beforeend', item);
