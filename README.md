@@ -9,7 +9,7 @@ StadiaIcons a set of game icons designed with Google Stadia in mind ([stadia.com
 ## How can I use it?
 StadiaIcons can be used in one of 2 ways:
 1. You can simply download or use a link to the icons you wish to use in [PNG image format](/Images), as [Windows Icons](/Icons), or as [WebP Images](/WebP); you are free to use them as you see fit!
-2. You can use [StadiaIcons Shortcuts](https://stadiaicons.000webhostapp.com/games.php) (currently in BETA), which lets you install shortcuts to individual Stadia games directly to your Desktop/Start Menu with the corresponding StadiaIcons icon automatically assigned. [Click here](/Shortcuts) to learn more.
+2. You can use [StadiaIcons Shortcuts](https://stadiaicons.web.app/), which lets you install shortcuts to individual Stadia games directly to your Desktop (and Start Menu in Windows) with the corresponding StadiaIcons icon automatically assigned. Learn more in the [Shortcuts](/Shortcuts) folder.
 
 ### Developers
 #### StadiaIcons
@@ -18,7 +18,7 @@ The [refs.json](refs.json) file contains a list of all StadiaIcons referenced by
 Each image uri can be constructed as follows: `datasets.X.uri` + `uids.Y.Z` + (optional)`other.altSuffix` + `datasets.X.extension` where `X` is the type of icon, `Y` is the game uid and `Z` is the icon variant id (`0` by default).
 
 #### StadiaIcons Shortcuts
-If you wish to make use of the [StadiaIcons Shortcuts](https://stadiaicons.000webhostapp.com/games.php) system, you will find the relevant information and code in the [/Shortcuts](/Shortcuts) folder.
+If you wish to make use of the [StadiaIcons Shortcuts](https://stadiaicons.web.app/) system, you will find the relevant information and code in the [/Shortcuts](/Shortcuts) folder.
 
 ## Contents
 Each game logo comes in 2 styles with 2 color variants each.
