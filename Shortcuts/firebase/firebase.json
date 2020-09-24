@@ -10,7 +10,7 @@
 			{
 				"source": "/",
 				"destination": "https://elowry.github.io/StadiaIcons/",
-				"type": 301
+				"type": 303
 			}
 		],
 		"rewrites": [

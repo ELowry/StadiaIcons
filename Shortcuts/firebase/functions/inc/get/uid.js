@@ -7,7 +7,7 @@ module.exports = function(path)
 	// GRAB UID FROM FILE PATH
 	
 	var output = {
-		uid: validator.rtrim(validator.ltrim(validator.trim(validator.whitelist(path, 'a-zA-Z0-9'), '/'), 'info/'), '/stadia.webmanifest')
+		uid: validator.trim(validator.whitelist(path, 'a-zA-Z0-9'), '/').replace(/^info\//, '').replace(/\/?stadia\.?webmanifest$/, '')
 	};
 	
 	// GET UID
