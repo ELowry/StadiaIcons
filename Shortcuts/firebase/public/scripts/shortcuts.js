@@ -146,10 +146,10 @@ window.addEventListener( 'load', function ()
 	}
 
 	// CLOSE ASIDE
-	var launchButtons = document.getElementsByClassName( 'closeAside' );
-	for ( var i = 0; i < launchButtons.length; i++ )
+	var closeButtons = document.getElementsByClassName( 'closeAside' );
+	for ( var i = 0; i < closeButtons.length; i++ )
 	{
-		launchButtons[i].addEventListener( 'click', ( e ) =>
+		closeButtons[i].addEventListener( 'click', ( e ) =>
 		{
 			document.getElementById( 'Alert' ).style.display = 'none';
 		} );
