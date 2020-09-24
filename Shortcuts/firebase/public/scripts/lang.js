@@ -243,7 +243,7 @@ function verifyLang(verif, langs, possibles)
 	
 	verif = prefix + '_' + suffix;
 	
-	if (!lang.hasOwnProperty(prefix) || !langs[prefix].includes(verif))
+	if (!langs.hasOwnProperty(prefix) || !langs[prefix].includes(verif))
 	{
 		return null;
 	}
