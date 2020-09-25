@@ -1,0 +1,101 @@
+{
+	"generic":
+	{
+		"error": "Fehler",
+		"important": "WICHTIG"
+	},
+	"meta":
+	{
+		"title": "StadiaIcons – {0} – Verknüpfung",
+		"simpleTitle": "{0} Verknüpfung",
+		"description": "Diese Webseite erlaubt dir {0} als Progressive Web App mit dem passenden StadiaIcon zu installieren.",
+		"keywords": "Stadia, Icon, Design, Gaming, Spiele, Verknüpfung{0}"
+	},
+	"main":
+	{
+		"installed":
+		{
+			"title": "Installation erfoglreich",
+			"info": "Du solltest jetzt in der Lage sein {0} direkt von deinem Desktop, oder Start Menü zu öffnen.",
+			"button": "Starte {0} jetzt"
+		},
+		"installPrompt":
+		{
+			"prompt": "Erstelle eine Verknüpfung auf deinem Gerät."
+		},
+		"popupPrompt":
+		{
+			"title": "Erstinstallation",
+			"inset1": "Dies ist das erste mal, dass du eine StadiaIcons Verknüpfung erstellst.",
+			"inset2": "Um eine Verknüpfung zu erstellen, musst du diese Webseite erst autorisieren Pop-up-Fenster anzeigen zu dürfen*.",
+			"inset3": "Abhängig von deinem Browser, solltest du eine Anfrage zur Autorisierung sehen. Diese ist typischerweise rechts von der Adresszeile.",
+			"request": "Siehst du diese Nachricht nicht, oder hast sie bereits autorisiert, drücke bitte diesen Knopf:",
+			"button": "Pop-Up Zugriff testen",
+			"footnote": "* StadiaIcon Verknüpfungen benutzen Progressive Web Apps und um das jeweilige Spiel ohne die Adresszeile zu öffnen, öffnet das Spiel stattdessen in einem Pop-Up, welches sich anschließend im Hintergrund schließt."
+		},
+		"uninstall":
+		{
+			"stopped": "Pausiert",
+			"info": "Du hast die {0} Taste gedrückt, während die Verknüpfung startet.",
+			"uninstall": "Möglicherweise versuchst du die Verknüpfung zu deinstallieren. Ist dies der Fall, solltest du eine <em>deinstallieren</em> Option in den Einstellungen dieses Fensters finden. Besagtes Menü befindet sich typischerweise am oberen, rechten Rand des Fensters.",
+			"restart": "Ist dies nicht der Fall, kannst du das Spiel ganz einfach über diesen Knopf starten:",
+			"button": "Starte {0}"
+		},
+		"unavailable":
+		{
+			"status": "Die Verknüpfung existiert möglicherweise bereits, oder dein Browser wird nicht unterstützt.",
+			"info": "Falls du die Verknüpfung für {0} von {1} bereits erstellt hast, brauchst du diese Adresse nicht wieder aufrufen; benutze einfach die erstellte Verknüpfung um das Spiel zu starten!",
+			"browsers": "Andernfalls empfehlen wir die Benutzung von {0}Chrome herunterladen{1} oder {2}Edge herunterladen{3}."
+		},
+		"alert":
+		{
+			"info": "Um diese Verknüpfung zu deinstallieren, drücke bitte die {0} Taste, wenn die Verknüpfung startet."
+		}
+	},
+	"home":
+	{
+		"metaDescription": "Erstelle Verknüpfungen für Stadia Spiele auf deinem Desktop, mit dem pasenden StadiaIcons!",
+		"title": "Willkommen zu {0}!",
+		"whatTitle": "Was it dies?",
+		"iconsDescription": "{0} ist eine Sammlung von Icons, im Stil von {1}. Jedes Icon folgt einem simplen Design Prinzip, inspiriert durch das Stadia Logo und seine Farben.",
+		"shortcutsDescription": "{0}, erlaubt dir schnell und einfach individuelle Verknüpfungen zu Stadia Spielen mit ihrem jeweiligen {1} in wenigen Clicks zu deinem Gerät hinzuzufügen.",
+		"howTitle": "Wie funktioniert das?",
+		"howInfo": "Es ist eigentlich ganz einfach: Wähle ein Stadia Spiel von der Liste unten zur Installation aus und wir begleiten dich durch den Prozess.",
+		"button": "Zeigs mir!"
+	},
+	"error":
+	{
+		"description": "Bei der Verarbeitung deiner {0} Anfrage, ist ein Fehler aufgetreten.",
+		"instructions": "Bitte schließe diese Seite und versuche es erneut. Tritt der Fehler weiterhin auf, kontaktiere uns bitte über {0} oder {1}.",
+		"title": "Fehler {0}:",
+		"cta": "{0}Drücke hiere{1} um zur Startseite zurückzukehren.",
+		"codes":
+		{
+			"400": "Fehlerhafte Anfrage",
+			"401": "Ungültige Authentifizierung",
+			"403": "Keine Berechtigung",
+			"404": "Seite nicht gefunden"
+		},
+		"head":
+		{
+			"title": "StadiaIcons – Fehler {0}",
+			"simpleTitle": "StadiaIcons – Fehler",
+			"description": "Beim laden der Webseite ist ein Fehler aufgetreten: Fehler {0}, {1}"
+		}
+	},
+	"popupTest":
+	{
+		"warning": "Dieses Fenster sollte sich in Kürze schließen.",
+		"request": "Bitte schließe es nicht selbst.",
+		"head":
+		{
+			"title": "Popup Test",
+			"description": "Diese Seite wird für die Pop-Up Autorisierung genutzt."
+		}
+	},
+	"footer":
+	{
+		"copyright": "Copyright © {0} Eric Lowry. Licensed under {1}.",
+		"links": "Folge {0}StadiaIcons auf GitHub{1}"
+	}
+}
