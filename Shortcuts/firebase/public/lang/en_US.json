@@ -26,7 +26,7 @@
 		"popupPrompt":
 		{
 			"title": "First Installation",
-			"inset1": "This is the first time you are installing a StadiaIcon shortcut.",
+			"inset1": "This is the first time you are installing a StadiaIcons shortcut.",
 			"inset2": "In order to create shortcuts, you must authorize this website to display popup windows*.",
 			"inset3": "Depending on your browser, you should see a message requesting this authorization. It is typically to the right of the address bar.",
 			"request": "If you do not see this message or once you have given authorization, please press this button:",
@@ -65,15 +65,10 @@
 	},
 	"error":
 	{
-		"head":
-		{
-			"title": "StadiaIcons – Error {0}",
-			"simpleTitle": "StadiaIcons – Error",
-			"description": "There was an error loading this page: Error {0}, {1}"
-		},
 		"description": "There was an error processing your {0} request.",
 		"instructions": "Please close this page and try again. If the problem persists, please contact us on Reddit at {0} or on {1}.",
 		"title": "Error {0}:",
+		"cta": "{0}Click Here{1} to return to the home page.",
 		"codes":
 		{
 			"400": "Bad Request",
@@ -81,17 +76,22 @@
 			"403": "Forbidden",
 			"404": "Page Not Found"
 		},
-		"cta": "{0}Click Here{1} to return to the home page."
+		"head":
+		{
+			"title": "StadiaIcons – Error {0}",
+			"simpleTitle": "StadiaIcons – Error",
+			"description": "There was an error loading this page: Error {0}, {1}"
+		}
 	},
 	"popupTest":
 	{
+		"warning": "This window should close shortly.",
+		"request": "Please do not close it yourself.",
 		"head":
 		{
 			"title": "Popup Test",
 			"description": "This page is used to test for popup authorization."
-		},
-		"warning": "This window should close shortly.",
-		"request": "Please do not close it yourself."
+		}
 	},
 	"footer":
 	{
