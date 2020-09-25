@@ -1,0 +1,101 @@
+{
+	"generic":
+	{
+		"error": "Fel",
+		"important": "VIKTIGT"
+	},
+	"meta":
+	{
+		"title": "StadiaIcons – {0} – Genväg",
+		"simpleTitle": "{0} genväg",
+		"description": "Den här sidan låter dig installera {0} som en Progressive Web App med motsvarande StadiaIcons-ikon.",
+		"keywords": "Stadia, Ikoner, Design, Gaming, Spel, Genväg{0}"
+	},
+	"main":
+	{
+		"installed":
+		{
+			"title": "Installationen Lyckades",
+			"info": "Du kan nu öppna {0} direkt från ditt skrivbord eller din startmeny.",
+			"button": "Starta {0} nu"
+		},
+		"installPrompt":
+		{
+			"prompt": "Skapa en genväg på din enhet."
+		},
+		"popupPrompt":
+		{
+			"title": "Första Installation",
+			"inset1": "Det är första gången du installerar en StadiaIcons genvägar.",
+			"inset2": "För att skapa genvägar måste du tillåta den här webbsidan att visa popup-fönster*.",
+			"inset3": "Beroende på din webbläsare borde du se ett meddelande som begär tillåtelse. Meddelandet är oftast till höger om addressfältet.",
+			"request": "Om du inte ser detta meddelande eller om du redan tillåtit popup-fönster, tryck på knappen nedan:",
+			"button": "Installera",
+			"footnote": "* StadiaIcons-genvägar använder Progressive Web App (PWA)-appar. För att öppna spelet utan addressfältet öppnar StadiaIcons spelet i din webbläsare med en popup som körs i bakgrunden. "
+		},
+		"uninstall":
+		{
+			"stopped": "Stoppad",
+			"info": "Du tryckte på {0} medan genvägen startade.",
+			"uninstall": "Om du försöker avinstallera genvägen kan du hitta en <em>avinstallera</em> knapp i fönstrets inställningar. Inställningarna finns oftast i övre högra hörnet.",
+			"restart": "Annars behöver du bara klicka på knappen nedan för att starta spelet.",
+			"button": "Starta {0}"
+		},
+		"unavailable":
+		{
+			"status": "Genvägen kanske redan är installerad, annars är det möjligt att din webbläsare inte stöds.",
+			"info": "Om du redan har installerat {0} {1}-genvägen behöver du inte längre använda den här länken. Bara använd den installerade genvägen för att spela!",
+			"browsers": "Annars rekommenderar vi starkt att du använder {0}Google Chrome{1} eller {0}Microsoft Edge{1}."
+		},
+		"alert":
+		{
+			"info": "För att avinstallera genvägen, klicka på {0} medan genvägen startar."
+		}
+	},
+	"home":
+	{
+		"metaDescription": "Installera genvägar till dina Stadia spel, med snygga ikoner!",
+		"title": "Välkommen till {0}!",
+		"whatTitle": "Vad är det?",
+		"iconsDescription": "{0} är en mängd ikoner formgjorda med {1} i åtanke. Varje ikon följer en enkel designprincip inspirerad av Stadia-loggan och Stadias temafärger.",
+		"shortcutsDescription": "{0} tillåter dig att enkelt lägga till Stadia spel som gevägar med deras motsvarande {1}, på bara några klick!",
+		"howTitle": "Hur fungerar det?",
+		"howInfo": "Det är ganska enkelt egentligen: välj ett Stadia-spel från listan nedan, efter det kommer vi guida dig genom installationen.",
+		"button": "Låter bra!"
+	},
+	"error":
+	{
+		"head":
+		{
+			"title": "StadiaIcons – Felkod {0}",
+			"simpleTitle": "StadiaIcons – Felkod",
+			"description": "Något gick fel medan sidan laddades: Felkod {0}, {1}"
+		},
+		"description": "Något gick fel medan din {0}-begäran hanterades.",
+		"instructions": "Stäng denna sida och försök igen. Om problemet återkommer, kontakta oss på Reddit via {0} eller med {1}.",
+		"title": "Felkod {0}:",
+		"codes":
+		{
+			"400": "Felaktig förfrågan (Bad request)",
+			"401": "Inte auktoriserad (Unauthorized)",
+			"403": "Förbjuden förfrågan (Forbidden)",
+			"404": "Okänd sida (Page not found)"
+		},
+		"cta": "{0}Klicka här{1} för att komma tillbaka till hem-sidan."
+	},
+	"popupTest":
+	{
+		"head":
+		{
+			"title": "Test sida för popups",
+			"description": "Den här sidan används för att testa popup-behörighet."
+		},
+		"warning": "Det här fönstret borde stängas inom kort.",
+		"request": "Försök inte stänga sidan själv."
+	},
+	"footer":
+	{
+		"copyright": "Copyright © {0} Eric Lowry. Licenserad enligt {1}.",
+		"links": "Följ {0}StadiaIcons på GitHub{1}"
+	}
+}
