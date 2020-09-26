@@ -1,0 +1,102 @@
+{
+	"translator": "timewasternl",
+	"generic":
+	{
+		"error": "Fout",
+		"important": "BELANGRIJK"
+	},
+	"meta":
+	{
+		"title": "StadiaIcons – {0} – Snelkoppeling",
+		"simpleTitle": "{0} snelkoppeling",
+		"description": "Deze pagina laat je {0} installeren als Progressive Web App met het bijbehorende StadiaIcon.",
+		"keywords": "Stadia, Icons, Design, Gaming, Game, Snelkoppeling{0}"
+	},
+	"main":
+	{
+		"installed":
+		{
+			"title": "Installatie Succesvol",
+			"info": "Je kunt nu {0} direct vanaf je Desktop of Start Menu openen.",
+			"button": "Start {0} Nu"
+		},
+		"installPrompt":
+		{
+			"prompt": "Maak een snelkoppeling op je apparaat."
+		},
+		"popupPrompt":
+		{
+			"title": "Eerste Installatie",
+			"inset1": "Dit is de eerste keer dat je een StadiaIcons snelkoppeling installeert.",
+			"inset2": "Om snelkoppelingen aan te maken, moet je deze website eerst rechten geven om popup vensters te tonen*.",
+			"inset3": "Afhankelijk van de browser die je gebruikt, zul je een bericht te zien krijgen die hiernaar vraagt. Meestal staat deze rechts van de adresbalk.",
+			"request": "Als je dit bericht niet ziet of de rechten al hebt toegestaan, druk dan op deze knop:",
+			"button": "TestPopup Toegang",
+			"footnote": "* StadiaIcon snelkoppelingen gebruiken Progressive Web Apps, en in plaats van je game te openen met een adresbalk bovenin, opent de app de game in een normaal browser tabblad met een popup en sluit hij deze meteen weer op de achtergrond."
+		},
+		"uninstall":
+		{
+			"stopped": "Gestopt",
+			"info": "Je hebt op de {0} toets gedrukt terwijl de snelkoppeling aan het starten was.",
+			"uninstall": "Probeerde je misschien om deze shortcut te deïnstalleren? Als dit het geval is, zou je een <em>verwijder</em>-knop in de instellingen van dit venster moeten zien. Dit menu staat doorgaans rechtsbovenin.",
+			"restart": "Als dat niet zo is, kun je simpelweg op deze knop drukken om je game te starten:",
+			"button": "Start {0}"
+		},
+		"unavailable":
+		{
+			"status": "De snelkoppeling is al geïnstalleerd OF je browser wordt niet ondersteund",
+			"info": "Als je de {0} {1} snelkoppeling al geïnstalleerd hebt, hoef je deze link niet langer te gebruiken; gebruik simpelweg de snelkoppeling om je game te spelen!",
+			"browsers": "In het andere geval, raden we je sterk aan om {0}Chrome{1} or {2}Edge{3} te downloaden."
+		},
+		"alert":
+		{
+			"info": "Om deze snelkoppeling te deïnstalleren, druk je bij het starten van de snelkoppeling de {0} toets in."
+		}
+	},
+	"home":
+	{
+		"metaDescription": "Installeer snelkoppelingen voor Stadia games op je desktop met de bijbehorende StadiaIcons!",
+		"title": "Welkom bij {0}!",
+		"whatTitle": "Wat is het?",
+		"iconsDescription": "{0} is een set van game iconen ontworpen met {1} in gedachten. Elk icoon volgt een simpel designprincipe geïnspireerd door het Stadia logo en kleuren.",
+		"shortcutsDescription": "{0} laat je gemakkelijk individuele Stadia game snelkoppelingen met bijbehorende {1} toevoegen aan je apparaat, met maar een paar keer klikken.",
+		"howTitle": "Hoe werkt het?",
+		"howInfo": "Het is vrij simpel: selecteer een Stadia game die je wil installeren uit onderstaande lijst en we helpen je door het proces.",
+		"button": "Laat maar zien!"
+	},
+	"error":
+	{
+		"description": "Er is een fout opgetreden bij het verwerken van je {0} aanvraag.",
+		"instructions": "Sluit deze pagina en probeer het alstublieft opnieuw. Als het probleem blijft bestaan, neem contact met ons op via Reddit op  {0} of {1}.",
+		"title": "Fout {0}:",
+		"cta": "{0}Klik hier{1} om terug te gaan naar de startpagina.",
+		"codes":
+		{
+			"400": "Foute aanvraag",
+			"401": "Niet geautoriseerd",
+			"403": "Verboden toegang",
+			"404": "Niet gevonden"
+		},
+		"head":
+		{
+			"title": "StadiaIcons – Fout {0}",
+			"simpleTitle": "StadiaIcons – Fout",
+			"description": "Er is een fout opgetreden bij het laden van deze pagina: Fout {0}, {1}"
+		}
+	},
+	"popupTest":
+	{
+		"warning": "Dit venster zou binnenkort moeten sluiten.",
+		"request": "Sluit 'm alstublieft niet zelf.",
+		"head":
+		{
+			"title": "Popup Test",
+			"description": "Deze pagina is bedoeld voor het testen van popup rechten."
+		}
+	},
+	"footer":
+	{
+		"copyright": "Copyright © {0} Eric Lowry. Gelicenseerd onder {1}.",
+		"links": "Volg {0}StadiaIcons op GitHub{1}"
+	}
+}

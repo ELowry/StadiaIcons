@@ -77,5 +77,5 @@ if ( uid == 'defaultIcon' || /^[A-z0-9]{32}rcp1$/.test( uid ) )
 }
 else
 {
-	console.error( 'The uid parameter is not valid' );
+	console.error('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'The uid parameter is not valid' );
 }

@@ -105,7 +105,7 @@ window.addEventListener( 'load', function ()
 			
 		}
 	).catch ((err) => {
-		console.log(err);
+		console.error('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', err);
 	});
 	
 });
@@ -126,11 +126,17 @@ function GrabLanguage(lang, prefix)
 			
 			TranslateHtml(json);
 			
+			if (json.hasOwnProperty('translator'))
+			{
+				var thanksTranslator = 'Thanks to ' + json.translator + ' for the translation!!!!!';
+				console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', thanksTranslator);
+			}
+			
 			document.body.classList.add('translated');
 			
 		}
 	).catch ((err) => {
-		console.log(err);
+		console.error('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', err);
 	});
 }
 
@@ -181,7 +187,7 @@ function TranslateMeta(data)
 						}
 						else
 						{
-							console.log('Translation Error: target not found for ', metaLang[m]);
+							console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', metaLang[m]);
 						}
 					}
 				}
@@ -206,18 +212,18 @@ function TranslateHtml(data)
 		{
 			if (elems && elems.length > 0)
 			{
-				//console.log('Translating {', objs[i].innerHTML, '} into {', target.format(elems), '} using these elements: ', elems);
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target.format(elems), '} using these elements: ', elems);
 				objs[i].innerHTML = target.format(elems);
 			}
 			else
 			{
-				//console.log('Translating {', objs[i].innerHTML, '} into {', target, '}.');
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target, '}.');
 				objs[i].innerHTML = target;
 			}
 		}
 		else
 		{
-			console.log('Translation Error: target not found for ', objs[i]);
+			console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', objs[i]);
 		}
 	}
 }

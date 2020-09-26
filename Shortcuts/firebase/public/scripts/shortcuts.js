@@ -14,6 +14,10 @@
 	You should have received a copy of the GNU General Public License
 	along with StadiaIcons.  If not, see <https://www.gnu.org/licenses/>.
 	*/
+
+console.log('%cStadiaIcons Shortcuts', 'display: inline-block; margin: 0.4em 0.3em 0.1em; padding: 0.2em; border-radius: 0.2em; font-size: 2.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif; color: #ffffff;')
+console.log('%cHah, you found me!\nHere\'s a cookie— oh wait no, we don\'t use those; take a croissant instead: 🥐\nIf you\'re experiencing problems with StadiaIcons Shortcuts or are just curious about how things run, please check out the GitHub page:', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; color: #d1293d;' );
+console.log('%chttps://github.com/ELowry/StadiaIcons/', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; font-weight: 600; color: #ff773d;' );
 	
 var inPWA = ( window.matchMedia( '(display-mode: standalone)' ).matches || window.matchMedia( '(display-mode: fullscreen)' ).matches || window.navigator.standalone === true ),
 	isChrome = /Chrome/.test( navigator.userAgent ) && /Google Inc/.test( navigator.vendor );
@@ -28,10 +32,10 @@ if ( "serviceWorker" in navigator )
 	{
 		navigator.serviceWorker.register( '/' + uid + "/sw.js?uid=" + uid ).then( ( reg ) =>
 		{
-			console.log( 'ServiceWorker registration successful with scope: ', reg.scope );
+			console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'ServiceWorker registration successful with scope: ', reg.scope );
 		} ).catch( ( err ) =>
 		{
-			console.error( 'Service Worker Error', err );
+			console.error('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Service Worker Error', err );
 		} );
 	} );
 }
@@ -171,7 +175,7 @@ function launchPup()
 			if ( ( !gameWindow || gameWindow.closed || typeof gameWindow.closed == 'undefined' ) || ( isChrome && !gameWindow || gameWindow.outerHeight === 0 ) )
 			{
 				// Failure
-				console.warn( 'The popup was blocked!' );
+				console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'The popup was blocked!' );
 
 				ShowInstallPrompt(); // TODO: Make this a specific version for recurring blocked popups.
 
@@ -186,14 +190,14 @@ function launchPup()
 		}
 		catch ( err )
 		{
-			console.warn( err );
+			console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', err );
 
 			if ( !gameWindow || gameWindow.closed || typeof gameWindow.closed == 'undefined' )
 			{
 				// Failure
 				if ( !hasRunCheck )
 				{
-					console.warn( 'The popup was blocked!' );
+					console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'The popup was blocked!' );
 
 					ShowInstallPrompt(); // TODO: Make this a specific version for recurring blocked popups.
 				}
@@ -214,7 +218,7 @@ function TestPopup()
 {
 	var popupTest = window.setTimeout( function ()
 	{
-		console.warn( "Popup Test Failed" );
+		console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', "Popup Test Failed" );
 		document.getElementById( 'PopupPrompt' ).style.display = 'flex';
 		document.getElementById( 'Loading' ).className = '';
 	}, 500 );
@@ -225,7 +229,7 @@ function TestPopup()
 		{
 			if ( e.data.loaded )
 			{
-				console.log( "Popup Test Successful" );
+				console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', "Popup Test Successful" );
 				clearTimeout( popupTest );
 				document.getElementById( 'InstallPrompt' ).style.display = 'flex';
 				document.getElementById( 'Loading' ).className = '';

@@ -15,6 +15,10 @@
 	along with StadiaIcons.  If not, see <https://www.gnu.org/licenses/>.
 	*/
 	
+console.log('%cStadiaIcons Shortcuts', 'display: inline-block; margin: 0.4em 0.3em 0.1em; padding: 0.2em; border-radius: 0.2em; font-size: 2.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif; color: #ffffff;')
+console.log('%cHah, you found me!\nHere\'s a cookie— oh wait no, we don\'t use those; take a croissant instead: 🥐\nIf you\'re experiencing problems with StadiaIcons Shortcuts or are just curious about how things run, please check out the GitHub page:', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; color: #d1293d;' );
+console.log('%chttps://github.com/ELowry/StadiaIcons/', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; font-weight: 600; color: #ff773d;' );
+	
 window.addEventListener('load', function ()
 {
 	
