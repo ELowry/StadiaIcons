@@ -7,6 +7,7 @@ module.exports = function(info, errors)
 	{
 		output += `
 <!DOCTYPE HTML>
+<meta charset="UTF-8">
 <html lang="en">
 	<head>
 		<title class="lang" data-lang="meta.title">StadiaIcons – &#8203;` + info.fullName + `&#8203; – Shortcut</title>
@@ -194,6 +195,7 @@ module.exports = function(info, errors)
 	{
 		output += `
 <!DOCTYPE HTML>
+<meta charset="UTF-8">
 <html lang="en">
 	<head>
 		<title class="lang" data-lang="error.head.simpleTitle">StadiaIcons – Error</title>
@@ -241,7 +243,7 @@ module.exports = function(info, errors)
 			output += '0';
 		}
 		else{
-			output+= 'console.log(' + JSON.stringify(errors) + ')';
+			output+= "console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:\"Google Sans\",\"Product Sans\",\"Roboto\",sans-serif;', 'ERRORS: '," + JSON.stringify(errors) + ')';
 		}
 			
 		output += `</script>
@@ -259,7 +261,7 @@ module.exports = function(info, errors)
 		</main>
 		<footer>
 			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
-			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203;</p>
+			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | <a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">Privacy Policy</a></p>
 		</footer>
 	</body>
 </html>`;

@@ -97,6 +97,20 @@
 	"footer":
 	{
 		"copyright": "Copyright © {0} Eric Lowry. Licensed under {1}.",
-		"links": "Folge {0}StadiaIcons auf GitHub{1}"
+		"links": "Folge {0}StadiaIcons auf GitHub{1} | {2}Datenschutzerklärung{3}"
+	},
+	"privacy":
+	{
+		"title": "Datenschutzerklärung",
+		"what": "What we Store",
+		"whatText": "This website is built on {0}Google's Firebase platform{1} and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.",
+		"whatLink": "You can learn more at {0}this link{1}.",
+		"cookies": "Cookies",
+		"cookiesText": "Though we love cookies {0}, we much prefer croissants {1}... So we don't story any cookies, don't worry!",
+		"head":
+		{
+			"title": "StadiaIcons – Datenschutzerklärung",
+			"description": "Keep your cookies, we have croissants!"
+		}
 	}
 }

@@ -21,34 +21,19 @@
 <meta charset="UTF-8">
 <html lang="en">
 	<head>
-		<title class="lang" data-lang="popupTest.head.title">StadiaIcons – Popup Test</title>
-		<meta name="description" content="This page is used to test for popup authorization.">
+		<title class="lang" data-lang="privacy.head.title">StadiaIcons – Privacy Policy</title>
+		<meta name="description" content="Keep your cookies, we have croissants!">
 		<meta name="author" content="Eric Lowry">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		
 		<script>
-			window.addEventListener('load', function () {
-				if (this.opener !== null)
-				{
-					this.opener.postMessage({'loaded': true}, "*");
-					this.close();
-				}
-				else
-				{
-					window.setTimeout(function ()
-					{
-						this.location.replace("/");
-					}, 2000);
-				}
-			});
-			
 			var metaLang = {
 				description: {
 					tag: 'meta',
 					attr: 'name',
 					attrVal: 'description',
 					targetAttr: 'content',
-					path: 'popupTest.head.description'
+					path: 'privacy.head.description'
 				}
 			},
 			langDir = '../lang/';
@@ -65,14 +50,19 @@
 			</section>
 			<section class="forced">
 				<div>
-						<h1 class="lang" data-lang="popupTest.warning">This window should close shortly.</h1>
-						<p class="lang" data-lang="popupTest.request">Please do not close it yourself.</p>
+					<h1><span class="gradient">StadiaIcons</span> Shortcuts</h1>
+					<h2 class="lang" data-lang="privacy.title">Privacy Policy</h2>
+					<h3 class="lang" data-lang="privacy.what">What we Store</h3>
+					<p class="lang" data-lang="privacy.whatText">This website is built on &#8203;<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noreferrer noopener">&#8203;Google's Firebase platform&#8203;</a>&#8203; and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.</p>
+					<p class="lang" data-lang="privacy.whatLink">You can learn more at &#8203;<a href="https://firebase.google.com/support/privacy#data_processing_information" target="_blank" rel="noreferrer noopener">&#8203;this link&#8203;</a>&#8203;.</p>
+					<h3 class="lang" data-lang="privacy.cookies">Cookies</h3>
+					<p class="lang" data-lang="privacy.cookiesText">Though we love cookies &#8203;🍪&#8203;, we much prefer croissants &#8203;🥐&#8203;... So we don't story any cookies, don't worry!</p>
 				</div>
 			</section>
 		</main>
 		<footer>
 			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
-			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | <a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">Privacy Policy</a></p>
+			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | &#8203;<a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">&#8203;Privacy Policy&#8203;</a>&#8203;</p>
 		</footer>
 	</body>
 </html>
