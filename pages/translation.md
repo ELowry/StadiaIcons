@@ -10,7 +10,7 @@ I wish to make the service easy to use and understand for all Stadia users, but 
 
 Here's how to go about things:
 
-1. First, check [this list of posts](https://github.com/ELowry/StadiaIcons/issues?q=is%3Aissue+label%3Atranslation+) in a new tab `Ctrl+click` to see if there isn't already a translation in your language. If there is, you can always check it for mistakes or improvements :grimacing:
+1. First, check [this list of posts](https://github.com/ELowry/StadiaIcons/issues?q=label%3Atranslation+) in a new tab `Ctrl+click` to see if there isn't already a translation in your language. If there is, you can always check it for mistakes or improvements :grimacing:
 2. If there is no translation for your language, simply create a new **"issue"** to post your translation into.
 3. *(Optional) You can set the issue's* label *to* translation *on the right; otherwise I'll take care of it.*
 4. Copy the big block of code below and paste it into your newly created issue.
