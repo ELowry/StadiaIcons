@@ -132,7 +132,7 @@ Here's how to go about things:
 		"whatText": "This website is built on {0}Google's Firebase platform{1} and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.",
 		"whatLink": "You can learn more at {0}this link{1}.",
 		"cookies": "Cookies",
-		"cookiesText": "Though we love cookies {0}, we much prefer croissants {1}... So we don't story any cookies, don't worry!",
+		"cookiesText": "Though we love cookies {0}, we much prefer croissants {1}... So we don't store any cookies, don't worry!",
 		"head":
 		{
 			"title": "StadiaIcons – Privacy Policy",
@@ -292,7 +292,7 @@ what": `What we Store`
 whatText": `This website is built on {0}Google's Firebase platform{1} and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
 whatLink: `You can learn more at {0}this link{1}.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
 cookies: `Cookies`
-cookiesText: `Though we love cookies {Cookie Emoji}, we much prefer croissants {Croissant Emoji}... So we don't story any cookies, don't worry!`
+cookiesText: `Though we love cookies {Cookie Emoji}, we much prefer croissants {Croissant Emoji}... So we don't store any cookies, don't worry!`
 
 #### head
 
