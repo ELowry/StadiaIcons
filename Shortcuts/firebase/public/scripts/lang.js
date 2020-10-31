@@ -14,6 +14,14 @@
 	You should have received a copy of the GNU General Public License
 	along with StadiaIcons.  If not, see <https://www.gnu.org/licenses/>.
 	*/
+	
+// Language Directory Fallback
+
+if(typeof langDir === 'undefined')
+{
+	var langDir = '../lang/';
+}
+
 
 window.addEventListener( 'load', function ()
 {
@@ -53,10 +61,6 @@ window.addEventListener( 'load', function ()
 	
 	// FIND EXISTING & POSSIBLES
 	
-	if(typeof langDir === undefined)
-	{
-		langDir = '../lang/';
-	}
 	fetch (langDir + 'langs.json').then (
 		response => response.json()
 	).then (
