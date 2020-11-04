@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 
 module.exports = function(info, errors)
 {
-	if (Object.keys(errors).length === 0 && info.isValid)
+	if (Object.keys(errors).length === 0)
 	{
 		return `{
 	"name": "` + info.fullName + `",

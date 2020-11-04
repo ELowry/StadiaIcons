@@ -21,7 +21,11 @@
 		},
 		"installPrompt":
 		{
-			"prompt": "Créez un raccourci sur votre appareil."
+			"prompt": "Créez un raccourci sur votre appareil.",
+			"warningTitle": "AVERTISSEMENT",
+			"warning1": "Malheureusement aucune icône n'est encore disponible pour ce jeu.",
+			"warning2": "Vous pouvez tout-de-même installer le raccourci, mais il aura l'icône par défaut pour le moment.",
+			"warningButton": "Je Comprends"
 		},
 		"popupPrompt":
 		{
@@ -54,11 +58,11 @@
 	},
 	"home":
 	{
-		"metaDescription": "Installez des racourcis vers les jeux Stadia avec l'icône StadiaIcons correspondante !",
+		"metaDescription": "Installez des raccourcis vers les jeux Stadia avec l'icône StadiaIcons correspondante !",
 		"title": "Bienvenue à {0}&nbsp;!",
 		"whatTitle": "Qu'est-ce&nbsp;?",
 		"iconsDescription": "{0} est un set d'icônes de jeux créés pour {1}. Chaque icône respecte un design simple inspirées par le logo et les couleurs de Stadia.",
-		"shortcutsDescription": "Quant à {0}, c'est un système qui vous permet de créer facilement sur votre bureau des racourcis pour vos jeux Stadia avec leur {1} correspondante.",
+		"shortcutsDescription": "Quant à {0}, c'est un système qui vous permet de créer facilement sur votre bureau des raccourcis pour vos jeux Stadia avec leur {1} correspondante.",
 		"howTitle": "Comment ça marche&nbsp;?",
 		"howInfo": "C'est assez simple&nbsp;: séléctionnez un jeu Stadia que vous souhaitez ajouter parmi la liste ci-dessous et suivez les instructions.",
 		"button": "Je veux!"

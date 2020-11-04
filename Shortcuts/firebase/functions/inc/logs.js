@@ -21,7 +21,7 @@ module.exports = function(log)
 			{
 				functions.logger[log.type](log.message);
 			}
-			toPush.message = log.message;
+			toPush.object = log.object;
 		}
 		else if (!log.hasOwnProperty('object'))
 		{
@@ -29,7 +29,7 @@ module.exports = function(log)
 			{
 				functions.logger[log.type](log.message);
 			}
-			toPush.object = log.object;
+			toPush.message = log.message;
 		}
 		else
 		{

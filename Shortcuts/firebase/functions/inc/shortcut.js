@@ -3,7 +3,7 @@ const functions = require('firebase-functions');
 module.exports = function(info, errors)
 {
 	var output = require('./license.js');
-	if (Object.keys(errors).length === 0 && info.isValid)
+	if (Object.keys(errors).length === 0)
 	{
 		output += `
 <!DOCTYPE HTML>
@@ -143,6 +143,19 @@ module.exports = function(info, errors)
 							<button><span class="lang" data-lang="main.installPrompt.prompt">Create a shortcut on your device.</span></button>
 						</div>
 					</a>
+				</div>
+				<div id="Warning">
+					<div>
+						<span class="close closeWarning">×</span>
+						<h2 class="lang" data-lang="main.installPrompt.warningTitle">IMPORTANT</h2>
+						<p class="lang" data-lang="main.installPrompt.warning1">Unfortunately the icons for this game is not yet available.</p>
+						<p class="lang" data-lang="main.installPrompt.warning2">You can still install the shortcut, but it will have a default icon for the time being.</p>
+						<span class="closeWarning">
+							<button>
+								<span class="lang" data-lang="main.installPrompt.warningButton">I Understand</span>
+							</button>
+						</span>
+					</div>
 				</div>
 			</section>
 			<section id="PopupPrompt">

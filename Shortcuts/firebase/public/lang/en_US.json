@@ -21,7 +21,11 @@
 		},
 		"installPrompt":
 		{
-			"prompt": "Create a shortcut on your device."
+			"prompt": "Create a shortcut on your device.",
+			"warningTitle": "WARNING",
+			"warning1": "Unfortunately the icons for this game is not yet available.",
+			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
+			"warningButton": "I Understand"
 		},
 		"popupPrompt":
 		{

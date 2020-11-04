@@ -22,21 +22,23 @@ module.exports = function(request, hasGet, uid, params, refs)
 	
 	// Uid fallback & storage
 	
+	data.uid = uid;
+	
 	if (!refs.uids.hasOwnProperty(uid))
 	{
 		uid = Object.keys(refs.uids)[0];
 		data.isValid = false;
 	}
 	
-	data.uid = uid;
+	data.imgID = uid;
 	
 	if (hasGet)
 	{
 		data.fullName = params.fullName;
 		data.shortName = params.shortName;
 		
-		data.shortcutUrl = request.protocol + '://' + request.headers['x-forwarded-host'] +'/' + uid + '/?fullName=' + encodeURI(params.fullName).replace('&', '%26') + '&shortName=' + encodeURI(params.shortName).replace('&', '%26');
-		data.webmanifestUrl = '/' + uid + '/stadia.webmanifest?fullName=' + encodeURI(params.fullName).replace('&', '%26') + '&shortName=' + encodeURI(params.shortName).replace('&', '%26');
+		data.shortcutUrl = request.protocol + '://' + request.headers['x-forwarded-host'] +'/' + data.uid + '/?fullName=' + encodeURI(params.fullName).replace('&', '%26') + '&shortName=' + encodeURI(params.shortName).replace('&', '%26');
+		data.webmanifestUrl = '/' + data.uid + '/stadia.webmanifest?fullName=' + encodeURI(params.fullName).replace('&', '%26') + '&shortName=' + encodeURI(params.shortName).replace('&', '%26');
 		
 		if (params.variant == 0)
 		{

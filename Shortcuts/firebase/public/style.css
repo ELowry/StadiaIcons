@@ -30,7 +30,7 @@ body
 	color: white;
 	padding: 0;
 	margin: 0;
-	overflow-x: hidden;
+	overflow-x: hiddenhidden;
 	background-color: #202124;
 	min-height: 100vh;
 }
@@ -161,6 +161,55 @@ footer
 }
 
 
+/* Warning */
+section #Warning {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: flex !important;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100vw;
+	min-height: 100vh;
+	max-width: none !important;
+	background: rgb(20, 21, 23, 0.66);
+	overflow-y: scroll;
+	transition: opacity 0.4s cubic-bezier(0.35,0,0.15,1), filter 0.4s cubic-bezier(0.35,0,0.15,1);
+	z-index: 96;
+}
+	section #Warning.hide {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		pointer-events: none;
+	}
+	section #Warning > div {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		padding: 1.4em 2.4em;
+		background: #202124;
+		border-radius: 0.34em;
+		box-shadow: 0 0.125em 0.9em rgba(0,0,0,0.32), 0 0.0625em 0.4em rgba(0, 0, 0, 0.18);
+	}
+		section #Warning > div > .close
+		{
+			position: absolute;
+			top: 0.3em;
+			right: 0.3em;
+			font-size: 1.4em;
+			width: 1.4em;
+			height: 1.4em;
+			line-height: 1.4em;
+			cursor: pointer;
+		}
+
+
 /* Areas */
 
 div.inset
@@ -183,10 +232,10 @@ button
 	box-sizing: border-box;
 	height: 3em;
 	padding: 0.625em 1.5em;
-	border-radius: 0.25rem;
+	border-radius: 0.25em;
 	box-shadow: 0 0.125em 0.75em rgba(0,0,0,0.32), 0 0.0625em 0.375em rgba(0,0,0,0.18);
 	font-family: 'Google Sans','Product Sans','Roboto',sans-serif;
-	font-size: 1rem;
+	font-size: 1em;
 	line-height: 1.5em;
 	font-weight: 600;
 	color: #fff;
@@ -215,7 +264,7 @@ button
 		left: 0;
 		right: 0;
 		bottom: 0;
-		border-radius: 0.25rem;
+		border-radius: 0.25em;
 		z-index: 0;
 	}
 	button:before

@@ -145,6 +145,7 @@ window.addEventListener( 'load', function ()
 	{
 		launchButtons[i].addEventListener( 'click', ( e ) =>
 		{
+			e.preventDefault();
 			launchPup();
 		} );
 	}
@@ -155,7 +156,19 @@ window.addEventListener( 'load', function ()
 	{
 		closeButtons[i].addEventListener( 'click', ( e ) =>
 		{
+			e.preventDefault();
 			document.getElementById( 'Alert' ).style.display = 'none';
+		} );
+	}
+	
+	// CLOSE WARNING
+	var closeWarningButtons = document.getElementsByClassName( 'closeWarning' );
+	for ( var i = 0; i < closeWarningButtons.length; i++ )
+	{
+		closeWarningButtons[i].addEventListener( 'click', ( e ) =>
+		{
+			e.preventDefault();
+			document.getElementById( 'Warning' ).classList.add('hide');
 		} );
 	}
 
