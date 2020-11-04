@@ -2,7 +2,12 @@ const functions = require('firebase-functions');
 
 module.exports = function(info, errors)
 {
-	var output = require('./license.js');
+	var output = require('./license.js'),
+		iconWarn = '';
+	if (!info.isValid)
+	{
+		iconWarn = ' class="display"';
+	}
 	if (Object.keys(errors).length === 0)
 	{
 		output += `
@@ -144,7 +149,7 @@ module.exports = function(info, errors)
 						</div>
 					</a>
 				</div>
-				<div id="Warning">
+				<div id="Warning"` + iconWarn + `>
 					<div>
 						<span class="close closeWarning">×</span>
 						<h2 class="lang" data-lang="main.installPrompt.warningTitle">IMPORTANT</h2>

@@ -167,7 +167,7 @@ section #Warning {
 	top: 0;
 	bottom: 0;
 	left: 0;
-	display: flex !important;
+	display: none;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -180,6 +180,9 @@ section #Warning {
 	transition: opacity 0.4s cubic-bezier(0.35,0,0.15,1), filter 0.4s cubic-bezier(0.35,0,0.15,1);
 	z-index: 96;
 }
+	section #Warning.display {
+		display: flex !important;
+	}
 	section #Warning.hide {
 		opacity: 0;
 		filter: alpha(opacity=0);
