@@ -25,11 +25,11 @@ Each game logo comes in 2 styles with 2 color variants each.
 
 The default icons are designed to be displayed in larger sizes (>128px)? They take the shape of the full Stadia Logo.
 
-![Destiny 2 Default Large Icon](/Images/192/Destiny%202.png) ![Destiny 2 Default Large Icon](/Images/192/Destiny%202_alt.png)
+![Sekiro Default Large Icon](/Images/192/Sekiro%20–%20Shadows%20Die%20Twice.png) ![Sekiro Default Large Icon](/Images/192/Sekiro%20–%20Shadows%20Die%20Twice_alt.png)
 
 The smaller variants are designed to be easily identifiable when displayed at smaller sizes, such as Windows Start Menu icons.
 
-![Destiny 2 Default Large Icon](/Images/128/Destiny%202.png) ![Destiny 2 Default Large Icon](/Images/128/Destiny%202_alt.png)
+![Sekiro Default Large Icon](/Images/128/Sekiro%20–%20Shadows%20Die%20Twice.png) ![Sekiro Default Large Icon](/Images/128/Sekiro%20–%20Shadows%20Die%20Twice_alt.png)
 
 The images with a tinted overlay are the default; they are designed to make the logos fit with the Stadia color scheme.
 
