@@ -2,6 +2,7 @@
 	"generic":
 	{
 		"error": "Erreur",
+		"warning": "Avertissement",
 		"important": "IMPORTANT"
 	},
 	"meta":
@@ -25,7 +26,8 @@
 			"warningTitle": "AVERTISSEMENT",
 			"warning1": "Malheureusement aucune icône n'est encore disponible pour ce jeu.",
 			"warning2": "Vous pouvez tout-de-même installer le raccourci, mais il aura l'icône par défaut pour le moment.",
-			"warningButton": "Je Comprends"
+			"warningButton": "Je Comprends",
+			"toggle": "{0}Basculer le Style"
 		},
 		"popupPrompt":
 		{
@@ -47,9 +49,14 @@
 		},
 		"unavailable":
 		{
-			"status": "Soit le raccourci est peut-être déjà installé OU votre navigateur n'est peut-être pas pris en charge",
+			"status": "Votre navigateur n'est peut-être pas pris en charge",
+			"browsers": "Nous vous recommandons vivement d'utiliser {0}Télécharger Chrome{1} ou {2}Télécharger Edge{3}."
+		},
+		"exists":
+		{
+			"status": "Le raccourci est peut-être déjà installé",
 			"info": "Si vous avez déjà installé le raccourci {1} de {0}, vous n'avez plus besoin d'utiliser ce lien&nbsp;; utilisez simplement le raccourci en question pour jouer à votre jeu&nbsp;!",
-			"browsers": "Au cas contraire, nous vous recommandons vivement d'utiliser {0}Télécharger Chrome{1} ou {2}Télécharger Edge{3}."
+			"fallback": "Sinon c'est qu'une erreur est survenue, et nous vous invitons à rafraichir la page, ce qui pourrait la résoudre."
 		},
 		"alert":
 		{

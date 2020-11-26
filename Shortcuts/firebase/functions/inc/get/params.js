@@ -58,26 +58,31 @@ module.exports = function(query)
 	}
 	
 	// Variant
-	if (params.hasOwnProperty('variant'))
+	if ( params.hasOwnProperty( 'variant' ) )
 	{
-		params['variant'] = validator.toInt(params['variant']);
-		if (validator.isInt(params['variant'], { min: 0 }))
+		params['variant'] = validator.toInt( params['variant'] );
+		if ( params['variant'] !== NaN )
 		{
-			vatiant = params['variant'];
+			variant = params['variant'];
 		}
 	}
-	if (!variant && variant !== 0)
+	if ( !variant && variant !== 0 )
 	{
-		output.errors = require('../logs.js')({
+		output.errors = require( '../logs.js' )( {
 			message: 'The variant parameter is missing.',
 			type: 'error',
 			array: output.errors
-		});
+		} );
 	}
 	else
 	{
 		output.variant = variant;
 	}
+require( '../logs.js' )( {
+message: 'The resulting variant parameter: ',
+object: output.variant,
+type: 'info'
+} );
 	
 	// Alt
 	if (params.hasOwnProperty('alt'))

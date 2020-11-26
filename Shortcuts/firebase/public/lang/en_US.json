@@ -2,6 +2,7 @@
 	"generic":
 	{
 		"error": "Error",
+		"warning": "Warning",
 		"important": "IMPORTANT"
 	},
 	"meta":
@@ -25,7 +26,8 @@
 			"warningTitle": "WARNING",
 			"warning1": "Unfortunately the icons for this game is not yet available.",
 			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
-			"warningButton": "I Understand"
+			"warningButton": "I Understand",
+			"toggle": "{0}Switch Style"
 		},
 		"popupPrompt":
 		{
@@ -47,9 +49,14 @@
 		},
 		"unavailable":
 		{
-			"status": "The shortcut may already be installed OR your browser may not be supported",
+			"status": "Your browser may not be supported",
+			"browsers": "We strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}."
+		},
+		"exists":
+		{
+			"status": "The shortcut may already be installed",
 			"info": "If you have already installed the {0} {1} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!",
-			"browsers": "Otherwise, we strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}."
+			"fallback":  "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
 		},
 		"alert":
 		{

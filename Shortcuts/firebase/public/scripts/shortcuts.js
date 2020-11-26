@@ -20,6 +20,7 @@ console.log('%cHah, you found me!\nHere\'s a cookie— oh wait no, we don\'t use
 console.log('%chttps://github.com/ELowry/StadiaIcons/', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; font-weight: 600; color: #ff773d;' );
 	
 var inPWA = ( window.matchMedia( '(display-mode: standalone)' ).matches || window.matchMedia( '(display-mode: fullscreen)' ).matches || window.navigator.standalone === true ),
+	isChromium = !!window.chrome && ( !!window.chrome.webstore || !!window.chrome.runtime ),
 	isChrome = /Chrome/.test( navigator.userAgent ) && /Google Inc/.test( navigator.vendor );
 
 
@@ -73,10 +74,13 @@ window.addEventListener( 'load', function ()
 	}
 	else
 	{
-		var incompatibleDelay = window.setTimeout( function ()
-		{
-			ShowIncompatible();
-		}, 1200 ),
+		var incompatibleDelay = window.setTimeout(
+			function ()
+			{
+				ShowIncompatible();
+			},
+			2000
+		),
 			hasInstalled = false;
 
 		let deferredPrompt;
@@ -204,7 +208,7 @@ function launchPup()
 		catch ( err )
 		{
 			console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', err );
-
+			
 			if ( !gameWindow || gameWindow.closed || typeof gameWindow.closed == 'undefined' )
 			{
 				// Failure
@@ -259,6 +263,7 @@ function ShowInstallPrompt()
 {
 	document.getElementById( 'InstallPrompt' ).style.display = 'none';
 	document.getElementById( 'Unavailable' ).style.display = 'none';
+	document.getElementById( 'Exists' ).style.display = 'none';
 	document.body.classList.add( 'loaded' );
 
 	TestPopup();
@@ -268,10 +273,21 @@ function ShowLoading()
 	document.body.classList.remove( 'loaded' );
 	document.getElementById( 'InstallPrompt' ).style.display = 'none';
 	document.getElementById( 'Unavailable' ).style.display = 'none';
+	document.getElementById( 'Exists' ).style.display = 'none';
 }
 function ShowIncompatible()
 {
-	document.getElementById( 'Unavailable' ).style.display = 'flex';
+	document.getElementById( 'InstallPrompt' ).style.display = 'none';
+	if ( isChromium )
+	{
+		document.getElementById( 'Unavailable' ).style.display = 'none';
+		document.getElementById( 'Exists' ).style.display = 'flex';
+	}
+	else
+	{
+		document.getElementById( 'Exists' ).style.display = 'none';
+		document.getElementById( 'Unavailable' ).style.display = 'flex';
+	}
 	document.body.classList.add( 'loaded' );
 }
 function ShowInstalled()

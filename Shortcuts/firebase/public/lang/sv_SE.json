@@ -3,6 +3,7 @@
 	"generic":
 	{
 		"error": "Fel",
+		"warning": "Warning",
 		"important": "VIKTIGT"
 	},
 	"meta":
@@ -26,7 +27,8 @@
 			"warningTitle": "WARNING",
 			"warning1": "Unfortunately the icons for this game is not yet available.",
 			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
-			"warningButton": "I Understand"
+			"warningButton": "I Understand",
+			"toggle": "{0}Switch Style"
 		},
 		"popupPrompt":
 		{
@@ -48,9 +50,14 @@
 		},
 		"unavailable":
 		{
-			"status": "Genvägen kanske redan är installerad, annars är det möjligt att din webbläsare inte stöds.",
+			"status": "Är det möjligt att din webbläsare inte stöds",
+			"browsers": "Rekommenderar vi starkt att du använder {0}Google Chrome{1} eller {0}Microsoft Edge{1}."
+		},
+		"exists":
+		{
+			"status": "Genvägen kanske redan är installerad",
 			"info": "Om du redan har installerat {0} {1}-genvägen behöver du inte längre använda den här länken. Bara använd den installerade genvägen för att spela!",
-			"browsers": "Annars rekommenderar vi starkt att du använder {0}Google Chrome{1} eller {0}Microsoft Edge{1}."
+			"fallback": "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
 		},
 		"alert":
 		{

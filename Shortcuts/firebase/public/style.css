@@ -289,6 +289,93 @@ button
 		filter: alpha(opacity=100);
 	}
 
+	button.outline,
+	button.outline:before,
+	button.outline:after
+	{
+		padding: 0.2em !important;
+		height: auto;
+		border-radius: 0.42em;
+	}
+		button.outline > span
+		{
+			background-color: #202124;
+			padding: 1.15em 1.1em;
+			height: 2.6em;
+			line-height: 0.2em;
+			border-radius: 0.25em;
+			box-shadow: 0 0.125em 0.75em rgba(0,0,0,0.32) inset, 0 0.0625em 0.375em rgba(0,0,0,0.18) inset;
+			transition: box-shadow 0.3s cubic-bezier(0.35,0,0.15,1);
+		}
+		button.outline:hover > span,
+		a:hover button.outline > span
+		{
+			box-shadow: 0 0.1em 0.15em rgba(0,0,0,0.2) inset, 0 0.04em 0.1em rgba(0,0,0,0.1) inset;
+		}
+
+	button span.buttonIcon
+	{
+		display: inline-block;
+		margin: -0.1875em 0.4em -0.1875em 0;
+		font-size: 1.6em;
+		vertical-align: middle;
+		height: 0.8em;
+		line-height: 0.5em;
+	}
+
+
+
+/* Installation */
+
+picture#IconPreview
+{
+	display: inline-block;
+	width: 1024px;
+	height: auto;
+	max-width: 33vw;
+	max-height: 55vh;
+}
+	picture#IconPreview img
+	{
+		max-width: 100%;
+		margin: -14% 0;
+	}
+
+@media (max-width:426px), (max-height: 232px)
+{
+	picture#IconPreview img
+	{
+		margin: 0.4em 0 1em;
+	}
+}
+
+#IconVariants
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+	#IconVariants h3
+	{
+		margin: 1em;
+	}
+
+		#IconVariants img
+		{
+			display: block;
+			margin: 0.6em;
+			width: 64px;
+			max-width: 16vw;
+		}
+
+			#IconVariants img.current
+			{
+				filter: brightness(60%);
+				opacity: 0.8;
+			}
+
 
 /* Loader */
 

@@ -3,7 +3,7 @@ const validator = require('validator');
 
 module.exports = function(log)
 {
-	var logging = false,
+	var logging = true,
 		toPush = {};
 	
 	// LOG MESSAGE

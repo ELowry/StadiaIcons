@@ -135,19 +135,48 @@ module.exports = function(info, errors)
 				<div>
 					<h1><span class="gradient">StadiaIcons</span> Shortcuts</h1>
 					<h2>` + info.fullName + `</h2>
-					<a id="InstallButton" href="https://stadia.google.com/player/` + info.uid + `">
-						<img  srcset="`
-						+ info.images.webp + ` 1024w, `
-						+ info.images.image + ` 1024w, `
-						+ info.images.image512 + ` 512w, `
-						+ info.images.image192 + ` 192w, `
-						+ info.images.image128 + ` 128w" `
-						+ `src="` + info.images.image192 + `" `
-						+ `alt="` + info.fullName + ` Game Icon'" style="width: 30vw;" />
-						<div>
+						<picture id="IconPreview">
+							<source  srcset ="` + info.images.image128 + `" media="(max-width:426px), (max-height: 232px)" />
+							<source  srcset ="` + info.images.image192 + `" media="(max-width:640px), (max-height: 249px)" />
+							<source  srcset="` + info.images.image512 + `" media="(max-width:1706px), (max-height: 930px)" />
+							<source  srcset="` + info.images.webp + `, ` + info.images.image + `" media="(min-width: 1707px) and (min-height: 931px)" />
+							<img src="` + info.images.image192 + `" alt="` + info.fullName + ` Game Icon" />
+						</picture>
+					<p>
+						<a href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt == '' ).toString() + `">
+							<button class="outline"><span class="lang" data-lang="main.installPrompt.toggle">&#8203;<span class="buttonIcon">⇆</span>&#8203;Switch Style</span></button>
+						</a>
+					</p>
+					<p>
+						<a id="InstallButton" href="https://stadia.google.com/player/` + info.uid + `">
 							<button><span class="lang" data-lang="main.installPrompt.prompt">Create a shortcut on your device.</span></button>
-						</div>
-					</a>
+						</a>
+					</p>
+					<div id="IconVariants">
+						<h3>Variants:</h3>
+						`;
+
+		for ( k in info.smallVariantIcons )
+		{
+			if ( info.smallVariantIcons.hasOwnProperty( k ) )
+			{
+				if ( info.smallVariantIcons[k] == info.images.image128 )
+				{
+					output += `<img class="current" src="` + info.smallVariantIcons[k] + `" alt="` + info.shortName + ` variant ` + k + `" />
+						`;
+				}
+				else
+				{
+					output += `<a href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt != '' ).toString() + `&variant=` + k + `">
+							<img src="` + info.smallVariantIcons[k] + `" alt="` + info.shortName + ` variant ` + k + `" />
+						</a>
+						`;
+				}
+			}
+		}
+		
+		output += `
+					</div>
 				</div>
 				<div id="Warning"` + iconWarn + `>
 					<div>
@@ -188,12 +217,19 @@ module.exports = function(info, errors)
 					<p style="padding-top: 2vw;"><button class="LaunchGame"><span class="lang" data-lang="main.uninstall.button">Launch &#8203;` + info.fullName + `&#8203;</span></button></a></p>
 				</div>
 			</section>
+			<section id="Exists">
+				<div>
+					<h1><span class="gradient">StadiaIcons</span> Shortcuts – <span class="lang" data-lang="generic.warning">Warning</span></h1>
+					<h2 class="lang" data-lang="main.exists.status">The shortcut may already be installed</h2>
+					<p class="lang" data-lang="main.exists.info">If you have already installed the &#8203;` + info.fullName + `&#8203; &#8203;<span class="gradient">StadiaIcons</span>&#8203; shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!</p>
+					<p class="lang" data-lang="main.exists.fallback">Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed.</p>
+				</div>
+			</section>
 			<section id="Unavailable">
 				<div>
 					<h1><span class="gradient">StadiaIcons</span> Shortcuts – <span class="lang" data-lang="generic.error">Error</span></h1>
-					<h2 class="lang" data-lang="main.unavailable.status">The shortcut may already be installed OR your browser may not be supported</h2>
-					<p class="lang" data-lang="main.unavailable.info">If you have already installed the &#8203;` + info.fullName + `&#8203; &#8203;<span class="gradient">StadiaIcons</span>&#8203; shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!</p>
-					<p class="lang" data-lang="main.unavailable.browsers">Otherwise, we strongly recommend using &#8203;<a href="https://google.com/chrome" title="&#8203;Download Chrome&#8203;" target="_blank" rel="noreferrer noopener">Chrome</a>&#8203; or &#8203;<a href="https://microsoft.com/edge" title="&#8203;Download Edge&#8203;" target="_blank" rel="noreferrer noopener">Chromium Edge</a>&#8203;.</p>
+					<h2 class="lang" data-lang="main.unavailable.status">Your browser may not be supported</h2>
+					<p class="lang" data-lang="main.unavailable.browsers">We strongly recommend using &#8203;<a href="https://google.com/chrome" title="&#8203;Download Chrome&#8203;" target="_blank" rel="noreferrer noopener">Chrome</a>&#8203; or &#8203;<a href="https://microsoft.com/edge" title="&#8203;Download Edge&#8203;" target="_blank" rel="noreferrer noopener">Chromium Edge</a>&#8203;.</p>
 				</div>
 			</section>
 			<aside id="Alert">
