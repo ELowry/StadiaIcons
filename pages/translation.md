@@ -29,6 +29,7 @@ Here's how to go about things:
 	"generic":
 	{
 		"error": "Error",
+		"warning": "Warning",
 		"important": "IMPORTANT"
 	},
 	"meta":
@@ -48,7 +49,12 @@ Here's how to go about things:
 		},
 		"installPrompt":
 		{
-			"prompt": "Create a shortcut on your device."
+			"prompt": "Create a shortcut on your device.",
+			"warningTitle": "WARNING",
+			"warning1": "Unfortunately the icons for this game is not yet available.",
+			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
+			"warningButton": "I Understand",
+			"toggle": "{0}Switch Style"
 		},
 		"popupPrompt":
 		{
@@ -70,9 +76,14 @@ Here's how to go about things:
 		},
 		"unavailable":
 		{
-			"status": "The shortcut may already be installed OR your browser may not be supported",
+			"status": "Your browser may not be supported",
+			"browsers": "We strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}."
+		},
+		"exists":
+		{
+			"status": "The shortcut may already be installed",
 			"info": "If you have already installed the {0} {1} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!",
-			"browsers": "Otherwise, we strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}."
+			"fallback":  "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
 		},
 		"alert":
 		{
@@ -155,6 +166,8 @@ As you
 
 error: `Error`
 
+warning: `Warning`
+
 important: `IMPORTANT` *<– Try and keep it in captial letters if possible.*
 
 ### meta
@@ -180,6 +193,16 @@ button: `Launch {Game Name} Now`
 #### installPrompt
 
 prompt: `Create a shortcut on your device.`
+
+warningTitle: `WARNING` *<– Try and keep it in captial letters if possible.*
+
+warning1: `Unfortunately the icons for this game is not yet available.`
+
+warning2: `You can still install the shortcut, but it will have a default icon for the time being.`
+
+warningButton: `I Understand`
+
+toggle: `{0}Switch Style`
 
 #### popupPrompt
 
@@ -211,11 +234,19 @@ button: `Launch {Game Name}`
 
 #### unavailable
 
-status: `The shortcut may already be installed OR your browser may not be supported`
+status: `Your browser may not be supported`
 
 info: `If you have already installed the {Game Name} {StadiaIcons} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!`
 
-browsers: `Otherwise, we strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
+browsers: `We strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
+
+#### exists
+
+status: `The shortcut may already be installed`,
+
+info: `If you have already installed the {0} {1} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!`,
+
+fallback:  `Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed.`
 
 #### alert
 
