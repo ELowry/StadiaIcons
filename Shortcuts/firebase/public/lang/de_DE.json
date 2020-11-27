@@ -3,7 +3,7 @@
 	"generic":
 	{
 		"error": "Fehler",
-		"warning": "Warning",
+		"warning": "Warnung",
 		"important": "WICHTIG"
 	},
 	"meta":
@@ -24,11 +24,11 @@
 		"installPrompt":
 		{
 			"prompt": "Erstelle eine Verknüpfung auf deinem Gerät.",
-			"warningTitle": "WARNING",
-			"warning1": "Unfortunately the icons for this game is not yet available.",
-			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
-			"warningButton": "I Understand",
-			"toggle": "{0}Switch Style"
+			"warningTitle": "WARNUNG",
+			"warning1": "Leider ist für dieses Spiel derzeit kein Icon verfügbar.",
+			"warning2": "Du kannst die Verknüpfung trotzdem hinzufügen, sie wird dann mit dem Standard Icon dargestellt.",
+			"warningButton": "Ich verstehe",
+			"toggle": "{0}Stil Wechseln"
 		},
 		"popupPrompt":
 		{
@@ -56,8 +56,8 @@
 		"exists":
 		{
 			"status": "Die Verknüpfung existiert möglicherweise bereits",
-			"info": "Falls du die Verknüpfung für {0} von {1} bereits erstellt hast, brauchst du diese Adresse nicht wieder aufrufen; benutze einfach die erstellte Verknüpfung um das Spiel zu starten!",
-			"fallback": "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
+			"info": "Wenn du die {0} {1} Verknüpfung bereits hinzugefügt hast, musst du diesen Link nicht wieder aufrufen; Benutze einfach die installierte Verknüpfung um das Spiel zu spielen!",
+			"fallback": "Andernfalls, ist etwas nicht wie geplant verlaufen; Wir schlagen vor diese Seite zu aktualisieren um zu sehen ob dies den Fehler behebt."
 		},
 		"alert":
 		{
@@ -113,15 +113,15 @@
 	"privacy":
 	{
 		"title": "Datenschutzerklärung",
-		"what": "What we Store",
-		"whatText": "This website is built on {0}Google's Firebase platform{1} and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.",
-		"whatLink": "You can learn more at {0}this link{1}.",
+		"what": "Was wir speichern",
+		"whatText": "Diese Website basiert auf {0}Google's Firebase Plattform{1} und benutzt <em>Firebase Hosting</em> und <em>Firebase Funktionen</em>. Deine <strong>IP Adresse</strong> wird deshalb für einige Monate gespeichert, um Missbrauch der Plattform zu vermeiden.",
+		"whatLink": "Mehr darüber kannst du {0}hier{1} lernen.",
 		"cookies": "Cookies",
-		"cookiesText": "Though we love cookies {0}, we much prefer croissants {1}... So we don't store any cookies, don't worry!",
+		"cookiesText": "Wir lieben Cookies {0}, ziehen Croissants aber vor {1}... Deshalb speichern wir keine Cookies, kein Grund zur Beunruhigung!",
 		"head":
 		{
 			"title": "StadiaIcons – Datenschutzerklärung",
-			"description": "Keep your cookies, we have croissants!"
+			"description": "Behalte deine Cookies, wir haben Croissants!"
 		}
 	}
 }
