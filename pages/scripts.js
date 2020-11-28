@@ -121,7 +121,7 @@ window.addEventListener( 'load', function ()
 							if ( g.indexOf( val ) !== -1 )
 							{
 								gameObjects[g].classList.add( 'found' );
-								gameObjects[g].setAttribute( 'tabindex', 1 );
+								gameObjects[g].setAttribute( 'tabindex', 0 );
 							}
 							else
 							{
