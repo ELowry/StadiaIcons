@@ -143,13 +143,13 @@ module.exports = function(info, errors)
 							<img src="` + info.images.image192 + `" alt="` + info.fullName + ` Game Icon" />
 						</picture>
 					<p>
-						<a href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt == '' ).toString() + `">
-							<button class="outline"><span class="lang" data-lang="main.installPrompt.toggle">&#8203;<span class="buttonIcon">⇆</span>&#8203;Switch Style</span></button>
+						<a class="button" href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt == '' ).toString() + `">
+							<button class="outline" tabindex="-1"><span class="lang" data-lang="main.installPrompt.toggle">&#8203;<span class="buttonIcon">⇆</span>&#8203;Switch Style</span></button>
 						</a>
 					</p>
 					<p>
-						<a id="InstallButton" href="https://stadia.google.com/player/` + info.uid + `">
-							<button><span class="lang" data-lang="main.installPrompt.prompt">Create a shortcut on your device.</span></button>
+						<a class="button" id="InstallButton" href="https://stadia.google.com/player/` + info.uid + `">
+							<button tabindex="-1"><span class="lang" data-lang="main.installPrompt.prompt">Create a shortcut on your device.</span></button>
 						</a>
 					</p>
 					<div id="IconVariants">

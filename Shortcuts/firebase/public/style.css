@@ -62,7 +62,7 @@ a
 		color: #d1293d;
 		outline: none;
 	}
-	a:focus
+	a:not(.button):focus
 	{
 		text-decoration: underline;
 	}
@@ -269,7 +269,6 @@ button
 	{
 		box-shadow: 0 0.1em 0.15em rgba(0,0,0,0.2), 0 0.04em 0.1em rgba(0,0,0,0.1);
 		outline: none;
-		text-decoration: none;
 	}
 	button > span
 	{
@@ -386,19 +385,38 @@ picture#IconPreview
 		margin: 1em;
 	}
 
-		#IconVariants img
+	#IconVariants a,
+	#IconVariants > img
+	{
+		margin: 0.2em;
+		padding: 0.4em;
+		width: calc( 64px + 0.8em);
+		max-width: 16vw;
+		border-radius: 33%;
+		box-shadow: 0 0 0 2px rgba(255, 119, 61, 0);
+		transition: color 0.24s cubic-bezier(0.35,0,0.15,1), box-shadow 0.24s cubic-bezier(0.35,0,0.15,1);
+	}
+
+		#IconVariants a:hover
 		{
-			display: block;
-			margin: 0.6em;
-			width: 64px;
-			max-width: 16vw;
+			box-shadow: 0 0 0 2px rgba(255, 119, 61, 0.6);
+		}
+		#IconVariants a:focus
+		{
+			box-shadow: 0 0 0 2px rgba(255, 119, 61, 1);
 		}
 
-			#IconVariants img.current
-			{
-				filter: brightness(60%);
-				opacity: 0.8;
-			}
+		#IconVariants a img
+		{
+			display: block;
+			width: 100%;
+		}
+
+		#IconVariants img.current
+		{
+			filter: brightness(60%);
+			opacity: 0.8;
+		}
 
 
 /* Loader */
