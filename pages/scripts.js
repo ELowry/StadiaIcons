@@ -63,7 +63,7 @@ window.addEventListener( 'load', function ()
 
 					grid.insertAdjacentHTML( 'beforeend', item );
 
-					gameObjects[u] = document.getElementById( u );
+					gameObjects[fName] = document.getElementById( u );
 
 				/* SEARCH */
 
