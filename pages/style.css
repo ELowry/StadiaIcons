@@ -6,7 +6,7 @@
 	{
 		max-width: 1280px !important;
 	}
-@media (min-width: 1024px)
+@media (min-width: 1025px)
 {
 	#Info > div
 	{
@@ -18,10 +18,17 @@
 	}
 }
 
-#Games {
+#Games
+{
 	background-color: #1a1b1e;
 	align-items: start;
 }
+	#Games > div
+	{
+		padding: 3vw !important;
+		width: 100%;
+		max-width: 1600px !important;
+	}
 
 #search
 {
@@ -63,11 +70,39 @@
 		box-shadow: 0 0 0 2px rgba(255, 119, 61, 0), 0 0.125rem 0.75rem rgba(0,0,0,.32) inset, 0 0.0625rem 0.375rem rgba(0,0,0,.18) inset;
 		transition: color 0.24s cubic-bezier(0.35,0,0.15,1), box-shadow 0.24s cubic-bezier(0.35,0,0.15,1);
 	}
+		#search #searchBar::placeholder
+		{
+			color: rgba(255,255,255,0.24);
+		}
 		#search #searchBar:focus
 		{
 			outline: none;
 			box-shadow: 0 0 0 2px rgba(255, 119, 61, 1), 0 0.1em 0.15em rgba(0,0,0,0.2) inset, 0 0.04em 0.1em rgba(0,0,0,0.1) inset;
 		}
+
+@media (max-width: 1024px)
+{
+	#search
+	{
+		font-size: 1.2em;
+	}
+}
+@media (max-width: 720px)
+{
+	#search
+	{
+		font-size: 1em;
+	}
+		#search::before
+		{
+			transform: scale(0.75);
+			margin: -4px 0.2em -4px 0;
+		}
+		#search #searchBar
+		{
+			width: calc(100% - 48px - 0.2em);
+		}
+}
 
 #grid
 {
@@ -89,6 +124,7 @@
 		{
 			outline: none;
 			box-shadow: 0 0 0 2px rgba(255, 119, 61, 1);
+			text-decoration: none;
 		}
 		#grid > a > figure,
 		#grid > a > figure > img

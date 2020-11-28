@@ -39,7 +39,18 @@ window.addEventListener( 'load', function ()
 
 			var grid = document.getElementById( 'grid' ),
 				search = document.getElementById( 'searchBar' ),
-				searchData = document.getElementById( 'searchDataList' );
+				searchData = document.getElementById( 'searchDataList' ),
+				curr = 0,
+				rand = 0;
+
+			if ( Object.hasOwnProperty( 'keys' ) )
+			{
+				rand = Math.floor( Math.random() * Object.keys( json.uids ).length );
+			}
+			else
+			{
+				rand = Math.floor( Math.random() * 100 )
+			}
 
 			for ( u in json.uids )
 			{
@@ -70,6 +81,19 @@ window.addEventListener( 'load', function ()
 					var dataItem = `<option value="` + fName + `">`;
 					searchData.insertAdjacentHTML( 'beforeend', dataItem );
 
+					if ( rand >= 0 )
+					{
+						if ( rand == curr )
+						{
+							search.setAttribute( 'placeholder', fName );
+							curr = -1;
+						}
+						else
+						{
+							curr++;
+						}
+					}
+
 				}
 
 			}
@@ -97,10 +121,12 @@ window.addEventListener( 'load', function ()
 							if ( g.indexOf( val ) !== -1 )
 							{
 								gameObjects[g].classList.add( 'found' );
+								gameObjects[g].setAttribute( 'tabindex', -1 );
 							}
 							else
 							{
 								gameObjects[g].classList.remove( 'found' );
+								gameObjects[g].setAttribute( 'tabindex', 1 );
 							}
 						}
 					}
