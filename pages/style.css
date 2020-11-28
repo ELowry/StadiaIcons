@@ -20,6 +20,7 @@
 
 #Games {
 	background-color: #1a1b1e;
+	align-items: start;
 }
 
 #search
@@ -77,6 +78,7 @@
 }
 	#grid > a
 	{
+		display: inline-block;
 		margin: 0.2em 1vw 0;
 		padding: 0 1vw 0.2em;
 		border-radius: 0.4em;
@@ -112,6 +114,16 @@
 		{
 			opacity: 0;
 			filter: alpha(opacity=0);
+		}
+
+	#grid.searching > a
+	{
+		display: none;
+	}
+
+		#grid.searching > a.found
+		{
+			display: inline-block;
 		}
 
 a:not(:hover):not(:focus) figcaption

@@ -63,7 +63,7 @@ window.addEventListener( 'load', function ()
 
 					grid.insertAdjacentHTML( 'beforeend', item );
 
-					gameObjects[fName] = document.getElementById( u );
+					gameObjects[escape( fName.toLowerCase() )] = document.getElementById( u );
 
 				/* SEARCH */
 
@@ -76,7 +76,8 @@ window.addEventListener( 'load', function ()
 
 			search.addEventListener( 'input', function ( e )
 			{
-				if ( this.value == '' )
+				var val = escape( this.value.toLowerCase() );
+				if ( val == '' )
 				{
 					grid.classList.remove( 'searching' );
 					for ( g in gameObjects )
@@ -93,7 +94,7 @@ window.addEventListener( 'load', function ()
 					{
 						if ( gameObjects.hasOwnProperty( g ) )
 						{
-							if ( g.indexOf( this.value ) !== -1 )
+							if ( g.indexOf( val ) !== -1 )
 							{
 								gameObjects[g].classList.add( 'found' );
 							}
