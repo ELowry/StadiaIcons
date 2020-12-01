@@ -182,7 +182,7 @@ window.addEventListener( 'load', function ()
 
 function launchPup()
 {
-	var gameWindow = window.open( 'https://stadia.google.com/player/' + uid, '_blank' );
+	var gameWindow = window.open( 'https://stadia.google.com/player/' + uid, '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1' );
 
 	window.setTimeout( function ()
 	{
@@ -200,7 +200,8 @@ function launchPup()
 			} else
 			{
 				// Success
-				window.close();
+				window.focus();
+				gameWindow.close();
 
 				hasRunCheck = true;
 			}
@@ -223,7 +224,8 @@ function launchPup()
 				// Success
 				if ( !hasRunCheck )
 				{
-					window.close();
+					window.focus();
+					gameWindow.close();
 				}
 			}
 		}

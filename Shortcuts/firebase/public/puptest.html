@@ -31,6 +31,7 @@
 				if (this.opener !== null)
 				{
 					this.opener.postMessage({'loaded': true}, "*");
+					this.opener.focus();
 					this.close();
 				}
 				else
