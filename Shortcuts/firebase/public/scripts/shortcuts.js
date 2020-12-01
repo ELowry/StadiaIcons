@@ -200,8 +200,7 @@ function launchPup()
 			} else
 			{
 				// Success
-				window.focus();
-				gameWindow.close();
+				window.close();
 
 				hasRunCheck = true;
 			}
@@ -224,8 +223,7 @@ function launchPup()
 				// Success
 				if ( !hasRunCheck )
 				{
-					window.focus();
-					gameWindow.close();
+					window.close();
 				}
 			}
 		}
@@ -257,6 +255,7 @@ function TestPopup()
 	} );
 
 	window.open( '/puptest.html', '_blank' );
+	window.focus();
 }
 
 // SECTION HANDLING
