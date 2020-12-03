@@ -254,7 +254,7 @@ function TestPopup()
 		}
 	} );
 
-	window.open( '/puptest.html', '_blank' );
+	window.open( '/puptest.html', '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1,fullscreen=1' );
 	window.focus();
 }
 
