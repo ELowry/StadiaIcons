@@ -159,6 +159,9 @@
 		"161f276db10947a199cd0260ed4dc248rcp1":{
 			"0":"Immortals Fenyx Rising"
 		},
+		"6363b82d1cc442f5af9c3ce98ceb731drcp1":{
+			"0":"Immortals Fenyx Rising"
+		},
 		"1a871cfe8a7d4ebc8592c2ad4bc07150rcp1":{
 			"0":"Into the Breach"
 		},
@@ -391,5 +394,8 @@
 		"cba537cccfe3470b8784f88660ea5f09rcp1":{
 			"0":"Zombie Army 4"
 		}
-	}
+	},
+	"demos":[
+		"6363b82d1cc442f5af9c3ce98ceb731drcp1"
+	]
 }

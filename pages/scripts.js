@@ -63,8 +63,15 @@ window.addEventListener( 'load', function ()
 					var name = json.uids[u][0],
 						fName = name.replace( ' – ', ': ' ),
 						sName = name.split( ' – ' )[0],
-						imgName = name.replace( "'", '%27' ).replace( '"', '%22' ).replace( ' ', '%20' ).replace( '&', '%26' ).replace( '?', '%3F' ),
-						item = `
+						imgName = name.replace( "'", '%27' ).replace( '"', '%22' ).replace( ' ', '%20' ).replace( '&', '%26' ).replace( '?', '%3F' );
+					
+					if ( json.demos.includes( u ) )
+					{
+						fName += ' (Demo)';
+						sName += ' (Demo)';
+					}
+					
+					var item = `
 						<a id="` + u + `" href="https://stadiaicons.web.app/` + u + `/?fullName=` + imgName + `&shortName=` + sName.replace( "'", '%27' ).replace( '"', '%22' ).replace( ' ', '%20' ).replace( '&', '%26' ).replace( '?', '%3F' ) + `" target="_blank" tabindex="0">
 							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192'].extension + `') no-repeat scroll;">
 								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + sName + ` icon]" title="` + fName + `"/>
