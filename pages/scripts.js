@@ -63,7 +63,7 @@ window.addEventListener( 'load', function ()
 					var name = json.uids[u][0],
 						fName = name.replace( ' – ', ': ' ),
 						sName = name.split( ' – ' )[0],
-						imgName = name.replace( "'", '%27' ).replace( '"', '%22' ).replace( ' ', '%20' ).replace( '&', '%26' ).replace( '?', '%3F' );
+						imgName = name.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' );
 					
 					if ( json.demos.includes( u ) )
 					{
@@ -72,7 +72,7 @@ window.addEventListener( 'load', function ()
 					}
 					
 					var item = `
-						<a id="` + u + `" href="https://stadiaicons.web.app/` + u + `/?fullName=` + fName.replace( "'", '%27' ).replace( '"', '%22' ).replace( ' ', '%20' ).replace( '&', '%26' ).replace( '?', '%3F' ) + `&shortName=` + sName.replace( "'", '%27' ).replace( '"', '%22' ).replace( ' ', '%20' ).replace( '&', '%26' ).replace( '?', '%3F' ) + `" target="_blank" tabindex="0">
+						<a id="` + u + `" href="https://stadiaicons.web.app/` + u + `/?fullName=` + fName.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' ) + `&shortName=` + sName.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' ) + `" target="_blank" tabindex="0">
 							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192'].extension + `') no-repeat scroll;">
 								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + sName + ` icon]" title="` + fName + `"/>
 								<figcaption>` + fName + `</figcaption>
