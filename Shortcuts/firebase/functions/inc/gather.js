@@ -37,8 +37,8 @@ module.exports = function ( request, hasGet, uid, params, refs )
 		data.fullName = params.fullName;
 		data.shortName = params.shortName;
 
-		data.shortcutUrl = request.protocol + '://' + request.headers['x-forwarded-host'] + '/' + data.uid + '/?fullName=' + encodeURI( params.fullName ).replace( '&', '%26' ) + '&shortName=' + encodeURI( params.shortName ).replace( '&', '%26' );
-		data.webmanifestUrl = '/' + data.uid + '/stadia.webmanifest?fullName=' + encodeURI( params.fullName ).replace( '&', '%26' ) + '&shortName=' + encodeURI( params.shortName ).replace( '&', '%26' );
+		data.shortcutUrl = request.protocol + '://' + request.headers['x-forwarded-host'] + '/' + data.uid + '/?fullName=' + encodeURI( params.fullName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' ) + '&shortName=' + encodeURI( params.shortName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' );
+		data.webmanifestUrl = '/' + data.uid + '/stadia.webmanifest?fullName=' + encodeURI( params.fullName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' ) + '&shortName=' + encodeURI( params.shortName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' );
 
 		if ( params.variant == 0 )
 		{
