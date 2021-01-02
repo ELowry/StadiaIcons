@@ -1,0 +1,127 @@
+{
+	"translator": "Lordubuntu94"
+	"generic":
+	{
+		"error": "Errore",
+		"warning": "Avviso",
+		"important": "IMPORTANTE"
+	},
+	"meta":
+	{
+		"title": "StadiaIcons – {0} – Scorciatoia",
+		"simpleTitle": "{0} scorciatoia",
+		"description": "Questa pagina ti permetterà di installare {0} come una Progressive Web App con la sua corrispondente StadiaIcon.",
+		"keywords": "Stadia, Icone, Design, Gaming, Gioco, Scorciatoia{0}"
+	},
+	"main":
+	{
+		"installed":
+		{
+			"title": "Installazione avvenuta con successo",
+			"info": "Dovresti essere in grado di aprire {0} direttamente dal tuo Desktop o dallo Start Menu.",
+			"button": "Avvia {0} Adesso"
+		},
+		"installPrompt":
+		{
+			"prompt": "Crea una scorciatoia sul tuo dispositivo.",
+			"warningTitle": "ATTENZIONE",
+			"warning1": "Sfortunatamente le icone per questo gioco non sono ancora disponibili.",
+			"warning2": "Puoi installare ancora la scorciatoia, ma avrà un' icona di default per ora.",
+			"warningButton": "Capisco",
+			"toggle": "{0}Cambia Stile"
+		},
+		"popupPrompt":
+		{
+			"title": "Prima Installazione",
+			"inset1": "Questa è la prima volta che installi una scorciatoia StadiaIcons.",
+			"inset2": "Per creare le scorciatoie, devi autorizzare questo sito per mostrare le finestre di popup*.",
+			"inset3": "In base al tuo browser, dovresti vedere un messaggio di richiesta autorizzazione. Solitamente si trova alla destra della barra degli indirizzi.",
+			"request": "Se non vedi questo messaggio oppure una volta data l'autorizzazione, per favore premi questo bottone:",
+			"button": "TestPopup Accesso",
+			"footnote": "* Le scorciatoie StadiaIcon usano Progressive Web Apps, per aprire il tuo gioco senza la barra degli indirizzi in testa, l'applicazione apre il gioco in una classica tab del browser usando un popup e immediatamente si chiude in background."
+		},
+		"uninstall":
+		{
+			"stopped": "Fermato",
+			"info": "Hai premuto la {0} chiave mentre la scorciatoia veniva lanciata.",
+			"uninstall": "Potresti provare a disinstallare questa scorciatoia. Se questo è il caso, dovresti trovare un bottonedisintalla nelle impostazioni di questa finestra. Questo menu è solitamente posizionato in alto a destra.",
+			"restart": "Se non fosse così, puoi semplicemente premere questo bottone all'inizio del tuo gioco:",
+			"button": "Lancia {0}"
+		},
+		"unavailable":
+		{
+			"status": "Il tuo browser potrebbe non essere supportato",
+			"browsers": "Ti consigliamo fortemente di usare {0}Download Chrome{1} or {2}Download Edge{3}."
+		},
+		"exists":
+		{
+			"status": "La scorciatoia potrebbe essere già stata installata",
+			"info": "Se hai già installato la {0} {1} scorciatoia, non hai più bisogno di accedere a questo link; semplicemente usa la scorciatoia installata per giocare al tuo gioco!",
+			"fallback": "Altrimenti, qualcosa è andato storto; ti suggeriamo di ricaricare questa pagina per vedere se le cose si aggiustano."
+		},
+		"alert":
+		{
+			"info": "Per disinstallare questa scorciatoia, per favore premi la {0} chiave appena la scorciatoia viene lanciata."
+		}
+	},
+	"home":
+	{
+		"metaDescription": "Installa scorciatoie per giochi Stadia sul tuo desktop con le corrispondenti StadiaIcons!",
+		"title": "Benvenuto in {0}!",
+		"whatTitle": "Che cos'è?",
+		"iconsDescription": "{0} è una collezione di icone per videogiochi progettate con {1} in mente. Ogni icona segue un semplice principio di design inspirato dal logo e i colori Stadia.",
+		"shortcutsDescription": "Per quanto riguarda {0}, ti permette facilmente di aggiungere individualmente le scorciatoie dei giochi Stadia col corrispondente {1} ai tuoi dispositivi in soli pochi click.",
+		"howTitle": "Come funziona?",
+		"howInfo": "É molto semplice : seleziona un gioco Stadia che vuoi installare dalla lista sotto e ti guideremo attraverso il processo.",
+		"button": "Mostrami!"
+	},
+	"error":
+	{
+		"description": "C'è stato un errore processando la tua {0} richiesta.",
+		"instructions": "Per favore chiudi questa pagina e riprova. Se il problema persiste, per favore contattaci su Reddit a {0} oppure su {1}.",
+		"title": "Errore {0}:",
+		"cta": "{0}Clicca Qui{1} per ritornare alla home page.",
+		"codes":
+		{
+			"400": "Cattiva Richiesta",
+			"401": "Non autorizzato",
+			"403": "Vietato",
+			"404": "Pagina Non Trovata"
+		},
+		"head":
+		{
+			"title": "StadiaIcons – Errore {0}",
+			"simpleTitle": "StadiaIcons – Errore",
+			"description": "C'è stato un errore durante il caricamento di questa pagina: Errore {0}, {1}"
+		}
+	},
+	"popupTest":
+	{
+		"warning": "Questa finestra si chiuderà a breve.",
+		"request": "Per favore non chiuderla manualmente.",
+		"head":
+		{
+			"title": "Popup Test",
+			"description": "Questa pagina è usata per testare l'autorizzazione per i popup."
+		}
+	},
+	"footer":
+	{
+		"copyright": "Copyright © {0} Eric Lowry. Licenza sotto {1}.",
+		"links": "Segui {0}StadiaIcons su GitHub{1} | {2}Privacy Policy{3}"
+	},
+	"privacy":
+	{
+		"title": "Privacy Policy",
+		"what": "Cosa Collezioniamo",
+		"whatText": "Questo sito è costruito sulla {0}piattaforma Google's Firebase{1} e usa il Firebase Hosting e le Funzioni Firebase. Come risultato, il tuo indirizzo IP verrà salvato per un paio di mesi per evitare un uso improprio della piattaforma.",
+		"whatLink": "Puoi saperne di più {0}da questo link{1}.",
+		"cookies": "Cookies",
+		"cookiesText": "Anche se amiamo i cookies {0}, preferiamo di più i croissants {1}... Quindi non salviamo nessun cookies, non preoccuparti!",
+		"head":
+		{
+			"title": "StadiaIcons – Privacy Policy",
+			"description": "Tieniti i tuoi cookies, noi abbiamo i croissants!"
+		}
+	}
+}
