@@ -5,8 +5,8 @@ module.exports = function(info, errors)
 	if (Object.keys(errors).length === 0)
 	{
 		return `{
-	"name": "` + info.fullName + `",
-	"short_name": "` + info.shortName + `",
+	"name": "` + info.fullName.replace( /&#x27;/g, "'" ) + `",
+	"short_name": "` + info.shortName.replace( /&#x27;/g, "'" ) + `",
 	"lang": "en-US",
 	"start_url": "` + info.shortcutUrl + `",
 	"scope": "/` + info.uid + `/",

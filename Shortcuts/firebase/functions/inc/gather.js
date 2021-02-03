@@ -37,8 +37,8 @@ module.exports = function ( request, hasGet, uid, params, refs )
 		data.fullName = params.fullName;
 		data.shortName = params.shortName;
 
-		data.shortcutUrl = request.protocol + '://' + request.headers['x-forwarded-host'] + '/' + data.uid + '/?fullName=' + encodeURI( params.fullName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' ) + '&shortName=' + encodeURI( params.shortName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' );
-		data.webmanifestUrl = '/' + data.uid + '/stadia.webmanifest?fullName=' + encodeURI( params.fullName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' ) + '&shortName=' + encodeURI( params.shortName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' );
+		data.shortcutUrl = request.protocol + '://' + request.headers['x-forwarded-host'] + '/' + data.uid + '/?fullName=' + encodeURIComponent( params.fullName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' ) + '&shortName=' + encodeURIComponent( params.shortName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' );
+		data.webmanifestUrl = '/' + data.uid + '/stadia.webmanifest?fullName=' + encodeURIComponent( params.fullName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' ) + '&shortName=' + encodeURIComponent( params.shortName ).replace( /&#x27;/g, '%27' ).replace( /&/g, '%26' );
 
 		if ( params.variant == 0 )
 		{
@@ -60,7 +60,7 @@ module.exports = function ( request, hasGet, uid, params, refs )
 		{
 			if ( refs.uids[uid].hasOwnProperty( k ) )
 			{
-				data.smallVariantIcons[k] = refs.datasets['images-128'].uri + encodeURI( refs.uids[uid][k] ) + data.alt + refs.datasets['images-128'].extension;
+				data.smallVariantIcons[k] = refs.datasets['images-128'].uri + encodeURIComponent( refs.uids[uid][k] ) + data.alt + refs.datasets['images-128'].extension;
 			}
 		}
 
@@ -73,12 +73,12 @@ module.exports = function ( request, hasGet, uid, params, refs )
 
 
 	data.images = {
-		icon: refs.datasets.icons.uri + encodeURI( refs.uids[uid][params.variant] ) + data.alt + refs.datasets.icons.extension,
-		image128: refs.datasets['images-128'].uri + encodeURI( refs.uids[uid][params.variant] ) + data.alt + refs.datasets['images-128'].extension,
-		image192: refs.datasets['images-192'].uri + encodeURI( refs.uids[uid][params.variant] ) + data.alt + refs.datasets['images-192'].extension,
-		image512: refs.datasets['images-512'].uri + encodeURI( refs.uids[uid][params.variant] ) + data.alt + refs.datasets['images-512'].extension,
-		image: refs.datasets.images.uri + encodeURI( refs.uids[uid][params.variant] ) + data.alt + refs.datasets.images.extension,
-		webp: refs.datasets.webp.uri + encodeURI( refs.uids[uid][params.variant] ) + data.alt + refs.datasets.webp.extension
+		icon: refs.datasets.icons.uri + encodeURIComponent( refs.uids[uid][params.variant] ) + data.alt + refs.datasets.icons.extension,
+		image128: refs.datasets['images-128'].uri + encodeURIComponent( refs.uids[uid][params.variant] ) + data.alt + refs.datasets['images-128'].extension,
+		image192: refs.datasets['images-192'].uri + encodeURIComponent( refs.uids[uid][params.variant] ) + data.alt + refs.datasets['images-192'].extension,
+		image512: refs.datasets['images-512'].uri + encodeURIComponent( refs.uids[uid][params.variant] ) + data.alt + refs.datasets['images-512'].extension,
+		image: refs.datasets.images.uri + encodeURIComponent( refs.uids[uid][params.variant] ) + data.alt + refs.datasets.images.extension,
+		webp: refs.datasets.webp.uri + encodeURIComponent( refs.uids[uid][params.variant] ) + data.alt + refs.datasets.webp.extension
 	}
 
 	return data;
