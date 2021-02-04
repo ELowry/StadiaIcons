@@ -20,6 +20,11 @@ Each image uri can be constructed as follows: `datasets.X.uri` + `uids.Y.Z` + (o
 #### StadiaIcons Shortcuts
 If you wish to make use of the [StadiaIcons Shortcuts](https://stadiaicons.web.app/) system, you will find the relevant information and code in the [/Shortcuts](/Shortcuts) folder.
 
+## Support this project
+Running [StadiaIcons Shortcuts](https://stadiaicons.web.app/) costs me a tiny bit each month, so if you enjoy it or just want to support my work, any help is welcome!!!
+
+<a href="https://www.buymeacoffee.com/EricLowry"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a croissant&emoji=🥐&slug=EricLowry&button_colour=d12947&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00"></a>
+
 ## Contents
 Each game logo comes in 2 styles with 2 color variants each.
 
