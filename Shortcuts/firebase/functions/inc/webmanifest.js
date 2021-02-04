@@ -95,6 +95,7 @@ module.exports = function(info, errors)
 		<footer>
 			<p>Copyright © 2020 Eric Lowry. Licensed under <a href="/LICENSE.txt">AGPL 3.0</a>.</p>
 			<p>Follow <a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">StadiaIcons on GitHub</a></p>
+			<a href="https://www.buymeacoffee.com/EricLowry"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a croissant&emoji=🥐&slug=EricLowry&button_colour=d12947&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00"></a>
 		</footer>
 	</body>
 </html>`;
