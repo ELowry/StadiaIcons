@@ -32,6 +32,12 @@
 		"defaultIcon":{
 			"0":"Stadia"
 		},
+		"d5a3bd3f904647e1b72b346be7330c39rcp1":{
+			"0":"A Place for the Unwilling"
+		},
+		"2c8b9ab112e5460db922dc7353381256rcp1":{
+			"0":"AVICII Invector"
+		},
 		"016636d5f49f4862be3ff8cbcf6c7adercp1":{
 			"0":"Ary and the Secret of Seasons"
 		},
@@ -103,6 +109,9 @@
 		"80a70c13987841b3a2aedbcac54784abrcp1":{
 			"0":"Dragon Ball Xenoverse 2"
 		},
+		"6cf458a458cd4b2e8161c740c4844621rcp1":{
+			"0":"Dragon Quest XI S"
+		},
 		"d46f9c2d858d41d6ae4cc12d186657f0rcp1":{
 			"0":"El Hijo – A Wild West Tale"
 		},
@@ -132,6 +141,9 @@
 		},
 		"ebf235012b054269af70eee901bc85cfrcp1":{
 			"0":"Farming Simulator 19"
+		},
+		"2c4539adc1e641c0bb2cd0e4032eec75rcp1":{
+			"0":"FIFA 21"
 		},
 		"7183914d07034cb1bbb8a511779bc1efrcp1":{
 			"0":"Figment – Creed Valley"
@@ -169,6 +181,9 @@
 		"cf784a0f4c554ce68a2880cb461bd903rcp1":{
 			"0":"Hello Neighbor – Hide and Seek"
 		},
+		"c87989ee2285400c8ac96b8e52f57991rcp1":{
+			"0":"Hellpoint"
+		},
 		"990ec302c2cd4ba7817cedcf633ab20frcp1":{
 			"0":"Hitman",
 			"1":"Hitman 2",
@@ -194,6 +209,9 @@
 		},
 		"1a871cfe8a7d4ebc8592c2ad4bc07150rcp1":{
 			"0":"Into the Breach"
+		},
+		"004b82924b0441c5a2ba6488cca19b90rcp1":{
+			"0":"It came from space and ate our brains"
 		},
 		"c727a9083ce649e5b1cc6999c4fa2e5frcp1":{
 			"0":"Jotun"
@@ -228,6 +246,9 @@
 		"3aed855f10b34f618e5f6c6f5467bcf9rcp1":{
 			"0":"Little Nightmares"
 		},
+		"0175bc876f55414ca207b2ea6691cfb2rcp1":{
+			"0":"Little Nightmares 2"
+		},
 		"d334bea27ee64ef5a3a9bb14b1d6a88ercp1":{
 			"0":"Lost Words – Beyond the Page"
 		},
@@ -252,11 +273,17 @@
 		"e7506ec75c8046dfa7879fe604505ca7rcp1":{
 			"0":"Monster Jam – Steel Titans"
 		},
+		"3fa9461d9fbd4fb3855039d9b64ca736rcp1":{
+			"0":"Monster Jam – Steel Titans 2"
+		},
 		"ef14fb2f692c4b42b4b092d3e7864cd8rcp1":{
 			"0":"Monster Boy and the Cursed Kingdom"
 		},
 		"d50e1c1b61224bceb65da9406f3f4e8frcp1":{
 			"0":"Monster Energy Supercross 3"
+		},
+		"a62130f4b41b4878a00f8ec444df6b01rcp1":{
+			"0":"Monster Energy Supercross 4"
 		},
 		"7bfbcba307114ab88ae4231da2ec85d3rcp1":{
 			"0":"Mortal Kombat 11"
@@ -300,6 +327,12 @@
 		"05b9db9b9b5b489995568afd930a9db3rcp1":{
 			"0":"Phogs"
 		},
+		"c02a86f966b044569ee03f80fbc86035rcp1":{
+			"0":"Pikuniku"
+		},
+		"5903b3b139194aefa713f216669ee334rcp1":{
+			"0":"PixelJunk Raiders"
+		},
 		"a4c5eb3f4e614b7fadbba64cba68f849rcp1":{
 			"0":"Playerunknown's Battlegrounds"
 		},
@@ -330,6 +363,9 @@
 		"d3d8e467203d401387857d5b6cc27263rcp1":{
 			"0":"Rock of Ages 3 – Make & Break"
 		},
+		"8d30307256df491c9d578792d11bd474rcp1":{
+			"0":"Saints Row the Third – Remastered"
+		},
 		"120348c2707740b99b509fad49a2f45drcp1":{
 			"0":"Samurai Shodown"
 		},
@@ -347,6 +383,12 @@
 		},
 		"b3bd32ef05444a189dcdc88f8e85d7f2rcp1":{
 			"0":"Serious Sam 4"
+		},
+		"bd913a37ecfe4b8d8c68280f4e1781bbrcp1":{
+			"0":"Shantae – Half-Genie Hero"
+		},
+		"4fe5de76fee2427591e4a61d046a20d0rcp1":{
+			"0":"Shantae – Ricky's Revenge"
 		},
 		"efa3b6108d3e41689b2223ba9d48f5c8rcp1":{
 			"0":"Shadow of the Tomb Raider"
@@ -395,6 +437,9 @@
 		},
 		"382fe14629e148449e7b8f94e8aecb38rcp1":{
 			"0":"Superhot – Mind Control Delete"
+		},
+		"774b82b8c1194dc2acc13a268c4ea7c7rcp1":{
+			"0":"Terraria"
 		},
 		"cc97434908874852a6705d255a605dc8rcp1":{
 			"0":"The Crew 2"
@@ -447,6 +492,9 @@
 		},
 		"3e7b24085e704c10ab03f93a19947c14rcp1":{
 			"0":"Wave Break"
+		},
+		"9fb7a46ff38a4c1d842e9ddd35b24d00rcp1":{
+			"0":"Welcome to Elk"
 		},
 		"0a60fff637b445a797623d0c69433a9crcp1":{
 			"0":"West of Loathing"
