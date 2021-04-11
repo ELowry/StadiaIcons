@@ -71,7 +71,7 @@ Without going into too many details, there are 2 elements worth mentioning:
 ### [functions/inc/webmanifest.js](functions/inc/webmanifest.js)
 This file is the endpoint of the `webmanifest` function and outputs a valid PWA manifest in JSON based on the previously gathered data.
 
-### [public/pupteest.html](public/pupteest.html)
+### [public/pupteest.html](public/puptest.html)
 This minimalist page is called up as a popup in order to test if the browser is blocking popups.
 
 ### [public/scripts/sw.js](public/scripts/sw.js)
