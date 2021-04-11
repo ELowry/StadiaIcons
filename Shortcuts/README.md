@@ -3,7 +3,9 @@
 ## What is it?
 StadiaIcons Shortcuts is a system that leverages the power of Progressive Web Apps and some popup trickery to allow you to easily add individual Stadia game shortcuts to your computer in just a few clicks. And the best part is that each icon will automatically use StadiaIcons images!
 
-Currently, you can access StadiaIcons Shortcuts through a [standalone page](https://stadiaicons.web.app/) that will allow you to access each game's installation page directly. The end-goal is to build this directly into Stadia using systems similar to [Stadia+](https://chrome.google.com/webstore/detail/stadia%20-extension/bbhmnnecicphphjamhdefpagipoegijd) or [Stadia Enhanced](https://chrome.google.com/webstore/detail/stadia-enhanced/ldeakaihfnkjmelifgmbmjlphdfncbfg).
+You can access StadiaIcons Shortcuts through a [standalone page](https://stadiaicons.web.app/) that will allow you to access each game's installation page directly.
+
+Alternatively, you can access the system directly from within Stadia using 3rd party systems like [Stadia Enhanced](https://chrome.google.com/webstore/detail/stadia-enhanced/ldeakaihfnkjmelifgmbmjlphdfncbfg) or [Stadia+](https://chrome.google.com/webstore/detail/stadia%20-extension/bbhmnnecicphphjamhdefpagipoegijd).
 
 ## How it Works
 StadiaIcons works by dynamically creating a unique webpage for each Stadia game with a StadiaIcons icon and letting you "install" this site as a Progressive Web App. This allows your device to launch the site directly from a custom shortcut; once launched, this site acts as a pass-through, opening a link to your game in a new tab and closing itself down right away.
