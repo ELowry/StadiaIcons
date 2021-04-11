@@ -48,7 +48,7 @@ https://<span></span>stadiaicons<span></span>.web<span></span>.app/`{uid}`/?full
 If you wish to deploy your own version of StadiaIcons Shortcuts, or use the code in your own projects, there are 2 versions of the code available:
 
 1. The [Firebase](firebase) version designed to be deployed on Google's [Firebase](https://firebase.google.com) which uses *Firebase Hosting* and *Firebase Functions*. This version is the one being currently used at [stadiaicons.web.apps](https://stadiaicons.web.apps).
-2. The [PHP](php) version designed to be deployed on a typical web hosting server. This version is no longer actively maintained but should still be fully functional. A demo is available at [stadiaicons.000webhostapp.com](https://stadiaicons.000webhostapp.com).
+2. ***(Deprecated)*** The [PHP](php) version designed to be deployed on a typical web hosting server. This version is no longer actively maintained but should still be fully functional. A demo is available at [stadiaicons.000webhostapp.com](https://stadiaicons.000webhostapp.com).
 
 You will find details about each version in the respective folders.
 
