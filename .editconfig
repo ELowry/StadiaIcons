@@ -1,0 +1,12 @@
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+trim_trailing_spaces = true
+insert_final_newline = false
+
+# trailing spaces in markdown indicate word wrap
+[*.md]
+trim_trailing_spaces = false
+max_line_length = 80
