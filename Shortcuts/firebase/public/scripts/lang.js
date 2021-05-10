@@ -204,7 +204,7 @@ function TranslateMeta(data)
 }
 
 
-// Treanslating HTML Contents
+// Translating HTML Contents
 
 function TranslateHtml(data)
 {
