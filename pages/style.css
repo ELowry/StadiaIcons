@@ -18,6 +18,12 @@
 	}
 }
 
+#MainLogo img
+{
+	width: 12em;
+	max-width: 30vw;
+}
+
 #Games
 {
 	background-color: #1a1b1e;
