@@ -63,7 +63,7 @@ Here's how to go about things:
 			"inset2": "In order to create shortcuts, you must authorize this website to display popup windows*.",
 			"inset3": "Depending on your browser, you should see a message requesting this authorization. It is typically to the right of the address bar.",
 			"request": "If you do not see this message or once you have given authorization, please press this button:",
-			"button": "TestPopup Access",
+			"button": "Test Popup Access",
 			"footnote": "* StadiaIcon shortcuts use Progressive Web Apps, and in order to open your game without the address bar at the top, the app instead opens the game in a regular browser tab using a popup and immediately closes in the background."
 		},
 		"uninstall":
@@ -216,7 +216,7 @@ inset3: `Depending on your browser, you should see a message requesting this aut
 
 request: `If you do not see this message or once you have given authorization, please press this button:`
 
-button: `TestPopup Access`  *<– The name of the button mentioned just above. It reloads the page to see if the test popup can appear successfully.*
+button: `Test Popup Access`  *<– The name of the button mentioned just above. It reloads the page to see if the test popup can appear successfully.*
 
 footnote: `* StadiaIcon shortcuts use Progressive Web Apps, and in order to open your game without the address bar at the top, the app instead opens the game in a regular browser tab using a popup and immediately closes in the background.`
 
