@@ -41,12 +41,18 @@
 		"016636d5f49f4862be3ff8cbcf6c7adercp1":{
 			"0":"Ary and the Secret of Seasons"
 		},
+		"ba56dcf3117a4a3a8323f49341f454a4rcp1":{
+			"0":"Assassin's Creed – Black Flag"
+		},
 		"8b7e7f7036e5483eaa8745d46248536crcp1":{
 			"0":"Assassin's Creed – Odyssey",
 			"1":"Assassin's Creed – Odyssey-2"
 		},
 		"11dfda5b2d78475d8624972b9b78c995rcp1":{
 			"0":"Assassin's Creed – Origins"
+		},
+		"1aca0f17682540698822de0419062511rcp1":{
+			"0":"Assassin's Creed – Rogue"
 		},
 		"88a2945345f744519c5148ddd54f26d1rcp1":{
 			"0":"Assassin's Creed – Syndicate"
@@ -100,8 +106,17 @@
 			"0":"Cyberpunk 2077",
 			"1":"Cyberpunk 2077-2"
 		},
+		"694bb88862a84a4d86ef09c447094763rcp1":{
+			"0":"Darksiders II"
+		},
+		"d05ef34140f34f5e91f7c2ea9e58b135rcp1":{
+			"0":"Darksiders III"
+		},
 		"f39390395ed5444d8e9b23460c8f9152rcp1":{
 			"0":"Darksiders – Genesis"
+		},
+		"848cb37ae8f64d4cbeddc5f2e290806ercp1":{
+			"0":"Darkwood"
 		},
 		"b67e43f2b05f4ba7acc56a4b222568aarcp1":{
 			"0":"Dead by Daylight"
@@ -166,6 +181,9 @@
 		"a2a4ff75e249404a975db7ae5f77e536rcp1":{
 			"0":"Far Cry – New Dawn"
 		},
+		"3bb062e7f1274d4ca83af6b5f67d9abarcp1":{
+			"0":"Farming Simulator 22"
+		},
 		"e184f2da322a41c9a31b3ef2c473f95arcp1":{
 			"0":"Floor Kidz"
 		},
@@ -174,6 +192,9 @@
 		},
 		"2c4539adc1e641c0bb2cd0e4032eec75rcp1":{
 			"0":"FIFA 21"
+		},
+		"d45d390acba5479db7c47170b09d517drcp1":{
+			"0":"FIFA 22"
 		},
 		"7183914d07034cb1bbb8a511779bc1efrcp1":{
 			"0":"Figment – Creed Valley"
@@ -276,6 +297,9 @@
 		"6b43cecd79734ba28cef5894985c65f1rcp1":{
 			"0":"Just Shapes & Beats"
 		},
+		"26f5878eb1ac46458bd275469f7a83fdrcp1":{
+			"0":"Katamari Damacy – Reroll"
+		},
 		"81733d32e2db41f9a58b97aa80c0b2fcrcp1":{
 			"0":"Kemono Heroes"
 		},
@@ -318,8 +342,14 @@
 		"451f31e0ce9e4ac4b928f4f6a9d2b3d0rcp1":{
 			"0":"Madden 22"
 		},
+		"9092c5ed87224f3e8a277dac0479874frcp1":{
+			"0":"Mafia III"
+		},
 		"232ff8abc7f74421a477e9e09dbf487drcp1":{
 			"0":"Marvel's Avengers"
+		},
+		"1509dbd662b7403f9497661157b9ca6brcp1":{
+			"0":"Merek's Market"
 		},
 		"9b3ea6519cac48d68ca821f07b1a6a3drcp1":{
 			"0":"Metro 2033 Redux"
@@ -430,6 +460,9 @@
 		"8615c857d7d54efebd94fe17e3f2896crcp1":{
 			"0":"Rage 2"
 		},
+		"e219615d926c4e6e92fae3b567fac94ercp1":{
+			"0":"Rainbow Six Extraction"
+		},
 		"ab3353cfcd1f4a938e40b0ba32c72b64rcp1":{
 			"0":"Rainbow Six Siege"
 		},
@@ -450,6 +483,9 @@
 		},
 		"c44439c4ee1741b383c93996985efddfrcp1":{
 			"0":"Resident Evil VIII – Village"
+		},
+		"a173ab7957e243d5a2a5668c6edd94b6rcp1":{
+			"0":"Riders Republic"
 		},
 		"e5c6ec7bf437491ea4ac0917df8f9640rcp1":{
 			"0":"Rise of the Tomb Raider"
@@ -492,6 +528,9 @@
 		},
 		"1376a179ca87458b85acd44341854772rcp1":{
 			"0":"Sniper Elite 4"
+		},
+		"25567bfb599a46ecab0fc8b18682b3f8rcp1":{
+			"0":"Spirit – Lucky's Big Adventure"
 		},
 		"921e9afe46aa478fb4aa929a7b1a6bd5rcp1":{
 			"0":"Spitlings"
@@ -544,6 +583,9 @@
 		"774b82b8c1194dc2acc13a268c4ea7c7rcp1":{
 			"0":"Terraria"
 		},
+		"06a1ece9dfdd42f3871af2735d688a34rcp1":{
+			"0":"The Addams Family – Mansion Mayhem"
+		},
 		"cc97434908874852a6705d255a605dc8rcp1":{
 			"0":"The Crew 2"
 		},
@@ -562,6 +604,9 @@
 			"2":"The Elder Scrolls – Online-Summerset",
 			"3":"The Elder Scrolls – Online-Elsweyr",
 			"4":"The Elder Scrolls – Online-Greymoor"
+		},
+		"b7be5151de924478ab54ef9afeee4826rcp1":{
+			"0":"The Falconeer – Warrior Edition"
 		},
 		"cf65dc95d523465493d6fbc482452227rcp1":{
 			"0":"The Gardens Between"
