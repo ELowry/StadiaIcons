@@ -236,7 +236,7 @@ button: `Launch {Game Name}`
 
 status: `Your browser may not be supported`
 
-browsers: `We strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
+browsers: `We strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}.` *<– In this case, the `{X}` tags are used to turn the words into links, please keep them stuck to the words and in the correct order.*
 
 #### exists
 
