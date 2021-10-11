@@ -312,14 +312,14 @@ description: `This page is used to test for popup authorization.`
 
 copyright: `Copyright © {Year} Eric Lowry. Licensed under {AGPL 3.0}.`
 
-links: `Follow {0}StadiaIcons on GitHub{1} | {2}Privacy Policy{3}` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
+links: `Follow {0}StadiaIcons on GitHub{1} | {2}Privacy Policy{3}` *<– In this case, the `{X}` tags are used to turn the words into links, please keep them stuck to the words and in the correct order.*
 
 ### privacy
 
 title: `Privacy Policy`
 what": `What we Store`
-whatText": `This website is built on {0}Google's Firebase platform{1} and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
-whatLink: `You can learn more at {0}this link{1}.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
+whatText": `This website is built on {0}Google's Firebase platform{1} and uses <em>Firebase Hosting</em> and <em>Firebase Functions</em>. As a result, your <strong>IP address</strong> will be stored for a couple of months to avoid misuse of the platform.` *<– In this case, the `{X}` tags are used to turn the words into links, please keep them stuck to the words and in the correct order.*
+whatLink: `You can learn more at {0}this link{1}.` *<– In this case, the `{X}` tags are used to turn the words into links, please keep them stuck to the words and in the correct order.*
 cookies: `Cookies`
 cookiesText: `Though we love cookies {Cookie Emoji}, we much prefer croissants {Croissant Emoji}... So we don't store any cookies, don't worry!`
 
