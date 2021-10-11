@@ -17,7 +17,7 @@ Here's how to go about things:
 5. Using the [Detailed Information](#detailed-information) section at the bottom of this page, you should have all the information you need to translate things.
 
 ### Tips & Info
-* *You just need to translate the bits on the right. So no need to translate the titles (such as* `"generic"`*), just the actual bits of text (like the word *Error** in* `"error": "Error",`
+* *You just need to translate the bits on the right. So no need to translate the titles (such as* `"generic"`*), just the actual bits of text (like the word **Error** in* `"error": "Error",`
 * *If something is unclear or you have a question, just leave that part untranslated and add your question at the bottom of your post, you can always edit the post or simply add the missing bit as a reply later.*
 * *There are markers that look like* `{0}` *all over this document, these are sections that get filled in automatically by the code, I will do my best to make it clear what they are in the [Detailed Information](#detailed-information) section below.*
 
