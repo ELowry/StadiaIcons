@@ -236,15 +236,13 @@ button: `Launch {Game Name}`
 
 status: `Your browser may not be supported`
 
-info: `If you have already installed the {Game Name} {StadiaIcons} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!`
-
 browsers: `We strongly recommend using {0}Download Chrome{1} or {2}Download Edge{3}.` *<– In this case, the `{X}` tags are used turn the words into links, please keep them stuck to the words and in the correct order.*
 
 #### exists
 
 status: `The shortcut may already be installed`,
 
-info: `If you have already installed the {0} {1} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!`,
+info: `If you have already installed the {Game Name} {StadiaIcons} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!`,
 
 fallback:  `Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed.`
 
