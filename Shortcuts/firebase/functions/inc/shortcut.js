@@ -116,6 +116,7 @@ module.exports = function(info, errors)
 				langDir = '../lang/';
 		</script>
 		<script src="/scripts/lang.js"></script>
+		<script src="/scripts/coffee.js"></script>
 		<script src="/` + info.uid + `/shortcuts.js"></script>
 	</head>
 	<body class="translatable loadable">
@@ -317,7 +318,7 @@ module.exports = function(info, errors)
 		<footer>
 			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
 			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | &#8203;<a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">&#8203;Privacy Policy&#8203;</a>&#8203;</p>
-			<a href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a croissant&emoji=🥐&slug=EricLowry&button_colour=d12947&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00" alt="🥐 Buy me a croissant"></a>
+			<a class="coffee" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 Buy me a croissant</span><span id="coffee"></button></span></a>
 		</footer>
 	</body>
 </html>`;

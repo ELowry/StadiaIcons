@@ -92,3 +92,11 @@ exports.verify = functions.https.onRequest((request, response) => {
 	response.send(require('./inc/gather.js')(request, true, uid.uid, params, refs.data));
 	
 });
+
+exports.coffee = functions.https.onRequest((request, response) => {
+	
+	var coffeeToken = require('./secure/coffeetoken.json');
+	
+	require('./inc/get/coffee.js')(response, coffeeToken);
+	
+});

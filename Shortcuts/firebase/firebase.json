@@ -33,6 +33,10 @@
 			{
 				"source": "/*rcp1/",
 				"function": "shortcut"
+			},
+			{
+				"source": "/coffee.json",
+				"function": "coffee"
 			}
 		]
 	}
