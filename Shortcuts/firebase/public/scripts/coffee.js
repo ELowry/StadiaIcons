@@ -18,7 +18,7 @@
 window.addEventListener( 'load', function ()
 {
 
-	fetch('/coffee.json').then(response => {
+	fetch('https://stadiaicons.web.app/coffee.json').then(response => {
 		if (!response.ok) {
 			throw new Error("HTTP error " + response.status);
 		}
@@ -26,7 +26,7 @@ window.addEventListener( 'load', function ()
 	}).then(json => {
 		if (json.hasOwnProperty('subs'))
 		{
-			document.getElementById('coffee').innerHTML = json.subs;
+			document.getElementById('coffee').innerHTML = json.subs + '❤';
 		}
 		else
 		{
