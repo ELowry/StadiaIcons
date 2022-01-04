@@ -521,7 +521,7 @@ span.gradient
 	padding: 0;
 	height: auto;
 }
-.coffee span {
+.coffee button > span {
 	padding: 0.32em 0 0.32em 0.625em;
 	font-weight: 300;
 }

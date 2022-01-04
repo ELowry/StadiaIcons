@@ -108,7 +108,8 @@
 	"footer":
 	{
 		"copyright": "Copyright © {0} Eric Lowry. Licenza sotto {1}.",
-		"links": "Segui {0}StadiaIcons su GitHub{1} | {2}Privacy Policy{3}"
+		"links": "Segui {0}StadiaIcons su GitHub{1} | {2}Privacy Policy{3}",
+		"coffee": "Offrimi un croissant"
 	},
 	"privacy":
 	{

@@ -95,8 +95,16 @@ exports.verify = functions.https.onRequest((request, response) => {
 
 exports.coffee = functions.https.onRequest((request, response) => {
 	
-	var coffeeToken = require('./secure/coffeetoken.json');
-	
-	require('./inc/get/coffee.js')(response, coffeeToken);
+	const cors = require('cors');
+	cors(
+		{
+			'methods': 'GET',
+			'origin': ['https://elowry.github.io', 'https://stadiaicons.web.app']
+		}
+	)(request, response, () => {
+		var coffeeToken = require('./secure/coffeetoken.json');
+		
+		require('./inc/get/coffee.js')(response, coffeeToken);
+	});
 	
 });

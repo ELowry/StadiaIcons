@@ -1,5 +1,5 @@
-const functions = require('firebase-functions');
-const https = require('https');
+const functions = require('firebase-functions'),
+	https = require('https');
 
 module.exports = function ( response, coffeeToken )
 {
