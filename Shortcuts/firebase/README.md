@@ -1,6 +1,6 @@
-# StadiaIcons Shortcuts Firebase version
+# StadiaIcons Shortcuts on Firebase
 
-This version is designed to be deployed using google's [Firebase](https://firebase.google.com) platform.
+This system is designed to be deployed using google's [Firebase](https://firebase.google.com) platform.
 
 In order to deploy this project, you will need to set up [Firebase Hosting](https://firebase.google.com/docs/hosting/) and [Firebase Cloud Functions](https://firebase.google.com/docs/functions) in your [Firebase Project](https://firebase.google.com/docs/projects/learn-more).
 
@@ -45,7 +45,19 @@ This file is used to retrieve and sanitize all the other url parameters describe
 
 #### [functions/inc/get/refs.js](functions/inc/get/refs.js)
 
-This file is used to retrieve the StadiaIcons [refs.json](/refs.json) file structure.
+This file is used to retrieve the StadiaIcons [refs.json](functions/refs.json) file structure.
+
+*Note: The refs file is included in the functions folder in order to avoid the need for retrieving a "distant" file from GitHub.*
+
+#### [functions/inc/get/coffee.js](functions/inc/get/coffee.js)
+
+This file is used to tretieve data from the [Buy me a Coffee API](https://developers.buymeacoffee.com) in order to display tips in the footer while keeping the user anonymous.
+
+***Important**: The file requires a "coffeeToken" to be passed as a parameter (cf. [functions/index.js](functions/index.js)). By default this token is stored in `functions/secure/coffeetoken.json` using the following format:*
+```JSON
+{ "token": "Bearer #TOKEN#" }
+```
+*This file and its contents is not and should not be shared for security reasons.*
 
 #### [functions/inc/gather.js](functions/inc/gather.js)
 
@@ -94,3 +106,6 @@ You might have noticed quite a few HTML elements with `class="lang"` and `data-l
 The language can be overridden by passing a language code via the `&lang=` url parameter. Language codes should follow one of the following structures: `en` or `en_US`.
 
 By default, the system uses the preferred language as defined by the browser to translate each page's contents based on the individual JSON files in the [public/lang](public/lang) folder.
+
+### [public/scripts/coffee.js](public/scripts/coffee.js)
+This is used to display a custom [Buy me a Coffee](https://buymeacoffee.com) module using [functions/inc/get/coffee.js](functions/inc/get/coffee.js) in order to anonymously retrieve API data.
