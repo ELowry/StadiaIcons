@@ -163,9 +163,7 @@ function StartLoading()
 	{
 		if ( !hasResolved )
 		{
-			document.getElementById( 'Info' ).style.display = 'flex';
-			document.getElementById( 'Games' ).style.display = 'flex';
-			document.body.classList.add( 'loaded' );
+			OnceLoaded();
 		}
 	}, 12000 );
 
@@ -176,10 +174,21 @@ function StartLoading()
 	} ) ) ).then( () =>
 	{
 		hasResolved = true;
-		document.getElementById( 'Info' ).style.display = 'flex';
-		document.getElementById( 'Games' ).style.display = 'flex';
-		document.body.classList.add( 'loaded' );
+		OnceLoaded();
 	} );
+}
+
+function OnceLoaded()
+{
+	document.getElementById( 'Info' ).style.display = 'flex';
+	document.getElementById( 'Games' ).style.display = 'flex';
+	document.body.classList.add( 'loaded' );
+	
+	let target = window.location.hash:
+	if ( target == "Games" )
+	{
+		window.scrollTo( 0, document.getElementById( target ).offsetTop );
+	}
 }
 
 // Smooth Scrolling
