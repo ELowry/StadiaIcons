@@ -185,9 +185,9 @@ function OnceLoaded()
 	document.body.classList.add( 'loaded' );
 	
 	let target = window.location.hash;
-	if ( target == "Games" )
+	if ( target == "#Games" )
 	{
-		window.scrollTo( 0, document.getElementById( target ).offsetTop );
+		location.href = target;
 	}
 }
 
