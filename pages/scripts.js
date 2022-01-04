@@ -184,7 +184,7 @@ function OnceLoaded()
 	document.getElementById( 'Games' ).style.display = 'flex';
 	document.body.classList.add( 'loaded' );
 	
-	let target = window.location.hash:
+	let target = window.location.hash;
 	if ( target == "Games" )
 	{
 		window.scrollTo( 0, document.getElementById( target ).offsetTop );
