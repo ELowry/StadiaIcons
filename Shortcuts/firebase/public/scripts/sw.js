@@ -17,7 +17,7 @@
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-var uid = new URL(self.location).searchParams.get('uid');
+const uid = new URL(self.location).searchParams.get('uid');
 
 if ( uid == 'defaultIcon' || /^[A-z0-9]{32}rcp1$/.test( uid ) )
 {

@@ -3,7 +3,7 @@ const validator = require('validator');
 
 module.exports = function ( request, hasGet, uid, params, refs )
 {
-	var data = {
+	let data = {
 		isValid: true,
 		variantFound: false,
 		shortcutUrl: null,

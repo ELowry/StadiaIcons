@@ -23,11 +23,16 @@
 		"installPrompt":
 		{
 			"prompt": "Créez un raccourci sur votre appareil.",
+			"promptTitleAttr": "Installez ce raccourcis sous forme de Progressive Web App.",
 			"warningTitle": "AVERTISSEMENT",
 			"warning1": "Malheureusement aucune icône n'est encore disponible pour ce jeu.",
 			"warning2": "Vous pouvez tout-de-même installer le raccourci, mais il aura l'icône par défaut pour le moment.",
 			"warningButton": "Je Comprends",
-			"toggle": "{0}Basculer le Style"
+			"toggle": "{0}Basculer le Style",
+			"toggleTitleAttr": "Basculez entre les deux styles d'icône",
+			"account": "{0}Choisir un Compte Google",
+			"accountTitleAttr": "Séléctionnez le compte Google qui sera utilisé lorsque le raccourcis est lancé.",
+			"variantTitleAttr": "Séléctionnez une variant d'icône à utiliser'."
 		},
 		"popupPrompt":
 		{
@@ -108,7 +113,8 @@
 	{
 		"copyright": "Copyright © {0} Eric Lowry. Sous license {1}.",
 		"links": "Suivez {0}StadiaIcons sur GitHub{1} | {2}Politique de Confidentialité{3}",
-		"coffee": "Offre-moi un croissant"
+		"coffee": "Offre-moi un croissant",
+		"coffeeTitleAttr": "Envoyez-moi un pourboire sur Buy me a Coffee!"
 	},
 	"privacy":
 	{

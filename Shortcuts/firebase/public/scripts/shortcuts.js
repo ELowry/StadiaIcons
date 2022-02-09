@@ -19,7 +19,7 @@ console.log('%cStadiaIcons Shortcuts', 'display: inline-block; margin: 0.4em 0.3
 console.log('%cHah, you found me!\nHere\'s a cookie— oh wait no, we don\'t use those; take a croissant instead: 🥐\nIf you\'re experiencing problems with StadiaIcons Shortcuts or are just curious about how things run, please check out the GitHub page:', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; color: #d1293d;' );
 console.log('%chttps://github.com/ELowry/StadiaIcons/', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; font-weight: 600; color: #ff773d;' );
 	
-var inPWA = ( window.matchMedia( '(display-mode: standalone)' ).matches || window.matchMedia( '(display-mode: fullscreen)' ).matches || window.navigator.standalone === true ),
+const inPWA = ( window.matchMedia( '(display-mode: standalone)' ).matches || window.matchMedia( '(display-mode: fullscreen)' ).matches || window.navigator.standalone === true ),
 	isChromium = !!window.chrome && ( !!window.chrome.webstore || !!window.chrome.runtime ),
 	isChrome = /Chrome/.test( navigator.userAgent ) && /Google Inc/.test( navigator.vendor );
 
@@ -57,7 +57,7 @@ window.addEventListener( 'load', function ()
 	{
 		document.getElementById( 'Alert' ).style.display = 'flex';
 
-		var loadDelay = window.setTimeout( function ()
+		let loadDelay = window.setTimeout( function ()
 		{
 			launchPup();
 		}, 800 );
@@ -74,7 +74,7 @@ window.addEventListener( 'load', function ()
 	}
 	else
 	{
-		var incompatibleDelay = window.setTimeout(
+		const incompatibleDelay = window.setTimeout(
 			function ()
 			{
 				ShowIncompatible();
@@ -144,8 +144,8 @@ window.addEventListener( 'load', function ()
 
 	// LAUNCH Button
 
-	var launchButtons = document.getElementsByClassName( 'LaunchGame' );
-	for ( var i = 0; i < launchButtons.length; i++ )
+	const launchButtons = document.getElementsByClassName( 'LaunchGame' );
+	for ( let i = 0; i < launchButtons.length; i++ )
 	{
 		launchButtons[i].addEventListener( 'click', ( e ) =>
 		{
@@ -154,9 +154,43 @@ window.addEventListener( 'load', function ()
 		} );
 	}
 
+	// ACCOUNT SELECTION
+
+	const accountButton = document.getElementById( 'GoogleAccountSelect' ),
+		accountSelectorDialog = this.document.getElementById( 'AccountSelector' ),
+		closeAccountSelector = this.document.getElementsByClassName( 'closeAccountSelector' ),
+		accountIDCookieConfirm = this.document.getElementById( 'AccountIDCookieConfirm' ),
+		accountIDSelector = this.document.getElementById( 'AccountIDSelector' ),
+		accountSelectorButton = this.document.getElementById( 'AccountSelectorButton' );
+	if ( accountButton && accountSelectorDialog )
+	{
+		accountButton.addEventListener( 'click', ( e ) =>
+		{
+			e.preventDefault();
+			accountSelectorDialog.style.display = 'flex';
+		} );
+		for ( let i = 0; i = closeAccountSelector.length; i++ )
+		{
+			closeAccountSelector[i].addEventListener( 'click', ( e ) =>
+			{
+				e.preventDefault();
+				accountSelectorDialog.style.display = 'none';
+			} );
+		}
+		accountSelectorButton.addEventListener( 'click', ( e ) =>
+		{
+			e.preventDefault();
+			if ( accountIDCookieConfirm.checked )
+			{
+				StoreGoogleAccountValue( accountIDSelector.value );
+			}
+			accountSelectorDialog.style.display = 'none';
+		} );
+	}
+
 	// CLOSE ASIDE
-	var closeButtons = document.getElementsByClassName( 'closeAside' );
-	for ( var i = 0; i < closeButtons.length; i++ )
+	const closeButtons = document.getElementsByClassName( 'closeAside' );
+	for ( let i = 0; i < closeButtons.length; i++ )
 	{
 		closeButtons[i].addEventListener( 'click', ( e ) =>
 		{
@@ -166,8 +200,8 @@ window.addEventListener( 'load', function ()
 	}
 	
 	// CLOSE WARNING
-	var closeWarningButtons = document.getElementsByClassName( 'closeWarning' );
-	for ( var i = 0; i < closeWarningButtons.length; i++ )
+	const closeWarningButtons = document.getElementsByClassName( 'closeWarning' );
+	for ( let i = 0; i < closeWarningButtons.length; i++ )
 	{
 		closeWarningButtons[i].addEventListener( 'click', ( e ) =>
 		{
@@ -182,11 +216,11 @@ window.addEventListener( 'load', function ()
 
 function launchPup()
 {
-	var gameWindow = window.open( 'https://stadia.google.com/player/' + uid, '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1' );
+	const gameWindow = window.open( 'https://stadia.google.com/player/' + uid, '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1' );
 
 	window.setTimeout( function ()
 	{
-		var hasRunCheck = false;
+		let hasRunCheck = false;
 		try
 		{
 			if ( ( !gameWindow || gameWindow.closed || typeof gameWindow.closed == 'undefined' ) || ( isChrome && !gameWindow || gameWindow.outerHeight === 0 ) )
@@ -231,9 +265,10 @@ function launchPup()
 }
 
 // POPUP TEST
+
 function TestPopup()
 {
-	var popupTest = window.setTimeout( function ()
+	const popupTest = window.setTimeout( function ()
 	{
 		console.warn('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', "Popup Test Failed" );
 		document.getElementById( 'PopupPrompt' ).style.display = 'flex';
@@ -256,6 +291,71 @@ function TestPopup()
 
 	window.open( '/puptest.html', '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1,fullscreen=1' );
 	window.focus();
+}
+
+// GOOGLE ACCOUNT
+
+function GetGoogleAccount()
+{
+	const accountNumber = GetGoogleAccountValue();
+	if ( accountNumber > 1 )
+	{
+		return '/u/' + accountNumber;
+	}
+	return '';
+}
+function GetGoogleAccountValue()
+{
+	const accountNumber = GetCookie( 'AccountNumber' );
+	if ( !isNaN( accountNumber ) && accountNumber > 1 && accountNumber <= 10 )
+	{
+		StoreGoogleAccountValue( accountNumber ); // The cookie is stored again in order to reset the expiration.
+		return accountNumber;
+	}
+	return 1;
+}
+function StoreGoogleAccountValue( accountNumber )
+{
+	if ( !isNaN( accountNumber ) && accountNumber > 1 && accountNumber <= 10 )
+	{
+		document.cookie.set( {
+			name: 'AccountNumber',
+			path: '/',
+			value: accountNumber,
+			secure: true,
+			expires: (Date.now() / 1000) + 31536000
+		} );
+	}
+	else
+	{
+		document.cookie.set( {
+			name: 'AccountNumber',
+			path: '/',
+			value: 1,
+			secure: true,
+			expires: 0
+		} );
+	}
+}
+
+function GetCookie( cname )
+{
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent( document.cookie );
+	let ca = decodedCookie.split( ';' );
+	for ( let i = 0; i < ca.length; i++ )
+	{
+		let c = ca[i];
+		while ( c.charAt( 0 ) == ' ' )
+		{
+			c = c.substring( 1 );
+		}
+		if ( c.indexOf( name ) == 0 )
+		{
+			return c.substring( name.length, c.length );
+		}
+	}
+	return "";
 }
 
 // SECTION HANDLING

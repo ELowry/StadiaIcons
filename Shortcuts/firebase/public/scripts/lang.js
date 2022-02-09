@@ -28,7 +28,7 @@ window.addEventListener( 'load', function ()
 
 	// LANGUAGE DETECTION
 		
-	var langs = navigator.languages;
+	let langs = navigator.languages;
 	if (!langs || !Array.isArray(langs) || langs.length <= 0)
 	{
 		if (navigator.language)
@@ -49,7 +49,7 @@ window.addEventListener( 'load', function ()
 	// CLEAN UP
 	
 	langs = langs.map((x) => {
-		var y = x.split(/[-_]/);
+		let y = x.split(/[-_]/);
 		if (y.length <= 1)
 		{
 			return y[0].toLowerCase();
@@ -66,9 +66,9 @@ window.addEventListener( 'load', function ()
 	).then (
 		(json) => {
 			
-			var lang = null,
-				possibles = [],
-				langGet = window.location.search.match(/[\?&]lang=([a-zA-Z]{2}(?:[- _][a-zA-Z]{1,2})?)/);
+			let lang = null,
+				possibles = [];
+			const langGet = window.location.search.match(/[\?&]lang=([a-zA-Z]{2}(?:[- _][a-zA-Z]{1,2})?)/);
 				
 			if (langGet && langGet.length > 0)
 			{
@@ -84,7 +84,7 @@ window.addEventListener( 'load', function ()
 			{
 				for (code in langs)
 				{
-					var result = verifyLang(langs[code], json, possibles);
+					const result = verifyLang(langs[code], json, possibles);
 					if(result)
 					{
 						lang = result;
@@ -129,15 +129,17 @@ function GrabLanguage(lang, prefix)
 			
 			if (json.hasOwnProperty('translator'))
 			{
-				var thanksTranslator = 'Thank you ' + json.translator + ' for the translation!!!!!';
+				const thanksTranslator = 'Thank you ' + json.translator + ' for the translation!!!!!';
 				console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', thanksTranslator);
 			}
 			
 			document.documentElement.lang = prefix;
 			
-			TranslateMeta(json);
+			TranslateMeta (json);
 			
-			TranslateHtml(json);
+			TranslateHtml (json);
+
+			TranslateTitles (json);
 			
 			document.body.classList.add('translated');
 			
@@ -158,7 +160,7 @@ function TranslateMeta(data)
 	{
 		for (m in metaLang)
 		{
-			var elems = document.getElementsByTagName(metaLang[m].tag);
+			const elems = document.getElementsByTagName(metaLang[m].tag);
 			
 			for (e in elems)
 			{
@@ -166,13 +168,13 @@ function TranslateMeta(data)
 				{
 					if (elems[e].getAttribute(metaLang[m].attr) === metaLang[m].attrVal)
 					{
-						var target = GetLangString(metaLang[m].path, data);
+						const target = GetLangString(metaLang[m].path, data);
 						
 						if (target)
 						{
 							if (metaLang[m].hasOwnProperty('props'))
 							{
-								var props = [];
+								let props = [];
 								for (p in metaLang[m].props)
 								{
 									if (typeof metaLang[m].props[p] === 'object')
@@ -208,11 +210,11 @@ function TranslateMeta(data)
 
 function TranslateHtml(data)
 {
-	var objs = document.getElementsByClassName('lang');
+	const objs = document.getElementsByClassName('lang');
 	
-	for (var i = 0; i < objs.length; i++)
+	for (let i = 0; i < objs.length; i++)
 	{
-		var elems = objs[i].innerHTML.match(/\u200B([^\u200B]+)\u200B/g),
+		const elems = objs[i].innerHTML.match(/\u200B([^\u200B]+)\u200B/g),
 			target = GetLangString(objs[i].dataset.lang, data);
 		
 		if (target)
@@ -235,13 +237,42 @@ function TranslateHtml(data)
 	}
 }
 
+function TranslateTitles( data )
+{
+	const objs = document.getElementsByClassName( 'langTitle' );
+
+	for ( let i = 0; i < objs.length; i++ )
+	{
+		const elems = objs[i].title.match( /\u200B([^\u200B]+)\u200B/g ),
+			target = GetLangString( objs[i].dataset.langTitle, data );
+
+		if ( target )
+		{
+			if ( elems && elems.length > 0 )
+			{
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target.format(elems), '} using these elements: ', elems);
+				objs[i].title = target.format( elems );
+			}
+			else
+			{
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target, '}.');
+				objs[i].title = target;
+			}
+		}
+		else
+		{
+			console.log( '%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', objs[i] );
+		}
+	}
+}
+
 
 // TOOLS
 
 function verifyLang(verif, langs, possibles)
 {
-	var verif = verif.split(/[-_]/),
-		prefix = verif[0].toLowerCase();
+	let verif = verif.split( /[-_]/ );
+	const prefix = verif[0].toLowerCase();
 	
 	if (verif.length <= 1)
 	{
@@ -252,9 +283,7 @@ function verifyLang(verif, langs, possibles)
 		return false;
 	}
 	
-	var suffix = verif[1].toUpperCase();
-	
-	verif = prefix + '_' + suffix;
+	verif = prefix + '_' + verif[1].toUpperCase();
 	
 	if (!langs.hasOwnProperty(prefix) || !langs[prefix].includes(verif))
 	{
@@ -275,8 +304,8 @@ function verifyLang(verif, langs, possibles)
 
 function GetLangString(pathString, data)
 {
-	var path = pathString.split('.'),
-		target = data;
+	const path = pathString.split( '.' );
+	let target = data;
 	
 	for (p in path)
 	{
@@ -292,7 +321,7 @@ if (!String.prototype.format)
 {
 	String.prototype.format = function(format)
 	{
-		var args = arguments;
+		let args = arguments;
 		if (Array.isArray(args[0]))
 		{
 			args = args[0];

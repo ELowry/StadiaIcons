@@ -157,6 +157,34 @@ aside
 	}
 
 
+/* Dialog */
+
+dialog
+{
+	display: none;
+}
+	dialog,
+	dialog > a:first-child
+	{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+		dialog > a:first-child
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			padding: 5vw;
+			background-color: rgba(0,0,0,0.4);
+			border: none;
+			text-decoration: none;
+		}
+
+
 /* Footer */
 
 footer

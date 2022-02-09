@@ -3,7 +3,8 @@
 	{
 		"error": "Error",
 		"warning": "Warning",
-		"important": "IMPORTANT"
+		"important": "IMPORTANT",
+		"cancel":  "Cancel"
 	},
 	"meta":
 	{
@@ -23,11 +24,16 @@
 		"installPrompt":
 		{
 			"prompt": "Create a shortcut on your device.",
+			"promptTitleAttr": "Install this shortcut as a Progressive Web App on your device.",
 			"warningTitle": "WARNING",
 			"warning1": "Unfortunately the icons for this game is not yet available.",
 			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
 			"warningButton": "I Understand",
-			"toggle": "{0}Switch Style"
+			"toggle": "{0}Switch Style",
+			"toggleTitleAttr": "Toggle between two icon design styles.",
+			"account": "{0}Pick a Google Account",
+			"accountTitleAttr": "Select a Google account to target when opening shortcuts.",
+			"variantTitleAttr": "Select an icon variant to use."
 		},
 		"popupPrompt":
 		{
@@ -56,7 +62,15 @@
 		{
 			"status": "The shortcut may already be installed",
 			"info": "If you have already installed the {0} {1} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!",
-			"fallback":  "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
+			"fallback": "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
+		},
+		"accountSelector":
+		{
+			"title": "Select your Google Account ID",
+			"info": "This corresponds to the position of your Google account in the list of connected accounts.{0}Check the bubble in the top-right corner of {1} to see this list.",
+			"confirm": "In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.",
+			"confirmButton": "",
+			"confirmButtonTitleAttr": "Save your prefered Googla account ID as a Cookie."
 		},
 		"alert":
 		{
@@ -108,7 +122,8 @@
 	{
 		"copyright": "Copyright © {0} Eric Lowry. Licensed under {1}.",
 		"links": "Follow {0}StadiaIcons on GitHub{1} | {2}Privacy Policy{3}",
-		"coffee": "Buy me a croissant"
+		"coffee": "Buy me a croissant",
+		"coffeeTitleAttr": "Send me tips using Buy me a Coffee!"
 	},
 	"privacy":
 	{

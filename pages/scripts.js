@@ -19,7 +19,7 @@ console.log( '%cStadiaIcons Shortcuts', 'display: inline-block; margin: 0.4em 0.
 console.log( '%cHah, you found me!\nHere\'s a cookie— oh wait no, we don\'t use those; take a croissant instead: 🥐\nIf you\'re experiencing problems with StadiaIcons Shortcuts or are just curious about how things run, please check out the GitHub page:', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; color: #d1293d;' );
 console.log( '%chttps://github.com/ELowry/StadiaIcons/', 'display: inline-block; padding: 0.4em; background: #202124; border-radius: 0.1em; font-size: 1.2em; font-family:"Google Sans","Product Sans","Roboto",sans-serif; font-weight: 600; color: #ff773d;' );
 
-var gameObjects = {};
+let gameObjects = {};
 	
 window.addEventListener( 'load', function ()
 {
@@ -37,10 +37,10 @@ window.addEventListener( 'load', function ()
 
 			/* GRID */
 
-			var grid = document.getElementById( 'grid' ),
+			const grid = document.getElementById( 'grid' ),
 				search = document.getElementById( 'searchBar' ),
-				searchData = document.getElementById( 'searchDataList' ),
-				curr = 0,
+				searchData = document.getElementById( 'searchDataList' );
+			let curr = 0,
 				rand = 0;
 
 			if ( Object.hasOwnProperty( 'keys' ) )
@@ -60,10 +60,10 @@ window.addEventListener( 'load', function ()
 
 				/* GRID */
 
-					var name = json.uids[u][0],
+					let name = json.uids[u][0],
 						fName = name.replace( ' – ', ': ' ),
-						sName = name.split( ' – ' )[0],
-						imgName = name.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' );
+						sName = name.split( ' – ' )[0];
+					const imgName = name.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' );
 					
 					if ( json.demos.includes( u ) )
 					{
@@ -71,7 +71,7 @@ window.addEventListener( 'load', function ()
 						sName += ' (Demo)';
 					}
 					
-					var item = `
+					const item = `
 						<a id="` + u + `" href="https://stadiaicons.web.app/` + u + `/?fullName=` + fName.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' ) + `&shortName=` + sName.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' ) + `" target="_blank" tabindex="0">
 							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192'].extension + `') no-repeat scroll;">
 								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + sName + ` icon]" title="` + fName + `"/>
@@ -85,7 +85,7 @@ window.addEventListener( 'load', function ()
 
 				/* SEARCH */
 
-					var dataItem = `<option value="` + fName + `">`;
+					const dataItem = `<option value="` + fName + `">`;
 					searchData.insertAdjacentHTML( 'beforeend', dataItem );
 
 					if ( rand >= 0 )
@@ -107,7 +107,7 @@ window.addEventListener( 'load', function ()
 
 			search.addEventListener( 'input', function ( e )
 			{
-				var val = escape( this.value.toLowerCase() );
+				const val = escape( this.value.toLowerCase() );
 				if ( val == '' )
 				{
 					grid.classList.remove( 'searching' );
@@ -157,7 +157,7 @@ window.addEventListener( 'load', function ()
 
 function StartLoading()
 {
-	var hasResolved = false;
+	let hasResolved = false;
 
 	setTimeout( function ()
 	{
@@ -203,7 +203,7 @@ function scrollAnchors( e, respond = null )
 {
 	const distanceToTop = el => Math.floor( el.getBoundingClientRect().top );
 	e.preventDefault();
-	var targetID = ( respond ) ? respond.getAttribute( 'href' ) : this.getAttribute( 'href' );
+	let targetID = ( respond ) ? respond.getAttribute( 'href' ) : this.getAttribute( 'href' );
 	const targetAnchor = document.querySelector( targetID );
 	if ( !targetAnchor ) return;
 	const originalTop = distanceToTop( targetAnchor );

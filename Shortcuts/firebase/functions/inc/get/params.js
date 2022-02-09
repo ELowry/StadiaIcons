@@ -6,7 +6,7 @@ module.exports = function ( query )
 
 	// PREPARE PARAMETERS
 
-	var params = query,
+	let params = query,
 		fullName = null,
 		shortName = null,
 		variant = 0,

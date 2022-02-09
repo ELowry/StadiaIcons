@@ -3,7 +3,7 @@ const validator = require('validator');
 
 module.exports = function(refs)
 {
-	var output = {
+	let output = {
 		data: null,
 		valid: true,
 	}

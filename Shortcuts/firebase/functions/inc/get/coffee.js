@@ -25,7 +25,7 @@ module.exports = function ( response, coffeeToken )
 		valid: false,
 	};
 
-	const coffeeRequest = new Promise((resolve, reject) => {
+	new Promise((resolve, reject) => {
 		const options = {
 			hostname: 'developers.buymeacoffee.com',
 			path: '/api/v1/supporters',

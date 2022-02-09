@@ -61,18 +61,41 @@ module.exports = function(info, errors)
 }`;
 	}
 	
-	var output = require('./license.js') + `
+	let output = require('./license.js') + `
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>StadiaIcons – Error 404 ?></title>
-		<meta name="description" content="There was an error loading this page: error 404, Page Not Found">
+		<title class="lang" data-lang="error.head.title">StadiaIcons – Error &#8203;404&#8203;</title>
+		<meta name="description" content="There was an error loading this page: Error 404, Page Not Found">
 		<meta name="author" content="Eric Lowry">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-		
+
+		<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Icons/StadiaIcons.ico">
+		<link rel="icon" type="image/png" sizes="128x128" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/128/StadiaIcons.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/192/StadiaIcons.png">
+		<link rel="icon" type="image/png" sizes="512x512" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/512/StadiaIcons.png">
+		<link rel="icon" type="image/png" sizes="1024x1024" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/StadiaIcons.png">
+		<link rel="icon" type="image/webp" sizes="1024x1024" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/WebP/StadiaIcons.webp">
+		<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/192/StadiaIcons.png">
+
+		<script>
+			var metaLang = {
+				description: {
+					tag: 'meta',
+					attr: 'name',
+					attrVal: 'description',
+					targetAttr: 'content',
+					path: 'error.head.description',
+					props: ['404', {path:'error.codes.404'}]
+				}
+			},
+			langDir = '../lang/';
+		</script>
+		<script src="/scripts/lang.js"></script>
+		<script src="/scripts/coffee.js"></script>
 		<link rel="stylesheet" href="/style.css">
 	</head>
-	<body>
+	<body class="translatable">
 		<script>`;
 		
 	if (Object.keys(errors).length === 0)
@@ -85,17 +108,20 @@ module.exports = function(info, errors)
 		
 	output += `</script>
 		<main>
+			<section id="Loading">
+				<div class="loader"><div></div><div></div><div></div><div></div></div>
+			</section>
 			<section class="forced">
 				<div>
-					<h1>Error 404: Page Not Found</h1>
-					<p><a href="/">Click Here</a> to return to the home page.</p>
+					<h1><span class="lang" data-lang="error.title">Error &#8203;404&#8203;:</span> <span class="lang" data-lang="error.codes.404">Page Not Found</span></h1>
+					<p class="lang" data-lang="error.cta">&#8203;<a href="/">&#8203;Click Here&#8203;</a>&#8203; to return to the home page.</p>
 				</div>
 			</section>
 		</main>
 		<footer>
-			<p>Copyright © 2020 Eric Lowry. Licensed under <a href="/LICENSE.txt">AGPL 3.0</a>.</p>
-			<p>Follow <a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">StadiaIcons on GitHub</a></p>
-			<a class="coffee" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 <span class="lang" data-lang="footer.coffee">Buy me a croissant</span></span><span id="coffee">❤</span></button></a>
+			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
+			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | &#8203;<a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">&#8203;Privacy Policy&#8203;</a>&#8203;</p>
+			<a class="coffee lang-title" data-langTitle="footer.coffeeTitleAttr" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 <span class="lang" data-lang="footer.coffee">Buy me a croissant</span></span><span id="coffee">❤</span></button></a>
 		</footer>
 	</body>
 </html>`;
