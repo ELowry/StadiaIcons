@@ -97,7 +97,9 @@ window.addEventListener( 'load', function ()
 			clearTimeout( incompatibleDelay );
 		} );
 
-		document.getElementById( 'InstallButton' ).addEventListener( 'click', ( e ) =>
+		const installButton = document.getElementById( 'InstallButton' );
+		UpdateGameUrl( installButton );
+		installButton.addEventListener( 'click', ( e ) =>
 		{
 			e.preventDefault();
 
@@ -158,18 +160,20 @@ window.addEventListener( 'load', function ()
 
 	const accountButton = document.getElementById( 'GoogleAccountSelect' ),
 		accountSelectorDialog = this.document.getElementById( 'AccountSelector' ),
-		closeAccountSelector = this.document.getElementsByClassName( 'closeAccountSelector' ),
 		accountIDCookieConfirm = this.document.getElementById( 'AccountIDCookieConfirm' ),
 		accountIDSelector = this.document.getElementById( 'AccountIDSelector' ),
-		accountSelectorButton = this.document.getElementById( 'AccountSelectorButton' );
+		accountSelectorButton = this.document.getElementById( 'AccountSelectorButton' ),
+		closeAccountSelector = this.document.getElementsByClassName( 'closeAccountSelector' );
 	if ( accountButton && accountSelectorDialog )
 	{
+		accountIDSelector.value = GetGoogleAccountValue();
+
 		accountButton.addEventListener( 'click', ( e ) =>
 		{
 			e.preventDefault();
 			accountSelectorDialog.style.display = 'flex';
 		} );
-		for ( let i = 0; i = closeAccountSelector.length; i++ )
+		for ( let i = 0; i < closeAccountSelector.length; i++ )
 		{
 			closeAccountSelector[i].addEventListener( 'click', ( e ) =>
 			{
@@ -177,14 +181,22 @@ window.addEventListener( 'load', function ()
 				accountSelectorDialog.style.display = 'none';
 			} );
 		}
+		accountIDCookieConfirm.addEventListener( 'change', ( e ) =>
+		{
+			accountSelectorButton.disabled = !accountIDCookieConfirm.checked;
+		} );
 		accountSelectorButton.addEventListener( 'click', ( e ) =>
 		{
 			e.preventDefault();
-			if ( accountIDCookieConfirm.checked )
+			if ( !accountSelectorButton.disabled )
 			{
-				StoreGoogleAccountValue( accountIDSelector.value );
+				if ( accountIDCookieConfirm.checked )
+				{
+					StoreGoogleAccountValue( accountIDSelector.value );
+					UpdateGameUrl( document.getElementById( 'InstallButton' ) );
+				}
+				accountSelectorDialog.style.display = 'none';
 			}
-			accountSelectorDialog.style.display = 'none';
 		} );
 	}
 
@@ -216,7 +228,7 @@ window.addEventListener( 'load', function ()
 
 function launchPup()
 {
-	const gameWindow = window.open( 'https://stadia.google.com/player/' + uid, '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1' );
+	const gameWindow = window.open( 'https://stadia.google.com' + GetGoogleAccount() + '/player/' + uid, '_blank', 'toolbar=0,location=0,menubar=0,status=0,resizable=1' );
 
 	window.setTimeout( function ()
 	{
@@ -318,31 +330,39 @@ function StoreGoogleAccountValue( accountNumber )
 {
 	if ( !isNaN( accountNumber ) && accountNumber > 1 && accountNumber <= 10 )
 	{
-		document.cookie.set( {
-			name: 'AccountNumber',
-			path: '/',
-			value: accountNumber,
-			secure: true,
-			expires: (Date.now() / 1000) + 31536000
-		} );
+		SetCookie( 'AccountNumber', accountNumber );
 	}
 	else
 	{
-		document.cookie.set( {
-			name: 'AccountNumber',
-			path: '/',
-			value: 1,
-			secure: true,
-			expires: 0
-		} );
+		ClearCookie( 'AccountNumber' );
 	}
 }
 
+function UpdateGameUrl(link)
+{
+	const launchUrlStart = 'https://stadia.google.com';
+	if ( link.href.substring( 0, launchUrlStart.length ) == launchUrlStart )
+	{
+		link.href = launchUrlStart + GetGoogleAccount() + link.href.substring( launchUrlStart.length );
+	}
+}
+
+function SetCookie( cname, cvalue )
+{
+	const d = new Date();
+	d.setTime( d.getTime() + 31536000000/* one year */);
+	document.cookie = cname + "=" + cvalue + ";" + "expires=" + d.toUTCString() + ";path=/";
+}
+function ClearCookie( cname )
+{
+	const d = new Date(0);
+	d.setTime( 0 );
+	document.cookie = cname + "=;" + "expires=" + d.toUTCString() + ";path=/";
+}
 function GetCookie( cname )
 {
 	let name = cname + "=";
-	let decodedCookie = decodeURIComponent( document.cookie );
-	let ca = decodedCookie.split( ';' );
+	let ca = decodeURIComponent( document.cookie ).split( ';' );
 	for ( let i = 0; i < ca.length; i++ )
 	{
 		let c = ca[i];

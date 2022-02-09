@@ -244,18 +244,18 @@ function TranslateTitles( data )
 	for ( let i = 0; i < objs.length; i++ )
 	{
 		const elems = objs[i].title.match( /\u200B([^\u200B]+)\u200B/g ),
-			target = GetLangString( objs[i].dataset.langTitle, data );
+			target = GetLangString( objs[i].dataset.langtitle, data );
 
 		if ( target )
 		{
 			if ( elems && elems.length > 0 )
 			{
-				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target.format(elems), '} using these elements: ', elems);
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].title, '} into {', target.format(elems), '} using these elements: ', elems);
 				objs[i].title = target.format( elems );
 			}
 			else
 			{
-				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target, '}.');
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].title, '} into {', target, '}.');
 				objs[i].title = target;
 			}
 		}
@@ -271,7 +271,8 @@ function TranslateTitles( data )
 
 function verifyLang(verif, langs, possibles)
 {
-	let verif = verif.split( /[-_]/ );
+	verif = verif.split( /[-_]/ );
+
 	const prefix = verif[0].toLowerCase();
 	
 	if (verif.length <= 1)

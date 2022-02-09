@@ -144,15 +144,15 @@ module.exports = function(info, errors)
 							<img src="` + info.images.image192 + `" alt="` + info.fullName + ` Game Icon" />
 						</picture>
 					<p>
-						<a class="button lang-title" data-langTitle="main.installPrompt.toggleTitleAttr" href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt == '' ).toString() + `" title="Toggle between two icon design styles.">
+						<a class="button langTitle" data-langtitle="main.installPrompt.toggleTitleAttr" href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt == '' ).toString() + `" title="Toggle between two icon design styles.">
 							<button class="outline" tabindex="-1"><span class="lang" data-lang="main.installPrompt.toggle">&#8203;<span class="buttonIcon">⇆</span>&#8203;Switch Style</span></button>
 						</a>
-						<a class="button lang-title" data-langTitle="main.installPrompt.accountTitleAttr" id="GoogleAccountSelect" href="#" title="Select a Google account to target when opening shortcuts.">
+						<a class="button langTitle" data-langtitle="main.installPrompt.accountTitleAttr" id="GoogleAccountSelect" href="#" title="Select a Google account to target when opening shortcuts.">
                             <button class="outline" tabindex="-1"><span class="lang" data-lang="main.installPrompt.account">&#8203;<span class="buttonIcon">👥</span>&#8203;Pick a Google Account</span></button>
 						</a>
 					</p>
 					<p>
-						<a class="button lang-title" data-langTitle="main.installPrompt.promptTitleAttr" id="InstallButton" href="https://stadia.google.com` + GetGoogleAccount() + `/player/` + info.uid + `" title="Install this shortcut as a Progressive Web App on your device.">
+						<a class="button langTitle" data-langtitle="main.installPrompt.promptTitleAttr" id="InstallButton" href="https://stadia.google.com/player/` + info.uid + `" title="Install this shortcut as a Progressive Web App on your device.">
 							<button tabindex="-1"><span class="lang" data-lang="main.installPrompt.prompt">Create a shortcut on your device.</span></button>
 						</a>
 					</p>
@@ -171,7 +171,7 @@ module.exports = function(info, errors)
 				}
 				else
 				{
-					output += `<a class="lang-title" data-langTitle="main.installPrompt.variantTitleAttr" href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt != '' ).toString() + `&variant=` + k + `" title="Select an icon variant to use.">
+					output += `<a class="langTitle" data-langtitle="main.installPrompt.variantTitleAttr" href="/` + info.uid + `/?fullName=` + info.fullName + `&shortName=` + info.shortName + `&alt=` + ( info.alt != '' ).toString() + `&variant=` + k + `" title="Select an icon variant to use.">
 							<img src="` + info.smallVariantIcons[k] + `" alt="` + info.shortName + ` variant ` + k + `" />
 						</a>
 						`;
@@ -240,14 +240,15 @@ module.exports = function(info, errors)
 				<a href="#" class="closeAccountSelector" tabindex="-1"></a>
 				<div>
 					<h2 class="lang" data-lang="main.accountSelector.title">Select your Google Account ID</h2>
-					<pclass="lang" data-lang="main.accountSelector.info">This corresponds to the position of your Google account in the list of connected accounts.&#8203;<br/>&#8203;Check the bubble in the top-right corner of &#8203;<a href="https://google.com">google.com</a>&#8203; to see this list.</p>
-					<p><input type="checkbox" id="AccountIDCookieConfirm"> <span class="lang" data-lang="main.accountSelector.confirm"><em>In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.</em></span></p>
-					<input type="number" id="AccountIDSelector" value="` + GetGoogleAccountValue() + `" min="1" max="10">
+					<input type="number" id="AccountIDSelector" value="1" min="1" max="10">
+					<p class="lang" data-lang="main.accountSelector.info">This corresponds to the position of your Google account in the list of connected accounts.&#8203;<br/>&#8203;Check the bubble in the top-right corner of &#8203;<a href="https://google.com">google.com</a>&#8203; to see this list.</p>
+					<p><label class="clickable"><input type="checkbox" id="AccountIDCookieConfirm"> <span class="lang" data-lang="main.accountSelector.confirm"><em>In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.</em></span></label></p>
 					<p>
-						<a class="button lang-title" data-langTitle="main.accountSelector.confirmButtonTitleAttr" id="AccountSelectorButton" href="#" title="Save your prefered Googla account ID as a Cookie.">
-							<button tabindex="-1"><span class="lang" data-lang="main.accountSelector.confirmButton">Save</span></button>
-						</a> <a class="button closeAccountSelector" href="#">
-							<button tabindex="-1"><span class="lang" data-lang="generic.cancel">Cencel</span></button>
+						<button id="AccountSelectorButton" class="langTitle" data-langtitle="main.accountSelector.confirmButtonTitleAttr" title="Save your prefered Googla account ID as a Cookie." disabled>
+							<span class="lang" data-lang="main.accountSelector.confirmButton">Save</span>
+						</button>
+						<button class="closeAccountSelector outline">
+							<span class="lang" data-lang="generic.cancel">Cencel</span>
 						</a>
 					</p>
 				</div>
@@ -261,7 +262,7 @@ module.exports = function(info, errors)
 		<footer>
 			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
 			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | &#8203;<a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">&#8203;Privacy Policy&#8203;</a>&#8203;</p>
-			<a class="coffee lang-title" data-langTitle="footer.coffeeTitleAttr" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 <span class="lang" data-lang="footer.coffee">Buy me a croissant</span></span><span id="coffee">❤</span></button></a>
+			<a class="coffee langTitle" data-langtitle="footer.coffeeTitleAttr" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 <span class="lang" data-lang="footer.coffee">Buy me a croissant</span></span><span id="coffee">❤</span></button></a>
 		</footer>
 	</body>
 </html>`;
@@ -337,7 +338,7 @@ module.exports = function(info, errors)
 		<footer>
 			<p class="lang" data-lang="footer.copyright">Copyright © &#8203;2020&#8203; Eric Lowry. Licensed under &#8203;<a href="/LICENSE.txt">AGPL 3.0</a>&#8203;.</p>
 			<p class="lang" data-lang="footer.links">Follow &#8203;<a href="https://github.com/ELowry/StadiaIcons/" target="_blank" rel="noreferrer noopener">&#8203;StadiaIcons on GitHub&#8203;</a>&#8203; | &#8203;<a href="/PRIVACY.html" target="_blank" rel="noreferrer noopener">&#8203;Privacy Policy&#8203;</a>&#8203;</p>
-			<a class="coffee lang-title" data-langTitle="footer.coffeeTitleAttr" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 <span class="lang" data-lang="footer.coffee">Buy me a croissant</span></span><span id="coffee">❤</span></button></a>
+			<a class="coffee langTitle" data-langtitle="footer.coffeeTitleAttr" href="https://www.buymeacoffee.com/EricLowry" title="Send me tips using Buy me a Coffee!"><button tabindex="-1"><span>🥐 <span class="lang" data-lang="footer.coffee">Buy me a croissant</span></span><span id="coffee">❤</span></button></a>
 		</footer>
 	</body>
 </html>`;

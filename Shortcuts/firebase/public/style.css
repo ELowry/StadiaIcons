@@ -161,7 +161,10 @@ aside
 
 dialog
 {
+	all: unset;
 	display: none;
+	justify-content: center;
+	align-items: center;
 }
 	dialog,
 	dialog > a:first-child
@@ -171,6 +174,7 @@ dialog
 		bottom: 0;
 		right: 0;
 		left: 0;
+		z-index: 50;
 	}
 		dialog > a:first-child
 		{
@@ -182,6 +186,17 @@ dialog
 			background-color: rgba(0,0,0,0.4);
 			border: none;
 			text-decoration: none;
+		}
+		dialog > div
+		{
+			z-index: 51;
+			padding: 0.76em calc(2vw + 1em);
+			background-color: #202124;
+			box-shadow: 0 0.125em 0.75em rgba(0,0,0,0.32), 0 0.0625em 0.375em rgba(0,0,0,0.18);
+			max-width: 60em;
+			border: 2px solid #d1293d;
+			border-radius: 0.76em;
+			text-align: center;
 		}
 
 
@@ -213,7 +228,7 @@ section #Warning {
 	width: 100vw;
 	min-height: 100vh;
 	max-width: none !important;
-	background: rgb(20, 21, 23, 0.66);
+	background-color: rgba(20, 21, 23, 0.66);
 	overflow-y: scroll;
 	transition: opacity 0.4s cubic-bezier(0.35,0,0.15,1), filter 0.4s cubic-bezier(0.35,0,0.15,1);
 	z-index: 96;
@@ -285,6 +300,10 @@ button
 	cursor: pointer;
 	transition: box-shadow 0.3s cubic-bezier(0.35,0,0.15,1);
 }
+	button:disabled
+	{
+		cursor: not-allowed;
+	}
 	button:hover,
 	button:focus,
 	a:hover button,
@@ -315,6 +334,11 @@ button
 		bottom: 0;
 		border-radius: 0.25em;
 		z-index: 0;
+	}
+	button:disabled:before,
+	button:disabled:after
+	{
+		display: none !important;
 	}
 	button:before
 	{
@@ -374,6 +398,39 @@ button
 		line-height: 0.5em;
 	}
 
+	button + button,
+	button + a.button,
+	a.button + button,
+	a.button + a.button
+	{
+		margin-left: 0.76em;
+	}
+
+
+/* Inputs */
+input[type="number"]
+{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	height: 3em;
+	padding: 0.625em;
+	border-radius: 0.45em;
+	box-shadow: 0 0.125em 0.75em rgb(0 0 0 / 32%), 0 0.0625em 0.375em rgb(0 0 0 / 18%);
+	font-family: 'Google Sans','Product Sans','Roboto',sans-serif;
+	font-size: 1em;
+	text-align: center;
+	color: #fff;
+	background: rgba(255,255,255,0.03);
+	border: 2px solid #fff;
+	cursor: pointer;
+	transition: border-color 0.3s cubic-bezier(0.35,0,0.15,1);
+}
+	input[type="number"]:focus-within
+	{
+		border-color: #ff773d;
+	}
 
 
 /* Installation */
@@ -520,6 +577,11 @@ picture#IconPreview
 
 
 /* Other */
+
+label.clickable
+{
+	cursor: pointer;
+}
 
 span.hilight
 {
