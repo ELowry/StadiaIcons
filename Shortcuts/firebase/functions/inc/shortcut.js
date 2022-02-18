@@ -239,7 +239,7 @@ module.exports = function(info, errors)
 			<dialog id="AccountSelector">
 				<a href="#" class="closeAccountSelector" tabindex="-1"></a>
 				<div>
-					<h2><label for="AccountIDSelector" class="lang" data-lang="main.accountSelector.title">Select your Google Account ID</label</h2>
+					<h2><label for="AccountIDSelector" class="lang" data-lang="main.accountSelector.title">Select your Google Account ID</label></h2>
 					<select id="AccountIDSelector">
 						<option value="1">1</option>
 						<option value="2">2</option>
