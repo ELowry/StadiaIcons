@@ -461,6 +461,39 @@ select
 			background-color: #2b2d31;
 		}
 
+input[type="checkbox"]
+{
+	appearance: none;
+	display: inline-grid;
+	place-content: center;
+	margin: unset;
+	font: inherit;
+	font-size: 1.4em;
+	color: currentColor;
+	width: 1.15em;
+	height: 1.15em;
+	border: 0.1em solid currentColor;
+	border-radius: 0.2em;
+	cursor: pointer;
+}
+
+	input[type="checkbox"]:before
+	{
+		content: "";
+		width: 0.65em;
+		height: 0.65em;
+		transform: scale(0);
+		transition: 0.1s transform ease-in-out;
+		background-color: #ff4c1d;
+		background-image: linear-gradient(70deg,#ff4c1d,#9b0063);
+		border-radius: 0.1em;
+	}
+
+	input[type="checkbox"]:checked::before
+	{
+		transform: scale(1);
+	}
+
 
 /* Installation */
 
