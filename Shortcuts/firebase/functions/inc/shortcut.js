@@ -239,8 +239,19 @@ module.exports = function(info, errors)
 			<dialog id="AccountSelector">
 				<a href="#" class="closeAccountSelector" tabindex="-1"></a>
 				<div>
-					<h2 class="lang" data-lang="main.accountSelector.title">Select your Google Account ID</h2>
-					<input type="number" id="AccountIDSelector" value="1" min="1" max="10">
+					<h2><label for="AccountIDSelector" class="lang" data-lang="main.accountSelector.title">Select your Google Account ID</label</h2>
+					<select id="AccountIDSelector">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
 					<p class="lang" data-lang="main.accountSelector.info">This corresponds to the position of your Google account in the list of connected accounts.&#8203;<br/>&#8203;Check the bubble in the top-right corner of &#8203;<a href="https://google.com">google.com</a>&#8203; to see this list.</p>
 					<p><label class="clickable"><input type="checkbox" id="AccountIDCookieConfirm"> <span class="lang" data-lang="main.accountSelector.confirm"><em>In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.</em></span></label></p>
 					<p>

@@ -408,6 +408,21 @@ button
 
 
 /* Inputs */
+select,
+input[type="number"]
+{
+	padding: 0.625em;
+	border-radius: 0.45em;
+	box-shadow: 0 0.125em 0.75em rgb(0 0 0 / 32%), 0 0.0625em 0.375em rgb(0 0 0 / 18%);
+	font: inherit;
+	font-size: 1em;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(255,255,255,0.03);
+	border: 2px solid #fff;
+	cursor: pointer;
+	transition: border-color 0.3s cubic-bezier(0.35,0,0.15,1);
+}
 input[type="number"]
 {
 	display: inline-flex;
@@ -415,22 +430,36 @@ input[type="number"]
 	justify-content: center;
 	box-sizing: border-box;
 	height: 3em;
-	padding: 0.625em;
-	border-radius: 0.45em;
-	box-shadow: 0 0.125em 0.75em rgb(0 0 0 / 32%), 0 0.0625em 0.375em rgb(0 0 0 / 18%);
-	font-family: 'Google Sans','Product Sans','Roboto',sans-serif;
-	font-size: 1em;
-	text-align: center;
-	color: #fff;
-	background: rgba(255,255,255,0.03);
-	border: 2px solid #fff;
-	cursor: pointer;
-	transition: border-color 0.3s cubic-bezier(0.35,0,0.15,1);
 }
 	input[type="number"]:focus-within
 	{
 		border-color: #ff773d;
 	}
+select
+{
+	appearance: none;
+	position: relative;
+	font-family: unset;
+	padding-right: 1.625em;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m7 10 5 5 5-5z' fill='white'%3E%3C/path%3E%3C/svg%3E");
+	background-size: 1.8em;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+	select::-ms-expand
+	{
+		display: none;
+	}
+	select option
+	{
+		color: inherit;
+		background-color: #202124;
+	}
+		select option:hover
+		{
+			outline: none;
+			background-color: #2b2d31;
+		}
 
 
 /* Installation */
