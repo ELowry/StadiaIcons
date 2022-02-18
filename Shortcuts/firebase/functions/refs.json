@@ -108,6 +108,9 @@
 		"fd6fc2b44158435497f23450fa656dcdrcp1":{
 			"0":"Chorus"
 		},
+		"b971477f9ee94083a6c8ae9e82cfb1a9rcp1":{
+			"0":"Chorus"
+		},
 		"3f94b62fa50c4202be10472947478f8frcp1":{
 			"0":"Chronos – Before the Ashes"
 		},
@@ -150,6 +153,9 @@
 		},
 		"0fd3103549b54c7e89afd6eed83672cercp1":{
 			"0":"Destroy All Humans!"
+		},
+		"6c48ffe02b6b439583fba2038c8a5249rcp1":{
+			"0":"Dynasty Warriors 9 – Empires"
 		},
 		"ed81a01114044edcacfa52656b259d41rcp1":{
 			"0":"Dirt 5"
@@ -213,6 +219,9 @@
 		},
 		"3bb062e7f1274d4ca83af6b5f67d9abarcp1":{
 			"0":"Farming Simulator 22"
+		},
+		"b7e0896baf5d4a0b83a008aa6f277b53rcp1":{
+			"0":"Fast and Furious – Spy Racers Rise of SH1FT3R"
 		},
 		"2c4539adc1e641c0bb2cd0e4032eec75rcp1":{
 			"0":"FIFA 21"
@@ -372,6 +381,12 @@
 		"ba593716983f436ea49ae09a531d65b5rcp1":{
 			"0":"Legend of Keepers – Career of a Dungeon Manager"
 		},
+		"09011184da8446c1b6fafb8c010888bfrcp1":{
+			"0":"Life is Strange – Remastered"
+		},
+		"e8eaa376059b43d5a3007c13589e8a1drcp1":{
+			"0":"Life is Strange – Before the Storm Remastered"
+		},
 		"00c1858d808f469297b1200c8383f5f5rcp1":{
 			"0":"Life is Strange – True Colors"
 		},
@@ -441,11 +456,17 @@
 		"e465c4086aff4884990933d9f119f5f5rcp1":{
 			"0":"MotoGP 20"
 		},
+		"bd9890f0ca304e6e8d329ae133199793rcp1":{
+			"0":"MotoGP 21"
+		},
 		"ee055d3ed7d3485d81ee329ec554c207rcp1":{
 			"0":"Murder by Numbers"
 		},
 		"5e294a10f1d848c78ac205218b68e469rcp1":{
 			"0":"My Friend Peppa Pig"
+		},
+		"8b82beb7ee8d45968e1a4756fc278fc4rcp1":{
+			"0":"My Hero One's Justice 2"
 		},
 		"4108770e33414848ae849cb6ad14e685rcp1":{
 			"0":"Nanotale – Typing Chronicles",
@@ -707,6 +728,9 @@
 		"30fd580936bb43b782ec2dbdac8b2f45rcp1":{
 			"0":"Trine 4"
 		},
+		"41ddc764b6f842cfa57ade28ccc56483rcp1":{
+			"0":"Trollhunters – Defenders of Arcadia"
+		},
 		"1694aaa3968344228424092f180a3e0ercp1":{
 			"0":"Uno"
 		},
@@ -763,6 +787,7 @@
 		}
 	},
 	"demos":[
-		"6363b82d1cc442f5af9c3ce98ceb731drcp1"
+		"6363b82d1cc442f5af9c3ce98ceb731drcp1",
+		"b971477f9ee94083a6c8ae9e82cfb1a9rcp1"
 	]
 }
