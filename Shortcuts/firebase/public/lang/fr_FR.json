@@ -3,7 +3,8 @@
 	{
 		"error": "Erreur",
 		"warning": "Avertissement",
-		"important": "IMPORTANT"
+		"important": "IMPORTANT",
+		"cancel": "Annuler"
 	},
 	"meta":
 	{
@@ -62,6 +63,14 @@
 			"status": "Le raccourci est peut-être déjà installé",
 			"info": "Si vous avez déjà installé le raccourci {1} de {0}, vous n'avez plus besoin d'utiliser ce lien&nbsp;; utilisez simplement le raccourci en question pour jouer à votre jeu&nbsp;!",
 			"fallback": "Sinon c'est qu'une erreur est survenue, et nous vous invitons à rafraichir la page, ce qui pourrait la résoudre."
+		},
+		"accountSelector":
+		{
+			"title": "Séléctonnez votre N° de Compte Google",
+			"info": "",
+			"confirm": "",
+			"confirmButton": "Enregistrer",
+			"confirmButtonTitleAttr": ""
 		},
 		"alert":
 		{
@@ -124,6 +133,7 @@
 		"whatLink": "Vous pouvez en apprendre plus en cliquant sur {0}ce lien{1}.",
 		"cookies": "Les Cookies",
 		"cookiesText": "Même si on adore les cookies {0}, on préfère largement les croissants {1}... Et on ne stoque donc pas de cookies dans le navigateur, promis&nbsp;!",
+		"cookiesText2": "{0}Update 02/2022:{1} The option to select a target Google Account has been added and will store this value as a cookie. This cookie is not used for tracking and you will be warned before it is stored.",
 		"head":
 		{
 			"title": "StadiaIcons – Politique de confidentialité",

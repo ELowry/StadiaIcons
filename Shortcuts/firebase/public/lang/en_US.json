@@ -69,7 +69,7 @@
 			"title": "Select your Google Account ID",
 			"info": "This corresponds to the position of your Google account in the list of connected accounts.{0}Check the bubble in the top-right corner of {1} to see this list.",
 			"confirm": "In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.",
-			"confirmButton": "",
+			"confirmButton": "Save",
 			"confirmButtonTitleAttr": "Save your prefered Googla account ID as a Cookie."
 		},
 		"alert":
@@ -133,6 +133,7 @@
 		"whatLink": "You can learn more at {0}this link{1}.",
 		"cookies": "Cookies",
 		"cookiesText": "Though we love cookies {0}, we much prefer croissants {1}... So we don't store any cookies, don't worry!",
+		"cookiesText2": "{0}Update 02/2022:{1} The option to select a target Google Account has been added and will store this value as a cookie. This cookie is not used for tracking and you will be warned before it is stored.",
 		"head":
 		{
 			"title": "StadiaIcons – Privacy Policy",
