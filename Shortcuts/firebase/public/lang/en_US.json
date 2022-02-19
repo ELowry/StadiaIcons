@@ -70,7 +70,7 @@
 			"info": "This corresponds to the position of your Google account in the list of connected accounts.{0}Check the bubble in the top-right corner of {1} to see this list.",
 			"confirm": "In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.",
 			"confirmButton": "Save",
-			"confirmButtonTitleAttr": "Save your prefered Googla account ID as a Cookie."
+			"confirmButtonTitleAttr": "Save your prefered Google account ID as a Cookie."
 		},
 		"alert":
 		{

@@ -224,12 +224,12 @@ function TranslateHtml(data)
 		{
 			if (elems && elems.length > 0)
 			{
-				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target.format(elems), '} using these elements: ', elems);
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translating {', objs[i].innerHTML, '} into {', target.format(elems), '} using these elements: ', elems);
 				objs[i].innerHTML = target.format(elems);
 			}
 			else
 			{
-				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].innerHTML, '} into {', target, '}.');
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translating {', objs[i].innerHTML, '} into {', target, '}.');
 				objs[i].innerHTML = target;
 			}
 		}
@@ -253,12 +253,12 @@ function TranslateTitles( data )
 		{
 			if ( elems && elems.length > 0 )
 			{
-				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].title, '} into {', target.format(elems), '} using these elements: ', elems);
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translating {', objs[i].title, '} into {', target.format(elems), '} using these elements: ', elems);
 				objs[i].title = target.format( elems );
 			}
 			else
 			{
-				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for ', 'Translating {', objs[i].title, '} into {', target, '}.');
+				//console.log('%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translating {', objs[i].title, '} into {', target, '}.');
 				objs[i].title = target;
 			}
 		}
@@ -310,12 +310,20 @@ function GetLangString(pathString, data)
 {
 	const path = pathString.split( '.' );
 	var target = data;
-	
-	for (p in path)
+
+	try
 	{
-		target = target[path[p]];
+		for ( p in path )
+		{
+			target = target[path[p]];
+		}
+		return target;
 	}
-	return target;
+	catch ( err )
+	{
+		//console.log( '%cStadiaIcons', 'display: inline-block; padding: 0em 0.2em; font-size: 1.08em; border-radius: 0.2em; font-weight: 900; -webkit-linear-gradient(107deg,#ff4c1d,#9b0063); background: linear-gradient(107deg,#ff4c1d,#9b0063); font-family:"Google Sans","Product Sans","Roboto",sans-serif;', 'Translation Error: target not found for [' + pathString + '] using these elements:', data );
+		return false;
+	}
 }
 
 

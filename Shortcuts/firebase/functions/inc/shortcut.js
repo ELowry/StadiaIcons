@@ -255,7 +255,7 @@ module.exports = function(info, errors)
 					<p class="lang" data-lang="main.accountSelector.info">This corresponds to the position of your Google account in the list of connected accounts.&#8203;<br/>&#8203;Check the bubble in the top-right corner of &#8203;<a href="https://google.com">google.com</a>&#8203; to see this list.</p>
 					<p><label class="clickable"><input type="checkbox" id="AccountIDCookieConfirm"> <span class="lang" data-lang="main.accountSelector.confirm"><em>In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.</em></span></label></p>
 					<p>
-						<button id="AccountSelectorButton" class="langTitle" data-langtitle="main.accountSelector.confirmButtonTitleAttr" title="Save your prefered Googla account ID as a Cookie." disabled>
+						<button id="AccountSelectorButton" class="langTitle" data-langtitle="main.accountSelector.confirmButtonTitleAttr" title="Save your prefered Google account ID as a Cookie." disabled>
 							<span class="lang" data-lang="main.accountSelector.confirmButton">Save</span>
 						</button>
 						<button class="closeAccountSelector outline">
