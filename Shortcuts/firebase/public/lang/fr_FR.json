@@ -67,10 +67,10 @@
 		"accountSelector":
 		{
 			"title": "Séléctonnez votre N° de Compte Google",
-			"info": "",
-			"confirm": "",
+			"info": "Ce numéro correspond à la position de votre compte Google dans la liste des comptes connectés.{0}Vous pouvez vérifier la bulle en haut à droite de la page {1} pour trouver cette liste.",
+			"confirm": "Afin de stocker votre N° de compte, le numéro que vous avez sélectionné sera enregistré dans votre navigateur à l'aide d'un cookie. Ce dernier ne sera pas utilisé à des fins de traçage.",
 			"confirmButton": "Enregistrer",
-			"confirmButtonTitleAttr": ""
+			"confirmButtonTitleAttr": "Enregistrez votre N° de compte Google préféré dans un Cookie."
 		},
 		"alert":
 		{
