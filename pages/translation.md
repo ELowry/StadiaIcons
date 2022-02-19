@@ -30,7 +30,8 @@ Here's how to go about things:
 	{
 		"error": "Error",
 		"warning": "Warning",
-		"important": "IMPORTANT"
+		"important": "IMPORTANT",
+		"cancel":  "Cancel"
 	},
 	"meta":
 	{
@@ -50,11 +51,16 @@ Here's how to go about things:
 		"installPrompt":
 		{
 			"prompt": "Create a shortcut on your device.",
+			"promptTitleAttr": "Install this shortcut as a Progressive Web App on your device.",
 			"warningTitle": "WARNING",
 			"warning1": "Unfortunately the icons for this game is not yet available.",
 			"warning2": "You can still install the shortcut, but it will have a default icon for the time being.",
 			"warningButton": "I Understand",
-			"toggle": "{0}Switch Style"
+			"toggle": "{0}Switch Style",
+			"toggleTitleAttr": "Toggle between two icon design styles.",
+			"account": "{0}Pick a Google Account",
+			"accountTitleAttr": "Select a Google account to target when opening shortcuts.",
+			"variantTitleAttr": "Select an icon variant to use."
 		},
 		"popupPrompt":
 		{
@@ -83,7 +89,15 @@ Here's how to go about things:
 		{
 			"status": "The shortcut may already be installed",
 			"info": "If you have already installed the {0} {1} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!",
-			"fallback":  "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
+			"fallback": "Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed."
+		},
+		"accountSelector":
+		{
+			"title": "Select your Google Account ID",
+			"info": "This corresponds to the position of your Google account in the list of connected accounts.{0}Check the bubble in the top-right corner of {1} to see this list.",
+			"confirm": "In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.",
+			"confirmButton": "Save",
+			"confirmButtonTitleAttr": "Save your prefered Google account ID as a Cookie."
 		},
 		"alert":
 		{
@@ -134,7 +148,9 @@ Here's how to go about things:
 	"footer":
 	{
 		"copyright": "Copyright © {0} Eric Lowry. Licensed under {1}.",
-		"links": "Follow {0}StadiaIcons on GitHub{1} | {2}Privacy Policy{3}"
+		"links": "Follow {0}StadiaIcons on GitHub{1} | {2}Privacy Policy{3}",
+		"coffee": "Buy me a croissant",
+		"coffeeTitleAttr": "Send me tips using Buy me a Coffee!"
 	},
 	"privacy":
 	{
@@ -144,14 +160,14 @@ Here's how to go about things:
 		"whatLink": "You can learn more at {0}this link{1}.",
 		"cookies": "Cookies",
 		"cookiesText": "Though we love cookies {0}, we much prefer croissants {1}... So we don't store any cookies, don't worry!",
+		"cookiesText2": "{0}Update 02/2022:{1} The option to select a target Google Account has been added and will store this value as a cookie. This cookie is not used for tracking and you will be warned before it is stored.",
 		"head":
 		{
 			"title": "StadiaIcons – Privacy Policy",
 			"description": "Keep your cookies, we have croissants!"
 		}
 	}
-}
-```
+}```
 ````
 
 ## Detailed Information
@@ -169,6 +185,8 @@ error: `Error`
 warning: `Warning`
 
 important: `IMPORTANT` *<– Try and keep it in captial letters if possible.*
+
+cancel: `Cancel`
 
 ### meta
 
@@ -194,6 +212,8 @@ button: `Launch {Game Name} Now`
 
 prompt: `Create a shortcut on your device.`
 
+promptTitleAttr: `Install this shortcut as a Progressive Web App on your device.`
+
 warningTitle: `WARNING` *<– Try and keep it in captial letters if possible.*
 
 warning1: `Unfortunately the icons for this game is not yet available.`
@@ -202,7 +222,15 @@ warning2: `You can still install the shortcut, but it will have a default icon f
 
 warningButton: `I Understand`
 
-toggle: `{0}Switch Style`
+toggle: `{Icon}Switch Style`
+
+toggleTitleAttr: `Toggle between two icon design styles.`
+
+account: `{Icon}Pick a Google Account`
+
+accountTitleAttr: `Select a Google account to target when opening shortcuts.`
+
+variantTitleAttr: `Select an icon variant to use.`
 
 #### popupPrompt
 
@@ -245,6 +273,18 @@ status: `The shortcut may already be installed`,
 info: `If you have already installed the {Game Name} {StadiaIcons} shortcut, you no longer need to access this link; simply use the installed shortcut to play your game!`,
 
 fallback:  `Otherwise, something didn't go as planned; we suggest you reload this page to see if things get fixed.`
+
+#### accountSelector
+
+title: `Select your Google Account ID`
+
+info: `This corresponds to the position of your Google account in the list of connected accounts.{Line Break}Check the bubble in the top-right corner of {https://google.com} to see this list.`
+
+confirm: `In order to store your account ID, this will register the number you have picked as a cookie in your browser. It will not be used for tracking purposes.`
+
+confirmButton: `Save`
+
+confirmButtonTitleAttr: `Save your prefered Google account ID as a Cookie.`
 
 #### alert
 
@@ -314,6 +354,10 @@ copyright: `Copyright © {Year} Eric Lowry. Licensed under {AGPL 3.0}.`
 
 links: `Follow {0}StadiaIcons on GitHub{1} | {2}Privacy Policy{3}` *<– In this case, the `{X}` tags are used to turn the words into links, please keep them stuck to the words and in the correct order.*
 
+coffee: `Buy me a croissant`
+
+coffeeTitleAttr: `Send me tips using Buy me a Coffee!` *<- "Buy me a Coffee" is the name of a [webiste](https://www.buymeacoffee.com/); please leave it as-is unless you can confirm that they translate their site name in your language.*
+
 ### privacy
 
 title: `Privacy Policy`
@@ -327,6 +371,8 @@ whatLink: `You can learn more at {0}this link{1}.` *<– In this case, the `{X}`
 cookies: `Cookies`
 
 cookiesText: `Though we love cookies {Cookie Emoji}, we much prefer croissants {Croissant Emoji}... So we don't store any cookies, don't worry!`
+
+cookiesText2: `{0}Update 02/2022:{1} The option to select a target Google Account has been added and will store this value as a cookie. This cookie is not used for tracking and you will be warned before it is stored.` *<– In this case, the `{X}` tags are used to turn the words into links, please keep them stuck to the words and in the correct order.*
 
 #### head
 
