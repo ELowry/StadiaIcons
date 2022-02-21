@@ -80,10 +80,9 @@ window.addEventListener( 'load', function ()
 				ShowIncompatible();
 			},
 			2000
-		),
-			hasInstalled = false;
-
-		let deferredPrompt;
+		);
+		let hasInstalled = false,
+			deferredPrompt;
 
 		window.addEventListener( 'beforeinstallprompt', ( e ) =>
 		{
