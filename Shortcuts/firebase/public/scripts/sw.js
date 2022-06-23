@@ -15,7 +15,7 @@
 	along with StadiaIcons.  If not, see <https://www.gnu.org/licenses/>.
 	*/
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 const uid = new URL(self.location).searchParams.get('uid');
 
