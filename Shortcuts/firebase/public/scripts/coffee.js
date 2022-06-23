@@ -24,7 +24,7 @@ window.addEventListener( 'load', function ()
 		}
 		return response.json();
 	}).then(json => {
-		if (json.hasOwnProperty('subs'))
+		if (json.hasOwnProperty('valid') && json.valid && json.hasOwnProperty('subs') && Number.isInteger(parseInt(json.subs)))
 		{
 			document.getElementById('coffee').innerHTML = json.subs + '❤';
 		}

@@ -39,8 +39,19 @@ module.exports = function ( response, coffeeToken )
 					body.push(d);
 				});
 				res.on('end', e => {
-					data.subs = JSON.parse(Buffer.concat(body).toString()).total;
-					data.valid = true;
+					try {
+						data.subs = JSON.parse(Buffer.concat(body).toString()).total;
+						data.valid = true;
+					} catch(error) {
+						data.subs = null;
+						data.valid = false;
+						data.error = {
+							name: error.name,
+							cause: error.cause,
+							message: error.message,
+							stack: error.stack
+						};
+					}
 					resolve(e);
 				});
 			});
