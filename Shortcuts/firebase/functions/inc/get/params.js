@@ -1,5 +1,5 @@
-const functions = require('firebase-functions');
-const validator = require('validator');
+const functions = require( 'firebase-functions' );
+const validator = require( 'validator' );
 
 module.exports = function ( query )
 {
@@ -61,7 +61,7 @@ module.exports = function ( query )
 	if ( params.hasOwnProperty( 'variant' ) )
 	{
 		params['variant'] = validator.toInt( params['variant'] );
-		if ( isNaN(params['variant'] )
+		if ( isNaN( params['variant'] ) )
 		{
 			variant = params['variant'];
 		}

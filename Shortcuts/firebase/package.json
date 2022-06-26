@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "firebase-functions": "^3.18.1"
+    "firebase-functions": "^3.18.1",
+    "validator": "^13.7.0"
   }
 }
