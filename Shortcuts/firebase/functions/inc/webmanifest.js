@@ -69,6 +69,8 @@ module.exports = function(info, errors)
 		<meta name="description" content="There was an error loading this page: Error 404, Page Not Found">
 		<meta name="author" content="Eric Lowry">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="theme-color" content="#202124">
+		<meta name="color-scheme" content="dark">
 
 		<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Icons/StadiaIcons.ico">
 		<link rel="icon" type="image/png" sizes="128x128" href="https://raw.githubusercontent.com/ELowry/StadiaIcons/master/Images/128/StadiaIcons.png">

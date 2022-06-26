@@ -31,7 +31,7 @@ module.exports = function(info, errors)
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="msapplication-starturl" content="` + info.shortcutUrl + `">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-		<meta name="theme-color" content="#202124">
+		<meta name="color-scheme" content="dark">
 
 		<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="` + info.images.icon + `">
 		<link rel="icon" type="image/png" sizes="128x128" href="` + info.images.image128 + `">
@@ -148,7 +148,7 @@ module.exports = function(info, errors)
 							<button class="outline" tabindex="-1"><span class="lang" data-lang="main.installPrompt.toggle">&#8203;<span class="buttonIcon">⇆</span>&#8203;Switch Style</span></button>
 						</a>
 						<a class="button langTitle" data-langtitle="main.installPrompt.accountTitleAttr" id="GoogleAccountSelect" href="#" title="Select a Google account to target when opening shortcuts.">
-                            <button class="outline" tabindex="-1"><span class="lang" data-lang="main.installPrompt.account">&#8203;<span class="buttonIcon">👥</span>&#8203;Pick a Google Account</span></button>
+							<button class="outline" tabindex="-1"><span class="lang" data-lang="main.installPrompt.account">&#8203;<span class="buttonIcon">👥</span>&#8203;Pick a Google Account</span></button>
 						</a>
 					</p>
 					<p>
@@ -160,7 +160,7 @@ module.exports = function(info, errors)
 						<h3>Variants:</h3>
 						`;
 
-		for ( k in info.smallVariantIcons )
+		for ( let k in info.smallVariantIcons )
 		{
 			if ( info.smallVariantIcons.hasOwnProperty( k ) )
 			{
@@ -290,6 +290,10 @@ module.exports = function(info, errors)
 		<meta name="keywords" content="Icons, Design, Gaming, Game, Shortcut, ` + info.shortName + `">
 		<meta name="author" content="Eric Lowry">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#202124">
+		<meta name="msapplication-navbutton-color" content="#202124">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="color-scheme" content="dark">
 		
 		<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="` + info.images.icon + `">
 		<link rel="icon" type="image/png" sizes="128x128" href="` + info.images.image128 + `">

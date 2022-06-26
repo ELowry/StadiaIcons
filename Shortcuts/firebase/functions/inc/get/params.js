@@ -15,7 +15,7 @@ module.exports = function ( query )
 
 	// FILTER PARAMETERS
 
-	for ( k in params )
+	for ( let k in params )
 	{
 		params[k] = validator.escape( params[k] );
 	}
@@ -61,7 +61,7 @@ module.exports = function ( query )
 	if ( params.hasOwnProperty( 'variant' ) )
 	{
 		params['variant'] = validator.toInt( params['variant'] );
-		if ( params['variant'] !== NaN )
+		if ( isNaN(params['variant'] )
 		{
 			variant = params['variant'];
 		}

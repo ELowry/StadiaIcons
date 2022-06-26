@@ -64,7 +64,7 @@ window.addEventListener( 'load', function ()
 
 		document.addEventListener( 'keydown', ( e ) =>
 		{
-			if ( e.keyCode = 17 && loadDelay != null )
+			if ( e.keyCode == 17 && loadDelay != null )
 			{
 				window.clearTimeout( loadDelay );
 				loadDelay = null;

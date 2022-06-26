@@ -82,7 +82,7 @@ window.addEventListener( 'load', function ()
 			
 			if (lang === null)
 			{
-				for (code in langs)
+				for (let code in langs)
 				{
 					const result = verifyLang(langs[code], json, possibles);
 					if(result)
@@ -161,11 +161,11 @@ function TranslateMeta(data)
 {
 	if (typeof metaLang !== 'undefined' && metaLang)
 	{
-		for (m in metaLang)
+		for (let m in metaLang)
 		{
 			const elems = document.getElementsByTagName(metaLang[m].tag);
 			
-			for (e in elems)
+			for (let e in elems)
 			{
 				if (!isNaN(e) && elems[e].hasAttribute(metaLang[m].attr))
 				{
@@ -178,7 +178,7 @@ function TranslateMeta(data)
 							if (metaLang[m].hasOwnProperty('props'))
 							{
 								let props = [];
-								for (p in metaLang[m].props)
+								for (let p in metaLang[m].props)
 								{
 									if (typeof metaLang[m].props[p] === 'object')
 									{
@@ -293,7 +293,7 @@ function verifyLang(verif, langs, possibles)
 	{
 		return null;
 	}
-	for (code in langs[prefix])
+	for (let code in langs[prefix])
 	{
 		if (langs[prefix][code] === verif)
 		{
