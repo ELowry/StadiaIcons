@@ -74,7 +74,7 @@ window.addEventListener( 'load', function ()
 					const item = `
 						<a id="` + u + `" href="https://stadiaicons.web.app/` + u + `/?fullName=` + fName.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' ) + `&shortName=` + sName.replace( /'/, '%27' ).replace( /"/g, '%22' ).replace( /\s/g, '%20' ).replace( /&/g, '%26' ).replace( /\?/g, '%3F' ) + `" target="_blank" tabindex="0">
 							<figure style="background: url('` + json.datasets['images-192'].uri + imgName + json.other.altSuffix + json.datasets['images-192'].extension + `') no-repeat scroll;">
-								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + sName + ` icon]" title="` + fName + `"/>
+								<img src="` + json.datasets['images-192'].uri + imgName + json.datasets['images-192'].extension + `" alt="[` + sName + ` icon]" title="` + fName + `" loading="lazy"/>
 								<figcaption>` + fName + `</figcaption>
 							</figure>
 						</a>`;
