@@ -1,6 +1,6 @@
-const functions = require('firebase-functions');
+const { onRequest } = require("firebase-functions/v2/https");
 
-exports.shortcut = functions.https.onRequest((request, response) => {
+exports.shortcut = onRequest((request, response) => {
 	
 	let errors = {};
 	
@@ -34,7 +34,7 @@ exports.shortcut = functions.https.onRequest((request, response) => {
 	
 });
 
-exports.webmanifest = functions.https.onRequest((request, response) => {
+exports.webmanifest = onRequest((request, response) => {
 		
 	let errors = {};
 	
@@ -64,7 +64,7 @@ exports.webmanifest = functions.https.onRequest((request, response) => {
 	
 });
 
-exports.verify = functions.https.onRequest((request, response) => {
+exports.verify = onRequest((request, response) => {
 	
 	
 	let errors = {};
@@ -93,7 +93,7 @@ exports.verify = functions.https.onRequest((request, response) => {
 	
 });
 
-exports.coffee = functions.https.onRequest((request, response) => {
+exports.coffee = onRequest((request, response) => {
 	
 	const cors = require('cors');
 	cors(
